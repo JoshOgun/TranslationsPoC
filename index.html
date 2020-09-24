@@ -8,7 +8,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    
+    .mt-48{
+      margin-top: 48px;
+      margin-left: 5px; 
+    }
+
   </style>
 </head>
 <body>
@@ -40,21 +44,26 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h2>About Me</h2>
-      <h5>Photo of me:</h5>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h4>Please Translate:</h4>
+      <select id="toTranlsate" class="form-control">...</select>
     </div>
-    <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      minim veniam, quis nostrud exercitation ullamco.</p>
+    
+    <div class="col-sm-1">
+      <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
+    </div>
+    
+    <div class="col-sm-7">
+      <div class="form-group">
+        <h4>Translation:</h4>
+        <input type="email" class="form-control" placeholder="Tranlsation">
+      </div>
+    
+      <button type="button" class="btn btn-primary pull-right" id="submitTranslation">Submit</button>
     </div>
   </div>
 </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+<div class="jumbotron text-center" style="margin: 30px auto 0px auto">
   <p>Created and Edited by Joshua Ogunjobi</p>
 </div>
 
