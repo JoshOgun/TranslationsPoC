@@ -1,0 +1,20 @@
+{
+  "one": "uno",
+  "two": "dos",
+  "three": "tres",
+  "four": "four",
+  "five": {
+    "fiveOne": "cinco-uno",
+    "fiveTwo": {
+      "fiveTwoOne": "five-two-one"
+    }
+  },
+  "six": {
+    "sixOne": "seis-uno",
+    "sixTwo": {
+      "sixTwoOne": "six-two-one",
+      "sixTwoTwo": "seis-dos-dos"
+    }
+  },
+  "seven": "siete"
+}
