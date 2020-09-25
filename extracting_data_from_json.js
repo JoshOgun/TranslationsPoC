@@ -1,6 +1,7 @@
 // Investigating JSONs
-var english = require('./en.json');
-var spanish = require('./es.json');
+
+// var english = require('./en.json');
+// var spanish = require('./es.json');
 
 var accessor = [];
 var missingTranslations = {};
@@ -38,11 +39,11 @@ function getObject(jsonObj, keyTrail){
 
 function getTranslations(missingTranslations){
   for (var key in missingTranslations) {
-    
+
   }
 
 }
 
 
-allKeys(english, spanish);
-console.log(missingTranslations);
+// allKeys(english, spanish);
+// console.log(missingTranslations);

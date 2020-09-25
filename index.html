@@ -5,19 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    .mt-48{
-      margin-top: 70%;
-      margin-left: 40%; 
-    }
 
-  </style>
+  <script defer type="text/javascript" src="es.json"></script>
+  <script defer type="text/javascript" src="en.json"></script>
+  <script defer src="extracting_data_from_json.js"></script>
 </head>
 <body>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+<div class="jumbotron text-center mb-0">
   <h1>Translations Manager</h1>
 </div>
 
@@ -27,7 +25,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">MH Translations</a>
     </div>
@@ -47,23 +45,23 @@
       <h4>Please Translate:</h4>
       <select id="toTranlsate" class="form-control">...</select>
     </div>
-    
+
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
       <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
     </div>
-    
+
     <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
       <div class="form-group">
         <h4>Translation:</h4>
         <input type="email" class="form-control" placeholder="Tranlsation">
       </div>
-    
+
       <button type="button" class="btn btn-primary pull-right" id="submitTranslation">Submit</button>
     </div>
   </div>
 </div>
 
-<div class="jumbotron text-center" style="margin: 30px auto 0px auto">
+<div class="jumbotron text-center mt-30">
   <p>Created and Edited by Joshua Ogunjobi</p>
 </div>
 
