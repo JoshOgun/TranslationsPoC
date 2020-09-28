@@ -1,7 +1,49 @@
 // Investigating JSONs
+init();
+ 
+var english = {};
+var spanish = {};
+var esIdentical = {};
 
-// var english = require('./en.json');
-// var spanish = require('./es.json');
+function init() {
+
+ loadJSON('en.json', function(response) {
+  // Parse JSON string into object
+    var english = JSON.parse(response);
+ });
+
+ loadJSON('es.json', function(response) {
+  // Parse JSON string into object
+    var spanish = JSON.parse(response);
+ });
+
+ loadJSON('esIdentical.json', function(response) {
+  // Parse JSON string into object
+    var esIdentical = JSON.parse(response);
+ });
+}
+
+function loadJSON(fileName, callback) {
+
+   var xobj = new XMLHttpRequest();
+       xobj.overrideMimeType("application/json");
+   xobj.open('GET', fileName, true);
+   xobj.onreadystatechange = function () {
+         if (xobj.readyState == 4 && xobj.status == "200") {
+           // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+           callback(xobj.responseText);
+         }
+   };
+   xobj.send(null);
+}
+
+// $.getJSON("en.json", function(engJson) {
+//     english = engJson;
+// });
+//
+// $.getJSON("es.json", function(espJson) {
+//     spanish = espJson;
+// });
 
 var accessor = [];
 var missingTranslations = {};
@@ -41,6 +83,10 @@ function getTranslations(missingTranslations){
   for (var key in missingTranslations) {
 
   }
+
+}
+
+function isTranslated(){
 
 }
 

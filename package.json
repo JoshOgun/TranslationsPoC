@@ -1,0 +1,24 @@
+{
+  "name": "TranslationsPoC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshOgun/TranslationsPoC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshOgun/TranslationsPoC/issues"
+  },
+  "homepage": "https://github.com/JoshOgun/TranslationsPoC#readme"
+}
