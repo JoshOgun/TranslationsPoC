@@ -5,13 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="public/css/indexStyle.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <!-- <script defer type="text/javascript" src="es.json"></script>
-  <script defer type="text/javascript" src="en.json"></script> -->
-  <script defer src="extracting_data_from_json.js"></script>
+  <script defer src="public/js/analyser.js"></script>
 </head>
 <body>
 
@@ -31,7 +29,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">German</a></li>
+        <li class="active"><a href="#" onclick="Clear Form">German</a></li>
         <li><a href="#">French</a></li>
         <li><a href="#">Italian</a></li>
       </ul>
@@ -42,8 +40,11 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="form-group">
       <h4>Please Translate:</h4>
       <select id="toTranlsate" class="form-control">...</select>
+    </div>
+
     </div>
 
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
