@@ -1,13 +1,14 @@
 
 var accessor = [];
+var english = {};
+var spanish = {};
+var currMissing = {};
 
 init();
 
 function init(){
-  var english = {};
-  var spanish = {};
-  var esIdentical = {};
 
+  var esIdentical = {};
 
   $.ajax({
     url: '/getEnglish',
@@ -49,7 +50,7 @@ function allKeys(eng, comparator, missingTranslations){
       accessor.push(key);
       if(getObjFromLastKey(eng, accessor) == getObjFromLastKey(comparator, accessor)){
         // Flag this word
-        console.log("Flagged: " + accessor + " - " + comparator[key]);
+        // console.log("Flagged: " + accessor + " - " + comparator[key]);
         missingTranslations[comparator[key]] = accessor.slice();
 
       }
@@ -68,12 +69,27 @@ function getObjFromLastKey(jsonObj, keyTrail){
 
 // Retrieves object from JSON, given the keyTrail.
 function getObject(jsonObj, keyTrail){
-  var baseObject = {};
-  for(var i = 0; i < jsonObj.length; i++){
-    baseObject = jsonObj[keyTrail[i]];
+  var baseObject = jsonObj;
+  for(var i = 0; i < keyTrail.length; i++){
+    baseObject = baseObject[keyTrail[i]];
   }
   return baseObject;
 }
+
+function inputObject(jsonObj, keyTrail, input){
+  var baseObject = jsonObj;
+  if(keyTrail.length != 0){
+    var key = keyTrail[0];
+    keyTrail.shift();
+    baseObject[key] = inputObject(baseObject[key], keyTrail, input);
+  }
+  else{
+    return input;
+  }
+return baseObject;
+}
+
+
 
 // function getTranslations(missingTranslations){
 //   for (var key in missingTranslations) {
@@ -101,4 +117,37 @@ function addOptions(base, comparator){
      // then append it to the select element
      select.appendChild(opt);
   }
+
+  currMissing = missing;
+}
+
+function submitTranslation(){
+  var select = document.getElementById('toTranlsate');
+
+  var inputTranslation = document.getElementById('translatedText').value;
+
+  var newSpanish = inputObject(spanish, currMissing[select.value], inputTranslation);
+  console.log(newSpanish);
+
+  select.remove(select.selectedIndex);
+  document.getElementById('translatedText').value = '';
+
+
+
+}
+
+function updateJSON(){
+  $.ajax({
+    url: '/updateSpanish',
+    data: spanish,
+    contentType: 'application/json; charset=utf-8',
+    type: 'GET',
+    async: false,
+    error: function(xhr, ajaxOptions, thrownError){
+      console.log(xhr);
+    },
+    success: function(data, textStatus, jqXHR){
+      console.log("done");
+    }
+  });
 }

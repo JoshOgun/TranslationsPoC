@@ -1,5 +1,6 @@
 const express = require('express');
 var path = require("path");
+var fs = require('fs');
 var engJson = require("./en.json");
 var espJson = require("./es.json");
 const app = express();
@@ -18,6 +19,21 @@ app.get("/getEnglish", function(req, res) {
 app.get("/getSpanish", function(req, res) {
   return res.send(espJson);
 });
+
+app.get("/updateSpanish", function(req, res) {
+  console.log(JSON.stringify(req.query));
+  console.log(req.query);
+  const getQuery = JSON.stringify(req.query, null, "\t");
+  console.log(getQuery);
+  fs.writeFile('enNew.json', getQuery, 'utf8', function (err) {
+    if (err) throw err;
+    console.log('File Uploaded!');
+  });
+
+  return res.status(200).end();
+});
+
+
 
 app.listen(8000, () => {
   console.log('Server is running on http://localhost:8000/')
