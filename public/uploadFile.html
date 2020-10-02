@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="public/css/indexStyle.css">
 
+  <script defer src="public/js/analyser.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script defer src="public/js/analyser.js"></script>
 </head>
 <body>
 
@@ -20,17 +21,17 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mhNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">MH Translations</a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="collapse navbar-collapse" id="mhNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="/">Upload</a></li>
-          <li class="active"><a href="#" onclick="updateJSON()">Spanish</a></li>
+          <li class="active"><a href="/">Upload</a></li>
+          <li><a href="/Spanish">Spanish</a></li>
           <li><a href="#">French</a></li>
           <li><a href="#">Italian</a></li>
         </ul>
@@ -42,25 +43,25 @@
     <div class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="form-group">
-          <h4>Please Translate:</h4>
-          <select id="toTranlsate" class="form-control">...</select>
-
+          <h4>Language</h4>
+          <select class="form-control" id="languageSelected">
+            <option> English </option>
+            <option> Spanish </option>
+            <option> German </option>
+            <option> French </option>
+          </select>
+          
         </div>
-        <button type="button" class="btn btn-primary" onclick="addOptions(english, spanish)">Load</button>
-
-      </div>
-
-      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-        <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
       </div>
 
       <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
         <div class="form-group">
-          <h4>Translation:</h4>
-          <input type="text" class="form-control" placeholder="Translation" id="translatedText">
+          <h4>File Name:</h4>
+          <input type="text" class="form-control" placeholder="File Name" id="fileName">
         </div>
 
-        <button type="button" class="btn btn-primary pull-right" id="submitTranslation" onclick="submitTranslation()">Submit</button>
+        <button type="button" class="btn btn-primary pull-right" id="submitFile" onclick="retrieveFile()">Submit</button>
+
       </div>
     </div>
   </div>

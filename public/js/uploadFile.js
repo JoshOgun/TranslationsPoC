@@ -6,6 +6,8 @@ var german = {};
 var french = {};
 var currMissing = {};
 
+
+
 function retrieveFile(){
   var language = document.getElementById('languageSelected').value;
   var params = document.getElementById('fileName').value;
@@ -44,6 +46,40 @@ function retrieveFile(){
     }
   });
 }
+
+// function init(){
+//
+//   var esIdentical = {};
+//
+//   $.ajax({
+//     url: '/getEnglish',
+//     contentType: 'application/json; charset=utf-8',
+//     type: 'GET',
+//     async: false,
+//     error: function(xhr, ajaxOptions, thrownError){
+//       console.log(xhr);
+//     },
+//     success: function(data, textStatus, jqXHR){
+//       english = data;
+//     }
+//   });
+//
+//   $.ajax({
+//     url: '/getSpanish',
+//     contentType: 'application/json; charset=utf-8',
+//     type: 'GET',
+//     async: false,
+//     error: function(xhr, ajaxOptions, thrownError){
+//       console.log(xhr);
+//     },
+//     success: function(data, textStatus, jqXHR){
+//       spanish = data;
+//     }
+//   });
+//
+//   addOptions(english, spanish);
+//
+// }
 
 
 function allKeys(eng, comparator, missingTranslations){
@@ -109,9 +145,6 @@ function isTranslated(){
 }
 
 function addOptions(base, comparator){
-  console.log(base);
-  console.log(comparator);
-  return;
     var missing = {};
     missing = allKeys(base, comparator, missing);
     console.log(missing);

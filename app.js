@@ -9,20 +9,21 @@ const app = express();
 app.use("/public", express.static(path.join(__dirname + "/public")));
 
 app.get("/", function(req, res) {
+  res.status(200).sendFile(path.join(__dirname + "/public/uploadFile.html"));
+});
+
+app.get("/Spanish", function(req, res) {
   res.status(200).sendFile(path.join(__dirname + "/public/index.html"));
 });
 
-app.get("/getEnglish", function(req, res) {
-  return res.send(engJson);
+app.get("/getJSON", function(req, res) {
+  var retrievedFile = require("./"+Object.keys(req.query)[0]);
+  console.log("File Retrieved.");
+  return res.send(retrievedFile);
 });
 
-app.get("/getSpanish", function(req, res) {
-  return res.send(espJson);
-});
 
 app.get("/updateSpanish", function(req, res) {
-  console.log(JSON.stringify(req.query));
-  console.log(req.query);
   const getQuery = JSON.stringify(req.query, null, "\t");
   console.log(getQuery);
   fs.writeFile('enNew.json', getQuery, 'utf8', function (err) {
