@@ -10,9 +10,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script defer src="public/js/analyser.js"></script>
+  <script defer src="public/js/components.js"></script>
 </head>
 <body>
-
+  <div class="sticky">
   <div class="jumbotron text-center mb-0">
     <h1>Translations Manager</h1>
   </div>
@@ -29,21 +30,77 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="/">Upload</a></li>
-          <li class="active"><a href="#" onclick="updateJSON()">Spanish</a></li>
-          <li><a href="#">French</a></li>
-          <li><a href="#">Italian</a></li>
+          <li id="uploadItem" class="active" onclick="changeActive('uploadItem')"><a>Upload</a></li>
+          <li id="spanishItem" onclick="changeActive('spanishItem')"><a>Spanish</a></li>
+          <li id="germanItem" onclick="changeActive('germanItem')"><a>German</a></li>
+
         </ul>
       </div>
     </div>
   </nav>
+</div>
 
   <div class="container">
+    <div id="uploadSection" class="section">
+      <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="form-group">
+            <h4>Language</h4>
+            <select class="form-control" id="languageSelected">
+              <option> English </option>
+              <option> Spanish </option>
+              <option> German </option>
+            </select>
+
+          </div>
+        </div>
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+          <div class="form-group">
+            <h4>File Name:</h4>
+            <input type="text" class="form-control" placeholder="File Name" id="fileName">
+          </div>
+
+          <button type="button" class="btn btn-primary pull-right" id="submitFile" onclick="retrieveFile()">Submit</button>
+
+        </div>
+      </div>
+    </div>
+    <div id="spanishSection" class="section">
+      <div class="row">
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="form-group">
+            <h4>Please Translate:</h4>
+            <select id="toTranlsate" class="form-control">...</select>
+
+          </div>
+          <button type="button" class="btn btn-primary" onclick="addOptions(english, spanish)">Load</button>
+
+        </div>
+
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+          <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
+        </div>
+
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+          <div class="form-group">
+            <h4>Translation:</h4>
+            <input type="text" class="form-control" placeholder="Translation" id="translatedText">
+          </div>
+
+          <button type="button" class="btn btn-primary pull-right" id="submitTranslation" onclick="submitTranslation()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+
+  <div id="germanSection" class="section">
     <div class="row">
+
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="form-group">
           <h4>Please Translate:</h4>
-          <select id="toTranlsate" class="form-control">...</select>
+          <select id="" class="form-control">...</select>
 
         </div>
         <button type="button" class="btn btn-primary" onclick="addOptions(english, spanish)">Load</button>
@@ -57,13 +114,14 @@
       <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
         <div class="form-group">
           <h4>Translation:</h4>
-          <input type="text" class="form-control" placeholder="Translation" id="translatedText">
+          <input type="text" class="form-control" placeholder="Translation" id="">
         </div>
 
-        <button type="button" class="btn btn-primary pull-right" id="submitTranslation" onclick="submitTranslation()">Submit</button>
+        <button type="button" class="btn btn-primary pull-right" id="" onclick="submitTranslation()">Submit</button>
       </div>
     </div>
   </div>
+</div>
 
   <div class="jumbotron text-center mt-30">
     <p>Created and Edited by Joshua Ogunjobi</p>

@@ -2,8 +2,9 @@ var accessor = [];
 var english = {};
 var spanish = {};
 var german = {};
-var french = {};
 var currMissing = {};
+var identicals = {};
+
 
 loadIdenticals();
 
@@ -18,7 +19,7 @@ function retrieveFile(){
     type: 'GET',
     async: false,
     error: function(xhr, ajaxOptions, thrownError){
-      alert("File not found - please try again.")
+      alert("File not found - please try again.");
     },
     success: function(data, textStatus, jqXHR){
       document.getElementById('fileName').value = "";
@@ -57,8 +58,9 @@ function allKeys(eng, comparator, missingTranslations){
       if(getObjFromLastKey(eng, accessor) == getObjFromLastKey(comparator, accessor)){
         // Flag this word
         // console.log("Flagged: " + accessor + " - " + comparator[key]);
-        missingTranslations[comparator[key]] = accessor.slice();
-
+        if(!identicals["Es"].includes(comparator[key])){
+          missingTranslations[comparator[key]] = accessor.slice();
+        }
       }
     }
     accessor.pop();
@@ -109,9 +111,11 @@ function isTranslated(){
 
 }
 
+
+
 function addOptions(base, comparator){
-  console.log(base);
-  console.log(comparator);
+  console.log(english);
+  console.log(spanish);
   return;
     var missing = {};
     missing = allKeys(base, comparator, missing);
@@ -169,7 +173,7 @@ function loadIdenticals(){
       console.log(xhr);
     },
     success: function(data, textStatus, jqXHR){
-
+      data = identicals;
     }
   });
 }

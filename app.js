@@ -1,15 +1,13 @@
 const express = require('express');
 var path = require("path");
 var fs = require('fs');
-var engJson = require("./en.json");
-var espJson = require("./es.json");
 const app = express();
 
 
 app.use("/public", express.static(path.join(__dirname + "/public")));
 
 app.get("/", function(req, res) {
-  res.status(200).sendFile(path.join(__dirname + "/public/uploadFile.html"));
+  res.status(200).sendFile(path.join(__dirname + "/public/index.html"));
 });
 
 app.get("/Spanish", function(req, res) {
