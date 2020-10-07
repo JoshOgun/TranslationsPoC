@@ -22,6 +22,12 @@ app.get("/getJSON", function(req, res) {
   return res.send(retrievedFile);
 });
 
+app.get("/loadIdenticals", function(req, res) {
+  var retrievedFile = require("./identicals.json");
+  console.log("File Retrieved.");
+  return res.send(retrievedFile);
+});
+
 
 app.get("/updateSpanish", function(req, res) {
   const getQuery = JSON.stringify(req.query, null, "\t");

@@ -1,10 +1,11 @@
-
 var accessor = [];
 var english = {};
 var spanish = {};
 var german = {};
 var french = {};
 var currMissing = {};
+
+loadIdenticals();
 
 function retrieveFile(){
   var language = document.getElementById('languageSelected').value;
@@ -140,8 +141,6 @@ function submitTranslation(){
   select.remove(select.selectedIndex);
   document.getElementById('translatedText').value = '';
 
-
-
 }
 
 function updateJSON(){
@@ -155,7 +154,22 @@ function updateJSON(){
       console.log(xhr);
     },
     success: function(data, textStatus, jqXHR){
-      console.log("done");
+      console.log("Done");
+    }
+  });
+}
+
+function loadIdenticals(){
+  $.ajax({
+    url: '/loadIdenticals',
+    contentType: 'application/json; charset=utf-8',
+    type: 'GET',
+    async: false,
+    error: function(xhr, ajaxOptions, thrownError){
+      console.log(xhr);
+    },
+    success: function(data, textStatus, jqXHR){
+
     }
   });
 }
