@@ -22,15 +22,18 @@ app.get("/getJSON", function(req, res) {
 
 app.get("/loadIdenticals", function(req, res) {
   var retrievedFile = require("./identicals.json");
-  console.log("File Retrieved.");
+  console.log("Identicals Retrieved.");
   return res.send(retrievedFile);
 });
 
 
-app.get("/updateSpanish", function(req, res) {
+app.get("/saveJSON", function(req, res) {
+
+  var exportFile = req.query.fileName;
+  delete req.query["fileName"];
   const getQuery = JSON.stringify(req.query, null, "\t");
   console.log(getQuery);
-  fs.writeFile('enNew.json', getQuery, 'utf8', function (err) {
+  fs.writeFile(exportFile, getQuery, 'utf8', function (err) {
     if (err) throw err;
     console.log('File Uploaded!');
   });

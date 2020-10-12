@@ -33,7 +33,7 @@
           <li id="uploadItem" class="active" onclick="changeActive('uploadItem')"><a>Upload</a></li>
           <li id="spanishItem" onclick="changeActive('spanishItem')"><a>Spanish</a></li>
           <li id="germanItem" onclick="changeActive('germanItem')"><a>German</a></li>
-
+          <li id="exportItem" onclick="changeActive('exportItem')"><a>Export</a></li>
         </ul>
       </div>
     </div>
@@ -56,11 +56,11 @@
         </div>
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
           <div class="form-group">
-            <h4>File Name:</h4>
+            <h4>Import File:</h4>
             <input type="text" class="form-control" placeholder="File Name" id="fileName">
           </div>
 
-          <button type="button" class="btn btn-primary pull-right" id="submitFile" onclick="retrieveFile()">Submit</button>
+          <button type="button" class="btn btn-primary pull-right" id="submitFile" onclick="retrieveFile()">Import</button>
 
         </div>
       </div>
@@ -121,7 +121,34 @@
       </div>
     </div>
   </div>
+
+  <div id="exportSection" class="section">
+    <div class="row">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="form-group">
+          <h4>Language</h4>
+          <select class="form-control" id="languageExporting">
+            <option> Spanish </option>
+            <option> German </option>
+          </select>
+
+        </div>
+      </div>
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <div class="form-group">
+          <h4>Export File:</h4>
+          <input type="text" class="form-control" placeholder="File Name" id="exportFile">
+        </div>
+
+        <button type="button" class="btn btn-primary pull-right" id="submitExport" onclick="updateJSON()">Export</button>
+
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<div id="snackbar">File Uploaded Successfully.</div>
 
   <div class="jumbotron text-center mt-30">
     <p>Created and Edited by Joshua Ogunjobi</p>

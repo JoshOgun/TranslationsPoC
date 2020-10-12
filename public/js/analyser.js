@@ -43,6 +43,7 @@ function retrieveFile(){
       // console.log("Spanish: " + JSON.stringify(spanish));
       // console.log("French: " + JSON.stringify(french));
       // console.log("German: " + JSON.stringify(german));
+      showToast();
     }
   });
 }
@@ -57,7 +58,7 @@ function allKeys(eng, comparator, missingTranslations){
       accessor.push(key);
       if(getObjFromLastKey(eng, accessor) == getObjFromLastKey(comparator, accessor)){
         // Flag this word
-        // console.log("Flagged: " + accessor + " - " + comparator[key]);
+        console.log("Flagged: " + accessor + " - " + comparator[key]);
         if(!identicals["Es"].includes(comparator[key])){
           missingTranslations[comparator[key]] = accessor.slice();
         }
@@ -97,29 +98,13 @@ function inputObject(jsonObj, keyTrail, input){
 return baseObject;
 }
 
-
-
-// function getTranslations(missingTranslations){
-//   for (var key in missingTranslations) {
-//
-//   }
-//
-// }
-
-// Function to check if the english translation is the same as the comparator language.
-function isTranslated(){
-
-}
-
-
-
 function addOptions(base, comparator){
-  console.log(english);
-  console.log(spanish);
-  return;
-    var missing = {};
-    missing = allKeys(base, comparator, missing);
-    console.log(missing);
+  console.log(base);
+  console.log(comparator);
+  // return;
+  var missing = {};
+  missing = allKeys(base, comparator, missing);
+  console.log(missing);
 
   for(var element in missing){
      var opt = document.createElement("option");
@@ -148,9 +133,21 @@ function submitTranslation(){
 }
 
 function updateJSON(){
+  var fileName = document.getElementById('exportFile').value;
+  var toSend = null;
+  var languageExporting = document.getElementById('languageExporting').value;
+  if(languageExporting = "Spanish"){
+    toSend = JSON.parse(JSON.stringify(spanish));
+  }
+  else if(languageExporting = "German"){
+    toSend = JSON.parse(JSON.stringify(german));
+  }
+
+  toSend["fileName"] = fileName;
+
   $.ajax({
-    url: '/updateSpanish',
-    data: spanish,
+    url: '/saveJSON',
+    data: toSend,
     contentType: 'application/json; charset=utf-8',
     type: 'GET',
     async: false,
@@ -173,7 +170,7 @@ function loadIdenticals(){
       console.log(xhr);
     },
     success: function(data, textStatus, jqXHR){
-      data = identicals;
+      identicals = data;
     }
   });
 }
