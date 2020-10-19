@@ -26,15 +26,18 @@ function retrieveFile(){
       switch(language) {
         case "English":
           english = data;
+          document.getElementById('englishCheck-01').setAttribute("style", "stroke: green;");
+          document.getElementById('englishCheck-02').setAttribute("style", "stroke: green;");
           break;
         case "Spanish":
           spanish = data;
-          break;
-        case "French":
-          french = data;
+          document.getElementById('spanishCheck-01').setAttribute("style", "stroke: green;");
+          document.getElementById('spanishCheck-02').setAttribute("style", "stroke: green;");
           break;
         case "German":
           german = data;
+          document.getElementById('germanCheck-01').setAttribute("style", "stroke: green;");
+          document.getElementById('germanCheck-02').setAttribute("style", "stroke: green;");
           break;
         default:
           console.log("Something went wrong");
@@ -171,6 +174,8 @@ function loadIdenticals(){
     },
     success: function(data, textStatus, jqXHR){
       identicals = data;
+      document.getElementById('identicalCheck-01').setAttribute("style", "stroke: green;");
+      document.getElementById('identicalCheck-02').setAttribute("style", "stroke: green;");
     }
   });
 }

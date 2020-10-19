@@ -14,31 +14,31 @@
 </head>
 <body>
   <div class="sticky">
-  <div class="jumbotron text-center mb-0">
-    <h1>Translations Manager</h1>
-  </div>
-
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">MH Translations</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li id="uploadItem" class="active" onclick="changeActive('uploadItem')"><a>Upload</a></li>
-          <li id="spanishItem" onclick="changeActive('spanishItem')"><a>Spanish</a></li>
-          <li id="germanItem" onclick="changeActive('germanItem')"><a>German</a></li>
-          <li id="exportItem" onclick="changeActive('exportItem')"><a>Export</a></li>
-        </ul>
-      </div>
+    <div class="jumbotron text-center mb-0">
+      <h1>Translations Manager</h1>
     </div>
-  </nav>
-</div>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">MH Translations</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li id="uploadItem" class="active" onclick="changeActive('uploadItem')"><a>Upload</a></li>
+            <li id="spanishItem" onclick="changeActive('spanishItem')"><a>Spanish</a></li>
+            <li id="germanItem" onclick="changeActive('germanItem')"><a>German</a></li>
+            <li id="exportItem" onclick="changeActive('exportItem')"><a>Export</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 
   <div class="container">
     <div id="uploadSection" class="section">
@@ -64,7 +64,45 @@
 
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
+            <circle id="identicalCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
+            <path id="identicalCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
+          </svg>
+          <p class="alignVertical fileLabel"> Identicals </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
+            <circle id="englishCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
+            <path id="englishCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
+          </svg>
+          <p class="alignVertical fileLabel"> English </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
+            <circle id="spanishCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
+            <path id="spanishCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
+          </svg>
+          <p class="alignVertical fileLabel"> Spanish </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
+            <circle id="germanCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
+            <path id="germanCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
+          </svg>
+          <p class="alignVertical fileLabel"> German </p>
+        </div>
+      </div>
     </div>
+
     <div id="spanishSection" class="section">
       <div class="row">
 
@@ -94,61 +132,61 @@
     </div>
 
 
-  <div id="germanSection" class="section">
-    <div class="row">
+    <div id="germanSection" class="section">
+      <div class="row">
 
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <div class="form-group">
-          <h4>Please Translate:</h4>
-          <select id="" class="form-control">...</select>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="form-group">
+            <h4>Please Translate:</h4>
+            <select id="" class="form-control">...</select>
+
+          </div>
+          <button type="button" class="btn btn-primary" onclick="addOptions(english, spanish)">Load</button>
 
         </div>
-        <button type="button" class="btn btn-primary" onclick="addOptions(english, spanish)">Load</button>
 
-      </div>
-
-      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-        <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
-      </div>
-
-      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-        <div class="form-group">
-          <h4>Translation:</h4>
-          <input type="text" class="form-control" placeholder="Translation" id="">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+          <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
         </div>
 
-        <button type="button" class="btn btn-primary pull-right" id="" onclick="submitTranslation()">Submit</button>
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+          <div class="form-group">
+            <h4>Translation:</h4>
+            <input type="text" class="form-control" placeholder="Translation" id="">
+          </div>
+
+          <button type="button" class="btn btn-primary pull-right" id="" onclick="submitTranslation()">Submit</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="exportSection" class="section">
-    <div class="row">
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <div class="form-group">
-          <h4>Language</h4>
-          <select class="form-control" id="languageExporting">
-            <option> Spanish </option>
-            <option> German </option>
-          </select>
+    <div id="exportSection" class="section">
+      <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="form-group">
+            <h4>Language</h4>
+            <select class="form-control" id="languageExporting">
+              <option> Spanish </option>
+              <option> German </option>
+            </select>
+
+          </div>
+        </div>
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+          <div class="form-group">
+            <h4>Export File:</h4>
+            <input type="text" class="form-control" placeholder="File Name" id="exportFile">
+          </div>
+
+          <button type="button" class="btn btn-primary pull-right" id="submitExport" onclick="updateJSON()">Export</button>
 
         </div>
-      </div>
-      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-        <div class="form-group">
-          <h4>Export File:</h4>
-          <input type="text" class="form-control" placeholder="File Name" id="exportFile">
-        </div>
-
-        <button type="button" class="btn btn-primary pull-right" id="submitExport" onclick="updateJSON()">Export</button>
-
       </div>
     </div>
+
   </div>
 
-</div>
-
-<div id="snackbar">File Uploaded Successfully.</div>
+  <div id="snackbar">File Uploaded Successfully.</div>
 
   <div class="jumbotron text-center mt-30">
     <p>Created and Edited by Joshua Ogunjobi</p>

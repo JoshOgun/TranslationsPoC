@@ -31,6 +31,23 @@
   margin-top: 290px;
 }
 
+.cls-1{
+  fill: #fff;
+  stroke: #ccc;
+  stroke-miterlimit:10;
+  stroke-width:2px;
+}
+
+.alignVertical{
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.label{
+  padding-left: 10px;
+  font-size: 17px;
+}
+
  /* TOAST */
 
 #snackbar {
