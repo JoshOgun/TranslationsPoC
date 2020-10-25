@@ -1,4 +1,5 @@
 document.getElementById('uploadSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
+showConfirmation();
 
 function changeActive(toItem) {
   var wasActive = document.getElementById("uploadItem");
@@ -8,6 +9,9 @@ function changeActive(toItem) {
   wasActive.classList.remove("active");
 
   wasActive = document.getElementById("germanItem");
+  wasActive.classList.remove("active");
+
+  wasActive = document.getElementById("frenchItem");
   wasActive.classList.remove("active");
 
   wasActive = document.getElementById("exportItem");
@@ -29,17 +33,33 @@ function scrollTo(section){
   else if(section == "germanItem"){
     document.getElementById('germanSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
+  else if(section == "frenchItem"){
+    document.getElementById('frenchSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }
   else if(section == "exportItem"){
     document.getElementById('exportSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
 }
 
-function showToast() {
+function showToast(message) {
   var toast = document.getElementById("snackbar");
+  toast.innerHTML = message;
 
   // Add the "show" class to DIV
   toast.className = "show";
 
   // After 3 seconds, remove the show class from DIV
   setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+}
+
+function showConfirmation(){
+  // document.getElementById('myModal').collapse('toggle')//see here usage
+  $("#myModal").collapse('toggle');
+};
+
+function removeOptions(selectElement) {
+   var count = selectElement.options.length - 1;
+   for(var i = count; i >= 0; i--) {
+      selectElement.remove(i);
+   }
 }

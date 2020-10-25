@@ -33,6 +33,7 @@
             <li id="uploadItem" class="active" onclick="changeActive('uploadItem')"><a>Upload</a></li>
             <li id="spanishItem" onclick="changeActive('spanishItem')"><a>Spanish</a></li>
             <li id="germanItem" onclick="changeActive('germanItem')"><a>German</a></li>
+            <li id="frenchItem" onclick="changeActive('frenchItem')"><a>French</a></li>
             <li id="exportItem" onclick="changeActive('exportItem')"><a>Export</a></li>
           </ul>
         </div>
@@ -47,9 +48,11 @@
           <div class="form-group">
             <h4>Language</h4>
             <select class="form-control" id="languageSelected">
+              <option> Identicals </option>
               <option> English </option>
               <option> Spanish </option>
               <option> German </option>
+              <option> French </option>
             </select>
 
           </div>
@@ -101,7 +104,37 @@
           <p class="alignVertical fileLabel"> German </p>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
+            <circle id="frenchCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
+            <path id="frenchCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
+          </svg>
+          <p class="alignVertical fileLabel"> French </p>
+        </div>
+      </div>
     </div>
+
+
+    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Small Modal</button>
+
+    <div class="modal fade" id="myModal" role="dialog">
+     <div class="modal-dialog modal-sm">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h4 class="modal-title">Modal Header</h4>
+         </div>
+         <div class="modal-body">
+           <p>This is a small modal.</p>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div> -->
 
     <div id="spanishSection" class="section">
       <div class="row">
@@ -109,10 +142,12 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <div class="form-group">
             <h4>Please Translate:</h4>
-            <select id="toTranlsate" class="form-control">...</select>
+            <select id="toTranslateSpa" class="form-control">...</select>
 
           </div>
-          <button type="button" class="btn btn-primary" onclick="addOptions(english, spanish)">Load</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, spanish, toTranslateSpa, 'Es')">Load</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('Spanish', toTranslateSpa)">Add to Ignore</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="">Export Missing</button>
 
         </div>
 
@@ -123,10 +158,10 @@
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
           <div class="form-group">
             <h4>Translation:</h4>
-            <input type="text" class="form-control" placeholder="Translation" id="translatedText">
+            <input type="text" class="form-control" placeholder="Translation" id="translatedTextSpa">
           </div>
 
-          <button type="button" class="btn btn-primary pull-right" id="submitTranslation" onclick="submitTranslation()">Submit</button>
+          <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(spanish, toTranslateSpa, translatedTextSpa)">Submit</button>
         </div>
       </div>
     </div>
@@ -138,10 +173,12 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <div class="form-group">
             <h4>Please Translate:</h4>
-            <select id="" class="form-control">...</select>
+            <select id="toTranslateGer" class="form-control">...</select>
 
           </div>
-          <button type="button" class="btn btn-primary" onclick="addOptions(english, spanish)">Load</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, german, toTranslateGer, 'De')">Load</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('German', toTranslateGer)">Add to Ignore</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="">Export Missing</button>
 
         </div>
 
@@ -152,10 +189,40 @@
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
           <div class="form-group">
             <h4>Translation:</h4>
-            <input type="text" class="form-control" placeholder="Translation" id="">
+            <input type="text" class="form-control" placeholder="Translation" id="translatedTextGer">
           </div>
 
-          <button type="button" class="btn btn-primary pull-right" id="" onclick="submitTranslation()">Submit</button>
+          <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(german, toTranslateGer, translatedTextGer)">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="frenchSection" class="section">
+      <div class="row">
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="form-group">
+            <h4>Please Translate:</h4>
+            <select id="toTranslateFr" class="form-control">...</select>
+
+          </div>
+          <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, french, toTranslateFr, 'Fr')">Load</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('French', toTranslateFr)">Add to Ignore</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="">Export Missing</button>
+
+        </div>
+
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+          <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
+        </div>
+
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+          <div class="form-group">
+            <h4>Translation:</h4>
+            <input type="text" class="form-control" placeholder="Translation" id="translatedTextFr">
+          </div>
+
+          <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(french, toTranslateFr, translatedTextFr)">Submit</button>
         </div>
       </div>
     </div>
@@ -166,8 +233,10 @@
           <div class="form-group">
             <h4>Language</h4>
             <select class="form-control" id="languageExporting">
+              <option> Identicals </option>
               <option> Spanish </option>
               <option> German </option>
+              <option> French </option>
             </select>
 
           </div>
@@ -186,7 +255,7 @@
 
   </div>
 
-  <div id="snackbar">File Uploaded Successfully.</div>
+  <div id="snackbar">Placeholder</div>
 
   <div class="jumbotron text-center mt-30">
     <p>Created and Edited by Joshua Ogunjobi</p>

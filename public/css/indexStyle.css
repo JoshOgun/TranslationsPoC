@@ -48,6 +48,14 @@
   font-size: 17px;
 }
 
+.btn-list{
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  margin-bottom: 15px;
+
+}
+
  /* TOAST */
 
 #snackbar {
