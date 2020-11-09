@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">MH Translations</a>
+          <a class="navbar-brand">MH Translations</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
@@ -43,8 +43,8 @@
 
   <div class="container">
     <div id="uploadSection" class="section">
-      <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="row row-eq-height">
+        <div class="col-lg-4">
           <div class="form-group">
             <h4>Language</h4>
             <select class="form-control" id="languageSelected">
@@ -57,19 +57,17 @@
 
           </div>
         </div>
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <div class="col-lg-4 col-lg-offset-1">
           <div class="form-group">
             <h4>Import File:</h4>
-            <input type="text" class="form-control" placeholder="File Name" id="fileName">
+            <input type="file" id="fileInstance" accept=".json">
+            <button type="button" class="btn btn-primary pull-right" id="submitFile" onclick="retrieveFile()">Import</button>
           </div>
-
-          <button type="button" class="btn btn-primary pull-right" id="submitFile" onclick="retrieveFile()">Import</button>
-
         </div>
       </div>
 
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
             <circle id="identicalCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
             <path id="identicalCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
@@ -78,7 +76,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
             <circle id="englishCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
             <path id="englishCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
@@ -115,27 +113,6 @@
       </div>
     </div>
 
-
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Small Modal</button>
-
-    <div class="modal fade" id="myModal" role="dialog">
-     <div class="modal-dialog modal-sm">
-       <div class="modal-content">
-         <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal">&times;</button>
-           <h4 class="modal-title">Modal Header</h4>
-         </div>
-         <div class="modal-body">
-           <p>This is a small modal.</p>
-         </div>
-         <div class="modal-footer">
-           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-         </div>
-       </div>
-     </div>
-   </div>
-  </div> -->
-
     <div id="spanishSection" class="section">
       <div class="row">
 
@@ -146,7 +123,8 @@
 
           </div>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, spanish, toTranslateSpa, 'Es')">Load</button>
-          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('Spanish', toTranslateSpa)">Add to Ignore</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('Spanish', toTranslateSpa)">Ignore for Spanish</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateSpa)">Ignore Always</button>
           <button type="button" class="btn btn-primary btn-list" onclick="">Export Missing</button>
 
         </div>
@@ -177,7 +155,8 @@
 
           </div>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, german, toTranslateGer, 'De')">Load</button>
-          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('German', toTranslateGer)">Add to Ignore</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('German', toTranslateGer)">Ignore for German</button>
+<button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateGer)">Ignore Always</button>
           <button type="button" class="btn btn-primary btn-list" onclick="">Export Missing</button>
 
         </div>
@@ -207,7 +186,8 @@
 
           </div>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, french, toTranslateFr, 'Fr')">Load</button>
-          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('French', toTranslateFr)">Add to Ignore</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('French', toTranslateFr)">Ignore for French</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateFr)">Ignore Always</button>
           <button type="button" class="btn btn-primary btn-list" onclick="">Export Missing</button>
 
         </div>
@@ -247,7 +227,7 @@
             <input type="text" class="form-control" placeholder="File Name" id="exportFile">
           </div>
 
-          <button type="button" class="btn btn-primary pull-right" id="submitExport" onclick="updateJSON()">Export</button>
+          <button type="button" class="btn btn-primary pull-right" id="submitExport" onclick="saveJSON()">Export</button>
 
         </div>
       </div>

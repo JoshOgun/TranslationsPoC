@@ -1,3 +1,10 @@
+body{
+  overflow: hidden;
+}
+select{
+  text-overflow: ellipsis;
+}
+
 .mt-48{
   margin-top: 70%;
   margin-left: 40%;
@@ -53,7 +60,11 @@
   width: 100%;
   max-width: 170px;
   margin-bottom: 15px;
+}
 
+input[type=file]{
+  display: inline-block;
+  margin-top: 5px;
 }
 
  /* TOAST */

@@ -16,12 +16,6 @@ app.get("/getJSON", function(req, res) {
   return res.send(retrievedFile);
 });
 
-// app.get("/loadIdenticals", function(req, res) {
-//   var retrievedFile = require("./identicals.json");
-//   console.log("Identicals Retrieved.");
-//   return res.send(retrievedFile);
-// });
-
 
 app.get("/saveJSON", function(req, res) {
 

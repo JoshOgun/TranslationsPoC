@@ -8,56 +8,50 @@ var identicals = {};
 
 function retrieveFile(){
   var language = document.getElementById('languageSelected').value;
-  var params = document.getElementById('fileName').value;
+  var fileObj = document.getElementById('fileInstance').files[0];
 
-  $.ajax({
-    url: '/getJSON',
-    data: params,
-    contentType: 'application/json; charset=utf-8',
-    type: 'GET',
-    async: false,
-    error: function(xhr, ajaxOptions, thrownError){
-      alert("File not found - please try again.");
-    },
-    success: function(data, textStatus, jqXHR){
-      document.getElementById('fileName').value = "";
+  if (fileObj) {
+    var reader = new FileReader();
+    reader.readAsText(fileObj, "UTF-8");
+    reader.onload = function (data) {
+      var langJSON = JSON.parse(data.target.result);
       switch(language) {
         case "Identicals":
-          identicals = data;
-          document.getElementById('identicalCheck-01').setAttribute("style", "stroke: green;");
-          document.getElementById('identicalCheck-02').setAttribute("style", "stroke: green;");
-          break;
+        identicals = langJSON;
+        document.getElementById('identicalCheck-01').setAttribute("style", "stroke: green;");
+        document.getElementById('identicalCheck-02').setAttribute("style", "stroke: green;");
+        break;
         case "English":
-          english = data;
-          document.getElementById('englishCheck-01').setAttribute("style", "stroke: green;");
-          document.getElementById('englishCheck-02').setAttribute("style", "stroke: green;");
-          break;
+        english = langJSON;
+        document.getElementById('englishCheck-01').setAttribute("style", "stroke: green;");
+        document.getElementById('englishCheck-02').setAttribute("style", "stroke: green;");
+        // console.log(english);
+        break;
         case "Spanish":
-          spanish = data;
-          document.getElementById('spanishCheck-01').setAttribute("style", "stroke: green;");
-          document.getElementById('spanishCheck-02').setAttribute("style", "stroke: green;");
-          break;
+        spanish = langJSON;
+        document.getElementById('spanishCheck-01').setAttribute("style", "stroke: green;");
+        document.getElementById('spanishCheck-02').setAttribute("style", "stroke: green;");
+        break;
         case "German":
-          german = data;
-          document.getElementById('germanCheck-01').setAttribute("style", "stroke: green;");
-          document.getElementById('germanCheck-02').setAttribute("style", "stroke: green;");
-          break;
+        german = langJSON;
+        document.getElementById('germanCheck-01').setAttribute("style", "stroke: green;");
+        document.getElementById('germanCheck-02').setAttribute("style", "stroke: green;");
+        break;
         case "French":
-          french = data;
-          document.getElementById('frenchCheck-01').setAttribute("style", "stroke: green;");
-          document.getElementById('frenchCheck-02').setAttribute("style", "stroke: green;");
-          break;
+        french = langJSON;
+        document.getElementById('frenchCheck-01').setAttribute("style", "stroke: green;");
+        document.getElementById('frenchCheck-02').setAttribute("style", "stroke: green;");
+        break;
         default:
-          console.log("Something went wrong");
+        console.log("Something went wrong");
       }
-      // console.log("English: " + JSON.stringify(english));
-      // console.log("Spanish: " + JSON.stringify(spanish));
-      // console.log("French: " + JSON.stringify(french));
-      // console.log("German: " + JSON.stringify(german));
       showToast("File Uploaded Successfully.");
+      document.getElementById("languageSelected").selectedIndex = document.getElementById("languageSelected").selectedIndex+1;
     }
-  });
-  document.getElementById("languageSelected").selectedIndex = document.getElementById("languageSelected").selectedIndex+1;
+    reader.onerror = function (data) {
+      alert("Error Reading File.");
+    }
+  }
 }
 
 
@@ -71,7 +65,7 @@ function allKeys(eng, comparator, missingTranslations, lang){
       if(getObjFromLastKey(eng, accessor) == getObjFromLastKey(comparator, accessor)){
         // Flag this word
         console.log("Flagged: " + accessor + " - " + comparator[key]);
-        if(!identicals.hasOwnProperty(lang) || !identicals[lang].includes(comparator[key])){
+        if(!identicals["All"].includes(comparator[key]) && ( !identicals.hasOwnProperty(lang) || !identicals[lang].includes(comparator[key]) )){
           missingTranslations[comparator[key]] = accessor.slice();
         }
       }
@@ -85,7 +79,13 @@ function allKeys(eng, comparator, missingTranslations, lang){
 
 // Retrieves an object while algorithm is in recursion.
 function getObjFromLastKey(jsonObj, keyTrail){
-  return jsonObj[keyTrail[keyTrail.length-1]];
+  try{
+    return jsonObj[keyTrail[keyTrail.length-1]];
+  }
+  catch{
+    // reference not found in the counterpart
+    return null;
+  }
 }
 
 // Retrieves object from JSON, given the keyTrail.
@@ -107,7 +107,7 @@ function inputObject(jsonObj, keyTrail, input){
   else{
     return input;
   }
-return baseObject;
+  return baseObject;
 }
 
 function addOptions(base, comparator, selectComponent, lang){
@@ -123,12 +123,13 @@ function addOptions(base, comparator, selectComponent, lang){
   removeOptions(selectComponent);
 
   for(var element in missing){
-     var opt = document.createElement("option");
-     opt.value = element;
-     opt.innerHTML = element;
+    var opt = document.createElement("option");
+    // Value ensures exact duplicates are removed.
+    opt.value = element;
+    opt.innerHTML = element;
 
-     // then append it to the select element
-     selectComponent.appendChild(opt);
+    // then append it to the select element
+    selectComponent.appendChild(opt);
   }
 
   currMissing = missing;
@@ -150,16 +151,19 @@ function updateIdenticals(lang, selectComponent){
 
   switch(lang) {
     case "Spanish":
-      appendToIgnores("Es", selectComponent.value);
-      break;
+    appendToIgnores("Es", selectComponent.value);
+    break;
     case "German":
-      appendToIgnores("De", selectComponent.value);
-      break;
+    appendToIgnores("De", selectComponent.value);
+    break;
     case "French":
-      appendToIgnores("Fr", selectComponent.value);
-      break;
+    appendToIgnores("Fr", selectComponent.value);
+    break;
+    case "All":
+    appendToIgnores("All", selectComponent.value);
+    break;
     default:
-      console.log("Something went wrong.");
+    console.log("Something went wrong.");
   }
   console.log(identicals);
   selectComponent.options[selectComponent.selectedIndex].remove();
@@ -175,7 +179,7 @@ function appendToIgnores(key, element){
   return identicals;
 }
 
-function updateJSON(){
+function saveJSON(){
   var fileName = document.getElementById('exportFile').value;
   var toSend = null;
   var languageExporting = document.getElementById('languageExporting').value;
