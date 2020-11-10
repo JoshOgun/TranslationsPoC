@@ -67,6 +67,11 @@ input[type=file]{
   margin-top: 5px;
 }
 
+textarea.form-control{
+  margin-bottom: 12px;
+  display: none;
+}
+
  /* TOAST */
 
 #snackbar {

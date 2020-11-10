@@ -119,9 +119,10 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <div class="form-group">
             <h4>Please Translate:</h4>
-            <select id="toTranslateSpa" class="form-control">...</select>
+            <select id="toTranslateSpa" class="form-control" onchange="checkSelected(toTranslateSpa, 'fullPreviewSpa')">...</select>
 
           </div>
+          <textarea id="fullPreviewSpa" class="form-control"> </textarea>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, spanish, toTranslateSpa, 'Es')">Load</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('Spanish', toTranslateSpa)">Ignore for Spanish</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateSpa)">Ignore Always</button>
@@ -151,12 +152,12 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <div class="form-group">
             <h4>Please Translate:</h4>
-            <select id="toTranslateGer" class="form-control">...</select>
-
+            <select id="toTranslateGer" class="form-control" onchange="checkSelected(toTranslateGer, 'fullPreviewGer')">...</select>
           </div>
+          <textarea id="fullPreviewGer" class="form-control"> </textarea>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, german, toTranslateGer, 'De')">Load</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('German', toTranslateGer)">Ignore for German</button>
-<button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateGer)">Ignore Always</button>
+          <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateGer)">Ignore Always</button>
           <button type="button" class="btn btn-primary btn-list" onclick="">Export Missing</button>
 
         </div>
@@ -182,9 +183,10 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <div class="form-group">
             <h4>Please Translate:</h4>
-            <select id="toTranslateFr" class="form-control">...</select>
+            <select id="toTranslateFr" class="form-control" onchange="checkSelected(toTranslateFr, 'fullPreviewFr')">...</select>
 
           </div>
+          <textarea id="fullPreviewFr" class="form-control"> </textarea>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, french, toTranslateFr, 'Fr')">Load</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('French', toTranslateFr)">Ignore for French</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateFr)">Ignore Always</button>

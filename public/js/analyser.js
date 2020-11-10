@@ -46,6 +46,7 @@ function retrieveFile(){
         console.log("Something went wrong");
       }
       showToast("File Uploaded Successfully.");
+      document.getElementById("fileInstance").value = "";
       document.getElementById("languageSelected").selectedIndex = document.getElementById("languageSelected").selectedIndex+1;
     }
     reader.onerror = function (data) {
@@ -126,8 +127,14 @@ function addOptions(base, comparator, selectComponent, lang){
     var opt = document.createElement("option");
     // Value ensures exact duplicates are removed.
     opt.value = element;
-    opt.innerHTML = element;
 
+    // 42 characters
+    if(element.length <= 42){
+      opt.innerHTML = element;
+    }
+    else{
+      opt.innerHTML = element.substring(0, 42) + " ...";
+    }
     // then append it to the select element
     selectComponent.appendChild(opt);
   }
@@ -179,6 +186,18 @@ function appendToIgnores(key, element){
   return identicals;
 }
 
+function checkSelected(selectElement, tArea){
+
+  if(selectElement.value.length > 42){
+    document.getElementById(tArea).style.display = "block";
+    document.getElementById(tArea).value = selectElement.value;
+  }
+  else {
+    document.getElementById(tArea).style.display = "none";
+  }
+}
+
+
 function saveJSON(){
   var fileName = document.getElementById('exportFile').value;
   var toSend = null;
@@ -208,7 +227,7 @@ function saveJSON(){
       console.log(xhr);
     },
     success: function(data, textStatus, jqXHR){
-      console.log("Done");
+
       showToast("File Exported Successfully.");
     }
   });
