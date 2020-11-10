@@ -1,0 +1,111 @@
+body{
+  overflow: hidden;
+}
+select{
+  text-overflow: ellipsis;
+}
+
+.mt-48{
+  margin-top: 70%;
+  margin-left: 40%;
+}
+
+.mb-0{
+  margin-bottom: 0px;
+}
+
+.mt-30{
+  margin: 30px auto 0px auto;
+}
+
+.section{
+  height: 70vh;
+  padding-top: 7vh;
+
+  scroll-snap-type: y mandatory;
+  border-bottom: 1px grey;
+}
+
+.sticky{
+  position: fixed;
+  top: 0px;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+.container{
+  margin-top: 290px;
+}
+
+.cls-1{
+  fill: #fff;
+  stroke: #ccc;
+  stroke-miterlimit:10;
+  stroke-width:2px;
+}
+
+.alignVertical{
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.label{
+  padding-left: 10px;
+  font-size: 17px;
+}
+
+.btn-list{
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  margin-bottom: 15px;
+}
+
+input[type=file]{
+  display: inline-block;
+  margin-top: 5px;
+}
+
+ /* TOAST */
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #3CB371;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+ #snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

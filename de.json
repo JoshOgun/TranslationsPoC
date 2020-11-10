@@ -1,0 +1,2057 @@
+{
+  "app-store": {
+    "Action": "Aktion",
+    "Application": "Anwendung",
+    "Description": "Beschreibung",
+    "InstallationStatus": "Installationsstatus",
+    "LicenseStatus": "Lizenzstatus",
+    "Name": "Anwendungsname",
+    "Platform": "Plattform",
+    "SoftwareName": "Softwarename",
+    "Status": "Status"
+  },
+  "ws-store": {
+    "Action": "Aktion",
+    "Application": "Anwendung",
+    "Description": "Beschreibung",
+    "InstallationStatus": "Installationsstatus",
+    "LicenseStatus": "Lizenzstatus",
+    "Name": "Anwendungsname",
+    "Platform": "Plattform",
+    "SoftwareName": "Softwarename",
+    "Status": "Status"
+  },
+  "assist": {
+    "articleWarning": "Leider sind noch nicht alle Assist-Artikel in My Hub verfügbar. Wenn Sie einen Artikel vermissen, suchen ",
+    "articleWarningLink": "Sie diesen",
+    "articleWarningStop": "bitte direkt in.",
+    "foundDocument": "Gefunden ({{value}})",
+    "modifiedDate": "Geändert: {{value}}",
+    "requestSupport": "Hilfe anfordern",
+    "Title": "Titel",
+    "Description": "Beschreibung",
+    "topics": "Thema",
+    "view": "Anzeigen",
+    "viewAll": "Alle anzeigen",
+    "viewMore": "{{value}} mehr anzeigen",
+    "searchPlaceholder": "Artikel oder Thema suchen",
+    "search": "Suche",
+    "searchFilter": "Filter Topics",
+    "filterPlaceholder": "Type to filter your results",
+    "email": "Share this solution via e-mail",
+    "copy": "Copy this solution link",
+    "addFeedback": "Hinzufügen",
+    "closeFeedback": "Schließen Sie Feedback",
+    "sendFeedback": "Feedback Senden",
+    "feedbackTitle": "War dieser Artikel hilfreich?",
+    "feedbackDescription": "Ihr Feedback hilft uns zu verstehen, wie hilfreich dieser Artikel für Sie war und wie wir ihn verbessern können.",
+    "feedbackLabelText": " bitte geben Sie Ihren Feedback unten ein.",
+    "feedbackWarningText": "Bitte geben Sie in diesem Feld kundenidentifizierenden Daten (CID) ein",
+    "feedbackErrorText": "Feedback erforderlich (mindestens 20 Zeichen)",
+    "feedbackHintText": "Ihr Feedback sollte mindestens 20 Zeichen enthalten",
+    "feedbackLoadingText": "Senden Sie Ihr Feedback. Bitte warten...",
+    "feedbackVoteMessage": "Ihre Stimme wurde eingereicht",
+    "feedbackVoteYes": "Ja",
+    "feedbackVoteNo": "Nein"
+  },
+  "authorize": {
+    "failed": "MyHub ist leider vorübergehend nicht verfügbar. Versuchen Sie es später erneut."
+  },
+  "blackberry": {
+    "accessKey": "Aktivierungsschlüssel",
+    "activationDate": "Aktivierungsdatum",
+    "bbsCheckInfo": "Ihre Anfrage wird mit Ihren BBS-Berechtigungen abgeglichen. Dies kann ein paar Minuten dauern.",
+    "carrier": "Träger",
+    "createdDate": "Erstellungsdatum",
+    "deviceName": "Gerätename",
+    "devices": "Geräte",
+    "hardware": "Hardware",
+    "installedapp": "Installierte App",
+    "installedApps": "Installierte Apps",
+    "instruction": "Anleitungen",
+    "lastActivity": "Zuletzt verbunden",
+    "lastConnectedDate": "Zuletzt verbunden",
+    "model": "Modell",
+    "myValidAccessKeys": "Mein gültiger Aktivierungsschlüssel",
+    "noAccessKeyFound": "Keinen gültigenAktivierungsschlüssel gefunden",
+    "noAppsInstalled": "Keine Apps installiert",
+    "noDeviceFound": "Sie haben derzeit keine aktiven Geräte.",
+    "osVersion": "Version des Betriebssystems",
+    "platform": "Plattform",
+    "title": "BlackBerry",
+    "validUntil": "Gültig bis",
+    "version": "Version",
+    "firstWords": "UBS Mobile offers",
+    "welcomeMsgFirst": "Ihre Hilfe um überall und jederzeit arbeiten zu können",
+    "welcomeMsgSecond": "Es gibt eine Reihe von mobilen Lösungen, die Ihnen mehr Flexibilität in Ihrer Arbeitsweise ermöglichen. Mit den Mobile Self-Service Anwendungen auf My Hub können Sie ganz einfach Ihre registrierten Bring Your Own Device (BYOD) Geräte verwalten, zentrale UBS Business-Anwendungen installieren und Schritt-für-Schritt-Anleitungen durchgehen, die Ihnen helfen Ihre Erfahrungen mit dem Thema ‘Mobiles Arbeiten‘ zu verbessern.",
+    "details": "Einzelheiten",
+    "refresh": "Aktualisieren",
+    "next": "Weiter",
+    "createnewKeyHeader": "Neuen Aktivierungsschlüssel erstellen",
+    "createNewkeyInfo": "Um ein persönliches Mobilgerät hinzuzufügen, benötigen Sie einen neuen Aktivierungsschlüssel.",
+    "newAccessKey": "Neuer Aktivierungsschlüssel",
+    "getAccessKey": "Generate New Access Key",
+    "whatToConsider": "Was Sie beachten müssen:",
+    "removeDevice": "Gerät entfernen",
+    "removeApp": "App entfernen",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "removeDeviceConfirmText": "Achtung: mit 'Bestätigen' entfernen Sie dieses Gerät von BYOD und löschen alle UBS Daten von diesem Gerät. Möchten Sie das Gerät erneut hinzufügen, benötigen Sie einen neuen Aktivierungsschlüssel",
+    "removeAppConfirmText": "Achtung: wenn Sie auf 'Bestätigen' klicken, wird diese App von Ihrem Gerät entfernt.",
+    "manageDeviceInfo": "Folgende Geräte sind derzeit für den BYOD Service registriert. Möchten Sie ein Gerät oder eine von UBS installierte App anzeigen, ändern oder entfernen, klicken Sie bitte auf “Einzelheiten”. Um ein neues Gerät hinzuzufügen, klicke Sie auf “Aktivierungsschlüssel verwalten."
+  },
+  "common": {
+    "save": "Speichern",
+    "search": "Suche",
+    "searchMany": "Search by typing a GPN, T Number, first name, last name or Email",
+    "getStarted": "Mehr zu...",
+    "view": "Anzeigen",
+    "loading": "Loading...",
+    "nothingToDisplay": "Es gibt nichts anzuzeigen.",
+    "zoomIn": "Hineinzoomen",
+    "noMatches": "Leider wurden keine Ergebnisse gefunden",
+    "filter": "Filter",
+    "close": "Schliessen",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "add": "Hinzufügen",
+    "remove": "Entfernen",
+    "new": "Neu"
+  },
+  "error": {
+    "standardError": "Leider ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+  },
+  "home": {
+    "assist": "Assist",
+    "assistDescription": "Im Assist-Wissensportal finden Sie Anleitungen für alle Anwendungen und Systeme bei UBS.",
+    "assistList": "Trendartikel",
+    "feedback": "Feedback",
+    "mobile": "Mobile",
+    "mobileDescription": "Alle Details zur Nutzung von My Hub auf Ihrem Smartphone oder Tablet finden Sie hier.",
+    "mycomputer": "Mein Computer",
+    "mycomputerDescription": "Auf ‚Mein Computer‘ finden Sie alle Information, um Ihren Desktop zu verwalten.",
+    "myStatus": "Mein status",
+    "mystatusDescription": "Hier finden Sie Ihre IT-Support Tickets, Anfragen und Bewilligungen sowie eine Suchfunktion für SNOW, BBS, ARP und MAC",
+    "emptyStatusMessage": "Sie haben keine aktuellen Statuspunkte",
+    "noData": "Keine Daten verfügbar",
+    "password": "Passwörter",
+    "passwordDescription": "Hier können Sie Ihre Passwörter verwalten und über eine A-Z Suchfunktion schnell weitere Informationen und Anleitungen finden.",
+    "peopledirectory": "Mitarbeiter-verzeichnis",
+    "peopledirectoryForButton": "Mitarbeiterverzeichnis",
+    "peopledirectoryDescription": "Über die Suchfunktion können Sie die  jeweilige Person direkt kontaktieren (via Skype und Email).",
+    "serviceStatus": "Service status",
+    "viewAll": "Alle ansehen",
+    "view": "Anzeigen",
+    "action": "Aktion",
+    "trending": "Trendartikel",
+    "disclaimerWarningText": "Service Status - planmäßige Wartung.",
+    "disclaimerMessageText": "Bitte beachten Sie, dass Ihr Service Status auf My Hub betroffen sein kann.",
+    "disclaimerLinkText": "Weitere Informationen hier."
+  },
+  "guides": {
+    "viewInstructionPdf": "View Instructions PDF",
+    "viewAssistArticle": "View My Hub article",
+    "needHelp": "Need Help?"
+  },
+  "app-layout": {
+    "alertBody": "CORONAVIRUS - MACHEN SIE SICH BEREIT FÜR DIE FERNARBEIT – Erfahren Sie mehr –",
+    "alertCta": "Finde mehr heraus"
+  },
+  "menu-bar": {
+    "blog": "Blog",
+    "assist": "Assist",
+    "healthscore": "Status",
+    "home": "Startseite",
+    "mobile-multimedia": "Mobile",
+    "my-computer": "Mein computer",
+    "my-status": "Mein status",
+    "password": "Passwörter",
+    "people-directory": "Mitarbeiterverzeichnis",
+    "video": "How-to",
+    "ppm": "PPM"
+  },
+  "my-status": {
+    "shortDescription": "Kurzbeschreibung",
+    "name": "Anwendungsname",
+    "version": "Version",
+    "vendor": "Anbieter",
+    "path": "Dateipfad",
+    "message": "Nachricht",
+    "executable": "Ausführbar",
+    "remediationApproach": "Korrekturansatz",
+    "remediationMessage": "Korrekturnachricht",
+    "remediationDueDate": "Fälligkeitsdatum der Korrektur",
+    "unauthorizedSoftwareProduct": "Nicht zugelassenes Softwareprodukt",
+    "remediation": "Sanierung",
+    "dueDate": "Fälligkeitsdatum",
+    "help": "Hilfe",
+    "confirmationRequired": "Rückmeldung erforderlich",
+    "removeTokenConfirmationMessage": "Sie sind im Begriff das Token zu entfernen. Bitte bestätigen Sie Ihre Aktion.",
+    "addComment": "Anmerkung hinzufügen",
+    "justificationMinLengthMessage": "Die Begründung muss mindestens 10 Zeichen enthalten",
+    "systemId": "System ID",
+    "accessRight": "Zugriffsrecht",
+    "accessRightDescription": "Details zum Zugriffsrecht",
+    "additionalInfo": "Zusätzliche Info",
+    "action": "Aktion",
+    "actions": "Aktionen",
+    "addComments": "Füge Anmerkung hinzu",
+    "addAttachment": "Anhang hinzufügen",
+    "affectedUser": "Betroffener Benutzer",
+    "all": "Alle",
+    "allowedActions": "Erlaubte Aktionen",
+    "approvals": "Bewilligungen",
+    "approvalStatus": "Stand der Bewilligung",
+    "approve": "Bewilligen",
+    "approvers": "Bewilliger",
+    "assignedUser": "Zugewiesener Benutzer",
+    "assignmentGroup": "Zuordnungsgruppe",
+    "attachments": "Anhänge",
+    "businessJustification": "Begründung für Bewilligung",
+    "businessJustificationRequired": "Begründung erforderlich",
+    "cancel": "Abbrechen",
+    "cancelRequest": "Abbrechen",
+    "category": "Kategorie",
+    "comment": "Anmerkung",
+    "commentedAt": "Anmerkung bei {{value}}",
+    "comments": "Anmerkungen",
+    "confirmCancellation": "Stornierung bestätigen",
+    "confirmApproval": "Bewilligung bestätigen",
+    "confirmFollowup": "Fortsetzung bestätigen",
+    "confirmRejection": "Abbruch bestätigen",
+    "processRejection": "Prozess Absage",
+    "processApproval": "Prozess Genehmigung",
+    "createdDate": "Erstellt",
+    "created": "Erstellt",
+    "createdAt": "Geschaffen",
+    "dateAttached": "Date Attached",
+    "dateCreated": "Erstellt",
+    "description": "Beschreibung",
+    "details": "Einzelheiten",
+    "download": "Download",
+    "dismiss": "Schliessen",
+    "domain": "Domain",
+    "doNotCancel": "Nicht abbrechen",
+    "followup": "Fortsetzen",
+    "fulfilSla": "Einhaltung SLA",
+    "function": "Funktion",
+    "implementation": "Implementierungszeit",
+    "item": "Artikel",
+    "linkedIncident": "Zugehörige Vorfälle",
+    "messageRequired": "Nachricht erforderlich.",
+    "modified": "Bearbeitet",
+    "noComments": "Keine Kommentare",
+    "notifications": "Mitteilungen",
+    "number": "Nummer",
+    "openBy": "Geöffnet von",
+    "origin": "Ursprung",
+    "preview": "Vorschau",
+    "priority": "Priorität ",
+    "profileDescription": "Profilbeschreibung",
+    "reason": "Grund",
+    "resource": "Resource",
+    "reasonRequired": "Grund erforderlich",
+    "reasonToCancel": "Grund für Abbruch",
+    "reasonToReject": "Grund für Ablehnung",
+    "reference": "Referenz",
+    "reject": "Ablehnen",
+    "requestedBy": "Angefragt von",
+    "requestedFor": "Anfrage für",
+    "requests": "Anfragen",
+    "rights": "Rechte",
+    "status": "Status",
+    "system": "System",
+    "systemName": "System Name",
+    "systemDescription": "System Description",
+    "ticket": "Ticket",
+    "tickets": "Tickets",
+    "title": "Titel",
+    "to": "Bis",
+    "type": "Type",
+    "validFrom": "Gültig von",
+    "validityEnd": "Gültig bis Datum",
+    "validityStart": "Gültig von Datum",
+    "noCid": "Keine CID eingeben",
+    "approvalMinChar": "Bitten geben Sie einen aussagekräftigen Kommentar ein (mindestens 10 Zeichen).",
+    "minChar": "(mindestens 10 Zeichen)",
+    "justification": "Begründung",
+    "lastUpdate": "Zuletzt aktualisiert am",
+    "lastRecords": "Zeigt alle Datensätze der letzten 90 Tage an",
+    "allstatusTag": "Anzeige aller Ihrer Statuselemente der letzten 90 Tage",
+    "ticketsTag": "Anzeige aller Ihrer Tickets der letzten 90 Tage",
+    "requestsTag": "Anzeige aller Ihrer Anfragen der letzten 90 Tage",
+    "approvalsTag": "Anzeige aller Ihrer Genehmigungselemente der letzten 90 Tage",
+    "notificationsTag": "Anzeige aller Ihrer Benachrichtigungen der letzten 90 Tage",
+    "moreDetails": "Mehr Details",
+    "hideDetails": "Weniger Details",
+    "businessRole": "Business Role",
+    "organizationName": "Organization Name",
+    "CID": "Customer Identifying Data (CID) and UBS employee data not available in Who is Who must not be entered in this ticket.{{value}}To protect our clients confidentiality and to comply with various data protection, privacy, and banking secrecy laws, your problem description and attachments must not contain data which identifies your client. No Customer Identifying Data (CID) or UBS Employee Data not available in Who is Who is allowed in this support ticket. Client Identifying Data is any data provided from or relating to UBS clients, prospects or employees (if they are UBS clients) which allows the deduction of the existence of a banking relationship between the client and UBS. Please contact your local security officer (http://goto/lso) if you are unsure or have any queries about this, before creating your ticket."
+  },
+  "myComputer": {
+    "available": "Verfügbar",
+    "assigned": "Assigned",
+    "approval": "Genehmigung erforderlich",
+    "close": "Schliessen",
+    "deliverStatus": "Lieferstatus",
+    "deliveryStatus": "Lieferstatus",
+    "descriptionFirst": "Ihre zentrale Self-Service Anlaufstelle",
+    "descriptionSecond": "Mit Tools zum Anfordern oder Entfernen von Anwendungen aus dem zentralen App Store, zur Verwaltung Ihrer E-Mail Verteilerlisten oder zur Überprüfung Ihrer Remote Readiness.  Noch nie war die Verwaltung Ihres Desktops einfacher. Entdecken Sie, was Ihnen alles auf ‘Mein Computer‘ zur Verfügung steht.",
+    "clickhere": "click here",
+    "firstWords": "The My Computer page",
+    "install": "Installieren",
+    "confirmRequest": "Anfrage bestätigen",
+    "installed": "Installierte",
+    "manufacturer": "Hersteller",
+    "myComputer": "Assets",
+    "title": "Mein Computer",
+    "notAvailable": "Nicht verfügbar ",
+    "nothingToDisplay": "Selected user is not entitled to use any asset",
+    "nonOperationalAssetsFound": "Nicht auswählbare Assets sind derzeit nicht betriebsbereit. Für die Inbetriebnahme, wählen Sie bitte Request Support beim entsprechenden Asset.",
+    "name": "Name",
+    "INKA": "INKA referenz",
+    "action": "Action",
+    "viewManage": "Anzeigen/Verwalten",
+    "ordered": "Bestellt",
+    "myOrderedapps": "My In Progress",
+    "orderedapps": "In Progress",
+    "requestedFor": "Anfrage für",
+    "rowsPerPageLabel": "Zeilen pro Seite:",
+    "rowsPerPage": "Zeilen pro Seite:  {{value1}} - {{value2}} von {{value3}}",
+    "search": "Suche:",
+    "setType": "Typ festlegen",
+    "storeName": "{{value}} App Store",
+    "system": "System",
+    "type": "Typ",
+    "uninstall": "Deinstallieren",
+    "startTyping": "Fangen Sie bitte an zu tippen...",
+    "noDataFound": "Leider haben wir keine Daten gefunden für ",
+    "fetchingDataFor": "Daten abrufen für ",
+    "businessJustification": "Begründung erforderlich",
+    "businessJustificationRequired": "Begründung erforderlich",
+    "noCid": "Keine CID eingeben",
+    "applicationRequested": "Ihre Anfrage wurde übermittelt. Referenz anforder - ",
+    "checkForUpdates": "Upon completion of the request, the application will be available to use with the next software update which runs overnight. For an immediate, check for software updates from Start Menu: Start > All Programs > UBS > Check for Software Updates",
+    "approvalMinChar": "Bitte geben Sie einen aussagekräftigen Kommentar ein (mindestens 10 Zeichen).",
+    "minChar": "(mindestens 10 Zeichen)",
+    "invalidA3User": "Dieser Nutzer hat keinen Zugriff auf A3 (IT Anywhere).",
+    "invalidWSUser": "Dieser Nutzer hat keinen Zugriff auf UBS Workspace.",
+    "onBehalfOfA3User": "Sie sind in {0} {1} App Store ({2}). Alle Änderungen werden in seinem/ihrem System gespeichert. Bitte klicken Sie auf X um in Ihren App Store zurückzukehren.",
+    "assetsOnBehalfOfUser": "Sie browsen die Details von {0} {1}.",
+    "onBehalfOfMe": "Sie sind in {0} {1} App Store ({2}).",
+    "cancel": "stornieren",
+    "setFailure": "Folgende Komponenten konnten nicht installiert werden:",
+    "takeOwnership": "Besitz übernehmen",
+    "requestSupport": "Hilfe anfordern",
+    "appStore": "App Store",
+    "requestTheControl": "Anfrage zur Kontrollübernahme an diesem Asset.",
+    "launchSmart": "Starten sie SMART Chat für eine Problemmeldung an diesem Asset.",
+    "launchAppStore": "Öffnen Sie den App Store zur Installation, Verwaltung oder De-Installation von Software auf diesem Asset.",
+    "searchAsset": "Suche nach Assets",
+    "noAssets": "Wenn Sie keine Assets sehen können, die Sie besitzen, lesen Sie bitte ",
+    "noAssetsLink": "diesen Artikel.",
+    "takeOwnershipSuccess1": "Ihre Anfrage zur Besitzübernahme an diesem Asset wurde übermittelt.",
+    "takeOwnershipSuccess2": "Aktualisieren Sie die Liste der Assets 24 Stunden, nachdem die Anfrage zur Bestätigung des Eigentums gesendet wurde.",
+    "foundTooMuchAssets": "Too many items were found for your search string, only the first 100 items are shown",
+    "noRecordsFound": "No records found",
+    "provideMoreSpecificSearch": "Please provide at least 3 symbols",
+    "actions": "Aktionen",
+    "for": "Für",
+    "distributionLists": {
+      "title": "Titel",
+      "email": "Email",
+      "accountName": "Kontoname",
+      "displayName": "Anwendungsname",
+      "action": "Aktion",
+      "details": "Einzelheiten",
+      "addMember": "Mitglied(er) hinzufügen",
+      "removeMember": "Mitglied(er) entfernen",
+      "search": "Suche",
+      "filterDistributionLists": "Verteilerlisten Filtern",
+      "filterMembers": "Mitglied(er) filtern (Nachname zuerst)",
+      "manageMembers": "Mitglied(er) verwalten",
+      "confirmRemove": "Bitte bestätigen Sie das Entfernen ausgewählter Mitglieder.",
+      "updateSuccessful": "Aktualisierung erfolgreich - Bitte warten Sie 30 Minuten, bis die Änderung wirksam wird.",
+      "updateFailed": "Aktualisierung Gescheitert",
+      "noDataFound": "Keine Daten gefunden.",
+      "noDLFound": "Keine Verteilerlisten gefunden.",
+      "noDLFound2": "Um eine Verteilerliste zu erstellen,",
+      "createDLUrl": "folgen Sie bitte dieser Anleitung",
+      "createDL": "Eine Verteilerliste zu erstellen",
+      "addMemberHeading": "Füge der Liste weitere Mitglieder hinzu",
+      "addMembersAlert": "Verwenden Sie die Suchmaske, um Mitglieder zu finden. Wählen Sie aus dem Suchergebnis die Mitglieder aus, die Sie der Liste hinzufügen möchten.",
+      "currentMemberHeading": "Mitglieder aus der Liste entfernen",
+      "noMembersFound": "Keine Mitglieder gefunden. Verwenden Sie die Suchmaske, um Mitglieder zu finden und Aktuelle Mitglieder.",
+      "requestDL": "Anfrage",
+      "viewInstructionPdf": "View Instructions PDF",
+      "viewAssistArticle": "View My Hub article",
+      "needHelp": "Brauchen Sie Hilfe?"
+    },
+    "workremote": {
+      "tabtext1": "The Basics",
+      "tabtext2": "In Practice",
+      "tabtext3": "Tipps und Tricks",
+      "tabtext4": "Skype",
+      "tabtext5": "My Hub",
+      "skype-text1": "Während viele von uns momentan zu Hause arbeiten, können kleine Änderungen die Qualität unserer technologischen Services massiv verbessern – speziell für Skype for Business.",
+      "skype-text2": "Wie kann ich eine optimale Skype-Performance sicherstellen?",
+      "skype-text3": "Benutzen Sie stets ein bewilligtes Headset wenn Sie mittels Skype von zu Hause aus telefonieren. Wenn Sie stattdessen die Lautsprecher ihres persönlichen Geräts nutzen, werden andere Teilnehmer Echos hören und Sie sind schwer zu verstehen.",
+      "skype-text4": "Nachdem ein Gespräch beendet ist, schliessen Sie das Fenster und alle Chats, die Sie nicht benötigen. Dies wird Netzwerkkapazität freigeben und die Performance verbessern.",
+      "skype-text5": "Falls Sie während der Heimarbeit die Videofunktion benutzen und Verbindungsprobleme auftreten, schalten Sie Video aus und nutzen Sie nur die Audio-Funktion.",
+      "skype-text6": "Mehr Tipps und Tricks",
+      "myhubexternal-text1": "The",
+      "myhubexternal-link1": "My Hub external site",
+      "myhubexternal-text2": "is designed to be a safety net if you're working remotely and need assistance logging in.",
+      "myhubexternal-text4": "Access",
+      "myhubexternal-link2": "HRi",
+      "myhub-text1": "When you need help, you want it fast. And with our technology service desks seeing increased volumes, you should know that for most of the common tech issues that we face at UBS, there's already a solution you can use right away—My Hub.",
+      "myhub-text2": "My Hub is full of self-service resources that you can use. Best of all, My Hub is available in the office, at home or on-the-go, whether you're logged in or not, to serve you whenever and wherever you may need. Learn more about the various access points for My Hub below:"
+    },
+    "remote-wizard": {
+      "tHeader": "Wir haben die folgenden Informationen gefunden",
+      "t1": "Diese Seite führt Sie durch die erforderlichen Aktionen für die Arbeit im Home Office.",
+      "t2": "Bitte überprüfen Sie die Details unten",
+      "t3": "Weitere",
+      "t4": "Informationen",
+      "t5": "finden Sie hier",
+      "employee-info": "Mitarbeiter Informationen",
+      "business-devision": "Geschäftsbereich",
+      "location": "Stadt/Ort",
+      "zone": "Zone",
+      "personal-info-hri": "Persönliche Informationen die in HRi erfasst sind",
+      "personal-phone": "Mobiltelefon-Nummer",
+      "personal-email": "E-Mail Adresse",
+      "security-settings": "Authentifizierungs-Methoden",
+      "card": "UBS SecurePass Seriennummer",
+      "card-small": "(siehe Rückseite der Karte)",
+      "securepass-token": "SecurePass Display token",
+      "enforced": "Zwingend erforderliche 2-Faktor-Authentifizierung?",
+      "enforcedReminder": "Sie dürfen beim Einloggen nur UBS SecurePass oder UBS MobilePass verwenden.",
+      "mobilepass": "UBS MobilePass",
+      "mobile": "UBS My Hub Mobile",
+      "recommended": "(empfohlen)",
+      "optional": "(freiwillig)",
+      "not-set": "Nicht festgelegt",
+      "not-available": "Nicht verfügbar",
+      "set": "Festgesetzt",
+      "activated": "Aktiviert",
+      "not-activated": "Aktivieren",
+      "not-installed": "Nicht installiert",
+      "installed": "Installiert",
+      "yes": "Ja",
+      "no": "Nein",
+      "remote-access-entitlement": "Berechtigungen",
+      "entitled": "Berechtigt",
+      "not-entitled": "Nicht Berechtigt",
+      "eligible": "Berechtigt",
+      "workspace-eligible": "UBS Workspace berechtigt",
+      "workspace": "IT Anywhere",
+      "it-anywhere": "IT Anywhere",
+      "workspace-ineligible": "Sie können noch nicht remote auf UBS Workspace zugreifen.",
+      "workspace-eligible-msg": "Sie sind berechtigt, eine neue Workspace Plattform zu beantragen.",
+      "workspace-eligible-msg-2": "Workspace ist die neueste Plattform, auf der UBS-Mitarbeiter aus dem Home Office mit den aktuellen Authentifizierungsmethoden MobilePass und SecurePass arbeiten können.",
+      "place-order": "Eine Bestellung aufgeben",
+      "cancel-order": "Bestellung abbrechen",
+      "workspace-ordered": "Ihre Bestellung wurde aufgenommen. Nachdem Ihre Anfrage genehmigt wurde dauert es 24 bis 36 Stunden, bis die Berechtigung aktiv ist.",
+      "workspace-entitle-msg": "Sie haben die Berechtigung, remote auf Ihren Desktop zuzugreifen.",
+      "workspace-entitle-msg-2": "Sie benötigen entweder UBS MobilePass oder UBS SecurePass, um remote auf Ihr UBS Workspace oder A3 System zugreifen zu können.",
+      "desktop-entitled": "Sie können auf einige Ihrer Basis Applikationen zugreifen, wenn Sie remote von Ihrem persönlichen Gerät aus mit ConnectLite zugreifen.",
+      "desktop-entitled-2": "Über einen Internet-Browser auf Ihrem persönlichen Gerät können Sie sich unter ubs.com/connectlite anmelden und auf Ihre Applikationen zugreifen.",
+      "desktop-entitled-3": "Wenn Sie mit Ihrem persönlichen Gerät eine Remote-Verbindung zu Ihrem uneingeschränkten UBS Desktop herstellen möchten, müssen Sie einen Antrag stellen und eine geschäftliche Notwendigkeit dafür nachweisen.",
+      "request-mobilepass": "UBS MobilePass beantragen",
+      "request-securepass": "Aktivieren¨Sie UBS SecurePass",
+      "connect-lite": "Connect Lite",
+      "desktop": "Desktop",
+      "desktop-not-entitled": "Sie sind derzeit nicht berechtigt, remote auf Ihren Desktop zuzugreifen.",
+      "raise-request": "Berechtigung beantragen",
+      "raise-entitlement-request": "Berechtigung beantragen",
+      "request-remote-access": "Antrag auf Remote Zugriff",
+      "raise-remote-plus": "Remote Plus-Zugriff beantragen",
+      "onBehalfOfUser": "Sie browsen die Details von {0} {1}.",
+      "returnToYours": "Zurück zu Ihrem",
+      "laptop-not-entitled": "Sie sind derzeit nicht berechtigt, remote auf Ihren Laptop zuzugreifen.",
+      "laptop-entitled": "Sie sind berechtigt, einen UBS Corporate Laptop zu verwenden, wenn Sie remote arbeiten. Um sich anzumelden, müssen Sie die ConnectMe Software verwenden, die standardmäßig bereits auf UBS Corporate Laptops installiert ist.",
+      "laptop-entitled-4": "Wenn Sie einen entsprechenden Business Case haben, können Sie auch eine Anfrage für die Standard Plus Berechtigung stellen.",
+      "connect-me": "Connect Me",
+      "own-laptop": "UBS-eigener Laptop",
+      "laptop-entitled-2": "Sie müssen die Connect Me-Software verwenden, die standardmäßig auf dem UBS-Laptop installiert ist.",
+      "laptop-entitled-3": "Um sich einzuloggen müssen Sie auch die Anwendung 'Remote Work' installieren und aktivieren.",
+      "request-submitted": "Antrag mit der Referenz {{value}} ist eingereicht und wartet auf Genehmigung.",
+      "request-submitted-2": "Es kann 24-36 Stunden dauern, bis der Antrag erledigt wurde.",
+      "view-request": "Antrag anzeigen",
+      "msg8": "Bei der Erstellung Ihrer Anfrage ist leider ein Fehler aufgetreten.",
+      "try-again": "Wiederholen",
+      "request-support": "Hilfe anfordern",
+      "msg9": "Einschränkungen bezüglich ConnectLite",
+      "msg10": "Nicht erlaubt für alle Mitglieder des Geschäftsbereichs Global Wealth Management.",
+      "msg11": "Nicht erlaubt für den Geschäftsbereich Asset Management Schweiz.",
+      "msg12": "Nicht erlaubt für Trader.",
+      "msg13": "Benutzer der Schweizer Roten Zone können von außerhalb der Schweiz nicht via Connect Lite zugreifen",
+      "msg14": "Der Zugriff auf Daten, die durch Smart Cards geschützt sind ist nicht möglich. Dies schliesst Applikationen oder Gruppen-Laufwerke im Netzwerk ein, wenn auf diese ebenfalls nur mittels  Smart Card Authentizierung zugegriffen werden kann.",
+      "wma": "Wealth Management Benutzer",
+      "wma-1": "So stellen Sie eine Anfrage im MAC Portal",
+      "tooltipConnectMe": "Verbinden Sie Ihren UBS Laptop über ein UBS-VPN-WLAN von zu Hause oder von einem öffentlichen Hotspot aus mit dem UBS-Netzwerk.",
+      "tooltipConnectLite1": "Mit Connect Lite können mobile arbeitende Mitarbeiter schnell und einfach von überall auf der Welt eine Verbindung zu den von ihnen benötigten Anwendungen herstellen.",
+      "tooltipConnectLite2": "Dies ist die neue SCG Lite-Lösung für DTP. Definieren Sie Connect My Apps, My Desktop, MyRDP als Alias für Connect Lite.",
+      "tooltipWorkspace": "Workspace: Stellen Sie eine Remote-Verbidung zu Ihrer UBS Workspace Desktop Plattform der nächsten Generation her.",
+      "tooltipA3": "A3: Benutzen Sie jede Anwendung, auf jedem Gerä und von jedem Ort aus über Ihre A3-Desktop-Sitzung.",
+      "tooltipLink": "Read more"
+    },
+    "ubs-workspace-eligible": {
+      "workspace-eligible-msg": "Sie sind berechtigt, eine neue Workspace Plattform zu beantragen."
+    }
+  },
+  "pagination": {
+    "itemsPerPageLabel": "Zeilen pro Seite:",
+    "nextPageLabel": "Weiter",
+    "previousPageLabel": "Bisherige",
+    "ofLabel": "von",
+    "next": "Weiter",
+    "rows": "Rows per Page: {{ value1 }} - {{ value2 }} von {{ value3 }}",
+    "complete": "Complete"
+  },
+  "password": {
+    "accessControlDescription": "Weitere Informationen zum Thema Zugangskontrolle finden Sie in der",
+    "accessControlPolicy": "Access Control Policy.",
+    "additionalInformation": "Weitere Informationen",
+    "answerSecurity": "Beantworten Sie bitte die Sicherheitsfragen",
+    "a-z": "A-Z",
+    "beAdvised": "Bitte schliessen Sie Outlook und Skype, um den Passwortassistenten nutzen zu können.",
+    "cancel": "Abbrechen",
+    "clickSubmit": "Klicken Sie auf ‚Senden‘, um Ihr Konto zu entsperren",
+    "close": "Schliessen",
+    "confirmPassword": "Neues Passwort bestätigen",
+    "firstWords": "The Passwords option",
+    "descriptionFirst": "Definieren, Entsperren und Zurücksetzen Ihrer Passwörter",
+    "descriptionSecond": "Wenn Ihr Konto gesperrt ist können Sie mit My Hub - Passwort vom Büro und von zu Hause aus schnell wieder Zugriff auf Ihren Desktop erhalten. Mit diesem Tool können Sie ganz einfach ein Passwort für ein System suchen und erfahren, wie Sie sie besser verwalten können. Sie können auch den Passwort-Assistenten ausführen, um Ihr Desktop-Konto zu entsperren, ein Ablaufdatum für ein Passwort zu finden, neue Passwörter erstellen oder vergessene Passwörter zurückzusetzen.",
+    "didYouKnow": "Wussten Sie schon...",
+    "didYouKnowDescriptionStart": "dass Sie mit dem ",
+    "didYouKnowDescriptionLink": "Password Wizard",
+    "didYouKnowDescriptionEnd": " sowohl WebSSO- als auch Windows-Kennwörter gleichzeitig ändern können?",
+    "ensureAnyWork": "Speichern und schliessen Sie alle Dateien und Anwendungen, bevor Sie weitermachen.",
+    "enterPassword": "Neues Passwort eingeben",
+    "followInstruction": "",
+    "getStarted": "Mehr zu...",
+    "inputPassword": "Neues Passwort eintragen",
+    "instruction": "Anleitung",
+    "lowerCase": "muss einen Kleinbuchstaben enthalten",
+    "managingPassword": "Passwortverwaltung",
+    "mustBeMax": "Maximal {{value}} Zeichen",
+    "mustBeMinimum": "Mindestens {{value}} Zeichen",
+    "next": "Weiter",
+    "numericValue": "Enthält {{value}} Zahlenwert(e)",
+    "password": "Passwort",
+    "passwordExpire": "Ihr Passwort wird in {{value}} Tagen ablaufen.",
+    "passwordExpired": "Ihr Passwort ist abgelaufen.",
+    "passwordReset": "Desktop Passwort zurücksetzen",
+    "passwordRules": "Passwortregeln",
+    "passwords": "Passwörter",
+    "passwordWizard": "Passwortassistent",
+    "passwordWizardDescription": "Mit dem Passwortassistent können Sie alle Ihre UBS-Passwörter einfach anpassen.",
+    "popular": "Beliebt",
+    "reset": "Zurücksetzen / Entsperren",
+    "resetPassword": "Passwort zurücksetzen",
+    "resetYourPassword": "Passwort zurücksetzen",
+    "selfService": "Self-Service Link",
+    "specialCharacter": "Muss ein Sonderzeichen enthalten",
+    "submit": "Senden",
+    "unlockAccount": "Konto entsperren",
+    "upperCase": "Muss einen Grossbuchstaben enthalten",
+    "useSearch": "Suchen Sie den für Sie relevanten Self-Service entweder über die Freitext-Suche rechts oder die A-Z Suchfunktion unten.",
+    "useThisOptionReset": "Hier können Sie Ihr Desktop-Passwort zurücksetzen oder entsperren.",
+    "useThisOptionUnlock": "Verwenden Sie diese Option, wenn Sie Ihr Konto einfach entsperren und mit dem aktuellen Passwort fortfahren wollen.",
+    "wizard": "Assistent",
+    "yourPasswordReset": "Ihr A3/DTP Passwort ist zurückgesetzt.",
+    "yourPasswordUnlock": "Ihr A3/DTP Konto ist entsperrt.",
+    "justReset": "Zurücksetzen"
+  },
+  "people-directory": {
+    "ouSearch": "OU Suche",
+    "searchMenu": "Suche",
+    "lookup": {
+      "labels": {
+        "ouCode": "OE Code",
+        "ouDesc": "OE Bezeichnung",
+        "record": " Eintrag gefunden",
+        "records": " Einträge gefunden",
+        "back": "Zurück",
+        "head": "Leiter :",
+        "member": "Mitglieder:",
+        "units": "Einheiten: "
+      },
+      "button": {
+        "search": "Suchen",
+        "reset": "Zurücksetzen "
+      }
+    },
+    "advancedSearch": "Erweiterte Suche",
+    "area": "Bereich",
+    "areYouSureRemove": "Wollen Sie Ihr Foto wirklich entfernen?",
+    "back": "Zurück",
+    "browse": "Durchsuchen",
+    "building": "Gebäude",
+    "buildingCode": "Gebäude Code",
+    "cancel": "Abbrechen",
+    "city": "Stadt",
+    "confirm": "Bestätigen",
+    "costCodeId": "Kostenstellen-ID",
+    "costCodeName": "Kostenstellenname",
+    "costCenter": "Kostenstellencode",
+    "directs": "Direktunterstellte",
+    "editProfile": "Profil bearbeiten",
+    "email": "EMAIL",
+    "employeeType": "Art der Anstellung",
+    "failedToLoad": "Ihr Foto konnte nicht hochgeladen werden. Bitte versuchen Sie es später nochmals oder kontaktieren Sie das Web-Team.",
+    "floorNo": "Stockwerk Nr",
+    "gpn": "GPN",
+    "iAffirmThat": "Ich bestätige, dass ich die Richtlinien gelesen und ihnen zugestimmt habe.",
+    "myProfile": "Mein Profil",
+    "profile": "Profil",
+    "myPhoto": "Mein Foto",
+    "maxfileSize": "Maximale Dateigrösse 3MB.",
+    "moreFilters": "Weitere Filter",
+    "lessFilters": "Weniger Filter",
+    "notification": "Mitteilung",
+    "ouId": "OU id",
+    "ouDescription": "OU Description",
+    "peopleDirectoryTitle": "Mitarbeiterverz...",
+    "region": "Region",
+    "remove": "Entfernen",
+    "room": "Raum",
+    "street": "Strasse",
+    "resultsCount": "Gefundene Ergebnisse",
+    "savePicture": "Foto speichern",
+    "search": "Suche",
+    "successful": "Erfolgreich",
+    "title": "{{value}}s Organigramm",
+    "tNumber": "T-Nummer",
+    "total": "Total",
+    "websso": "WebssO",
+    "rank": "Rang",
+    "businessDivision": "Unternehmensbereich",
+    "country": "Land",
+    "businessArea": "Geschäftsbereich",
+    "titleFilter": "Titel",
+    "businessSector": "Ressort",
+    "new": "Neu",
+    "firstName": "Vorname",
+    "lastName": "Name",
+    "contact": "Kontakt",
+    "telephone": "Telefon Nr",
+    "reset": "Zurücksetzen",
+    "jobInfo": "Job-Informationen",
+    "ouCode": "OE Code",
+    "userId": "Benutzer-ID",
+    "signature": "Unterschrift",
+    "location": "Ort",
+    "similarSearch": "Ähnlicher Wortlaut",
+    "searchFilters": "Filter",
+    "state": "Region",
+    "name": "Name",
+    "role": "Rolle",
+    "division": "Division",
+    "overView": "Übersicht",
+    "moreInfo": "Zusatzinfos",
+    "organization": "Organisation",
+    "legalName": "Legal Name",
+    "uuName": "UUName",
+    "businessLanguage": "Korrespondenz- Sprache",
+    "businessUnit": "Business Unit",
+    "address": "Adressen",
+    "zip": "PLZ",
+    "extraAddress": "Adresszusatz",
+    "internalPhoneNumber": "Tel. intern",
+    "externallPhoneNumber": "Tel. extern",
+    "externallFax": "Fax extern",
+    "mobile": "Mobile",
+    "mobilePhoneNumber": "Portable",
+    "gcrsCompany": "GCRS Company",
+    "Company": "Firma",
+    "internalMailCode": "Interner Postcode",
+    "interests": "Interessen",
+    "noCID": "Ich habe keine CID-Informationen in Felder eingegeben",
+    "biography": "Biografie",
+    "biographyTitle": "Nehmen Sie sich ein paar Minuten Zeit, um bißchen über sich selbst zu schreiben",
+    "roleDescriptionTitle": "Ihr Wissen und Ihr Know-how",
+    "roleDescription": "Beschreibung meiner aktuellen Rolle",
+    "updateSuccessful": "Aktualisierung Erfolgreich",
+    "updateFailed": "Aktualisierung gescheitert",
+    "businessTitle": "Business title",
+    "printAddress": "Begleitzettel drucken (PDF)",
+    "printOptions": "Druck Optionen",
+    "printUserDetails": "Drucken von Benutzerdetails (PDF)",
+    "instructionSlip": "Begleitzettel",
+    "forYourInformation": "zur Kenntnisnahme",
+    "pleaseComment": "zur Stellungnahme",
+    "pleaseProcess": "zur Erledigung",
+    "pleaseForwardTo": "zur Weiterleitung an",
+    "pleaseSign": "zur Unterschrift",
+    "pleaseDecide": "zum Entscheid",
+    "asDiscussedTel": "gem. Besprechung/Tel",
+    "forYourRecords": "zu Ihren Akten",
+    "returnedWithThanks": "mit Dank zurück",
+    "pleaseReturn": "bitte zurücksenden",
+    "pleaseCall": "bitte anrufen",
+    "urgent": "dringend",
+    "remark": "Mitteilung",
+    "format": "Format",
+    "internalMail": "Hauspost oder Etikette (Etikette Art.73652N)",
+    "fax": "Fax (nur intern)",
+    "c4": "C4 (UBS Art.82546SK-N)",
+    "c5": "C5 (UBS Art.82339SK-N)",
+    "saveSettings": "Einstellungen speichern",
+    "sender": "Absender",
+    "postalAddress": "Versandadresse",
+    "receiver": "Empfänger",
+    "ouStructure": "OE Struktur",
+    "seeAllOU": "OE (Leiter)",
+    "orgUnitLabel": "OE, deren Leiter der aktuelle Benutzer ist:",
+    "ouBase": "OE (Stamm)",
+    "ouCostCenter": "Kostenstelle",
+    "ouDeployed": "OE (Einsatz)",
+    "teamStructure": "Vorgesetzten-Ansicht",
+    "orgUnit": "Organisationseinheiten",
+    "bankUnitChart": "OrgCharts navigieren",
+    "levelUp": "Level hoch – übergeordnete Hierarchie",
+    "head": "Leiter",
+    "member": "Mitglieder",
+    "units": "Einheiten",
+    "editProfileMsg": "Beachten Sie, daß Sie zum Bearbeiten Ihres Profiles ein ",
+    "connectionRequest": "Connections-Konto ",
+    "editProfileMsg2": "erstellen müssen.",
+    "1stWorkplace": "1. Arbeitsplatz",
+    "2ndWorkplace": "2. Arbeitsplatz",
+    "officeAddress": "Domiziladresse",
+    "buildDescription": "Gebäudebezeichnung",
+    "gcrsBusinessDivision": "GCRS Unternehmensbereich",
+    "gcrsBusinessUnit": "GCRS Business Unit",
+    "gcrsBusinessSector": "GCRS Ressort",
+    "gcrsBusinessArea": "GCRS Geschäftsbereich",
+    "german": "Deutsch",
+    "french": "French",
+    "italian": "Italian",
+    "english": "English",
+    "defaultTab": "Diesen Tab als Standardansicht festlegen",
+    "corrections": "Arbeits-, Standort- und Kontaktdaten aktualisieren",
+    "editProfileLink": "Profil bearbeiten",
+    "disclaimer": "Teilen Sie niemals Mitarbeiter- und Organisationsdaten mit Personen, die sie nicht persönlich kennen.",
+    "disclaimerWarningText": "Achtung!",
+    "disclaimerLinkText": "Mehr Informationen."
+  },
+  "permission": {
+    "message": "Für diese Seite haben Sie keine Berechtigung."
+  },
+  "pointsharp": {
+    "defaultTemplate": "Kein Gerät gefunden",
+    "addNewSequrityToken": "Ein neues Sicherheitstoken hinzufügen",
+    "back": "Zurück",
+    "configureLoginApp": "Configure your Login app by scanning the barcode.",
+    "description": "Beschreibung",
+    "disabled": "Deaktiviert",
+    "lastUsed": "Zuletzt verwendet am",
+    "name": "Name",
+    "pinProtected": "PIN geschützt",
+    "platform": "Plattform",
+    "deviceType": "Gerätetyp",
+    "deviceName": "Gerätename",
+    "deviceNameValidationText": "Bitte achten Sie darauf, dass Sie keine Sonderzeichen, führende und abschließende Leerzeichen als Teil des Gerätenamens verwenden",
+    "requestPointsharpAcc": "Skype für Business Mobile Gerät beantragen",
+    "hasEntitlement": "Sie verfügen zwar über die erforderliche Berechtigung, jedoch ist Ihr Konto noch nicht eingerichtet. Bitte versuchen Sie es erneut in 24 Stunden",
+    "aboutToCreate": "Um Skype Mobile nutzen zu können, installieren Sie bitte \"Bring your own device\" (BYOD) sowie die PointSharp App für eine Zweistufen-Authentifizierung .  Bitte klicken Sie für die vollständige Anleitung auf 'Weiter'",
+    "next": "Weiter",
+    "cancel": "Abbrechen",
+    "tokendetail": "Details zu Ihren Gerät",
+    "details": "Einzelheiten",
+    "removeDevice": "Gerät entfernen",
+    "maximunLimitErrorText": "Sie haben die maximale Anzahl nicht genutzter Tokens erreicht. Bitte klicken Sie hier, um alle Token zu entfernen.",
+    "removeAllTokens": "alle Token entfernen",
+    "alreadyExists": "Der Gerätename ist bereits vorhanden. Bitte wählen Sie einen anderen Gerätenamen.",
+    "manageInfoText": "Hier finden Sie eine Übersicht aller Geräte, denen Sie ein Token zugeordnet haben. Falls nötig, können Sie hier ein Token von einem Gerät entfernen.",
+    "requestInfoText": "Die Zwei-Stufen-Authentifizierung für Skype Mobile erfordert die PointSharp App. Sie benötigen für jedes Mobilgerät je ein PointSharp Token.",
+    "deviceLimitAlert": "Maximum number of devices reached. If you wish to add a device, you must firstly remove a device. Click the \"Details\" button next to the device to view device details, where you can remove a device",
+    "videoInstruction": "Erfahren Sie mehr zur Installation von Skype Mobile im Video",
+    "viewVideo": "Video ansehen",
+    "wizardAltAndroidVideo": "AndroidVideo",
+    "wizardAltiOSVideo": "iOSVideo",
+    "wizardAndroidmobileinfo": "Bei einem Android-Gerät handelt es sich um ein Gerät, das auf dem Betriebssystem Android läuft. Android ist eine Software, die für mobile Geräte entwickelt worden ist und als Betriebssystem funktioniert. Ein Android-Gerät kann ein Smartphone oder Tablet-PC sein, von Marken wie Samsung, LG, Google Pixel, Sony, HTC, Huawei und viele mehr.",
+    "wizardChooseDeviceType": "Wählen Sie das Gerät aus, auf dem Sie PointSharp installieren:",
+    "wizardFolowSteps": "Führen Sie die folgenden Schritte aus:",
+    "wizardFollowVideo": "Folgen Sie dem kurzen Video unten.",
+    "wizardHeader": "Installation des Assistenten für biometrische Authentifizierung für {{ value }}",
+    "wizardInANutshell": "Zusammenfassend",
+    "wizardiOSMobileInfo": "iOS ist ein mobiles Betriebssystem, das von Apple Inc. exklusiv für seine Hardware entwickelt wurde. Es ist das Betriebssystem, welches derzeit für viele der mobilen Geräte des Unternehmens, einschließlich des iPhone, iPad und iPod Touch, verwendet wird.",
+    "wizardiPadMobileInfo": "The iPad is powered by the iOS is a mobile operating system created and developed by Apple Inc. exclusively for it's hardware.",
+    "wizardStillHavingTrouble": "Haben Sie immer noch Probleme?",
+    "wizardViewArticle": "Lesen Sie diesen Artikel zur Abhilfe.",
+    "wizardWifiSignal": "Bevor Sie fortfahren, stellen Sie sicher, dass Sie ein starkes WLAN- oder Trägersignal haben.",
+    "infoDescription": "Bevor Sie die mobile App von Skype for Business nutzen können, müssen Sie als zusätzliche Sicherheitsstufe die Pointsharp Login App auf Ihrem Mobilgerät installieren und einrichten.",
+    "infoLoginApp": "Bei jedem Gerät, auf dem Sie Skype for Business nutzen möchten, ist die Registrierung des Geräts in My Hub und die Installation der Pointsharp Login App erforderlich, um diese Sicherheit zu gewährleisten.",
+    "wizardYouWillNeed": "Sie benötigen während dieses Prozesses den <name> Ihres <device type>-Mobilgeräts.",
+    "removeConfirmationTitle": "Möchten Sie dieses Gerät wirklich entfernen?",
+    "removeConfirmationText": "Wenn Sie dieses Gerät entfernen, wird PointSharp von Ihrem Gerät entfernt.",
+    "readyToScanQRCode": "Sie können nun den QR-Code scannen",
+    "allowCamera": "Erlauben Sie der Anmelde-App den Zugriff auf die Kamera, um den QR-Code zu scannen",
+    "timeoutText": "Sie haben {{ value }} Stunden Zeit, um diesen Schritt auszuführen, bevor die Geräteregistrierung abläuft. Sollte dies geschehen, müssen Sie diesen Prozess wiederholen.",
+    "stepOne": {
+      "title": "Schritt 1",
+      "goto": "Öffnen Sie den {{ value }}",
+      "wizardWifiSignalAndFollow": "Stellen Sie sicher, dass Sie ein starkes WLAN- oder Trägersignal haben, und führen Sie die folgenden Schritte aus, um die 'Pointsharp Login' app herunterzuladen. ",
+      "downloadLoginApp": "Suchen Sie nach {{ value }} und laden Sie die App auf Ihr Gerät herunter",
+      "allowNotifications": "Wenn Sie dazu aufgefordert werden, erlauben Sie der App, Ihnen Benachrichtigungen zu senden und auf Ihre Kamera zuzugreifen.",
+      "important": "Wichtig:",
+      "necessary": "Dies ist für das Scannen des QR-Codes im nächsten Schritt sowie die ordnungsgemässe Funktion der App erforderlich",
+      "clickNext": "Klicken Sie auf die 'Weiter'-Schaltfläche unten, um fortzufahren"
+    },
+    "stepTwo": {
+      "title": "Schritt 2",
+      "description": "Nachdem Sie die Pointsharp Login App heruntergeladen haben, müssen Sie einen QR-Code scannen, um die Anwendung für unsere Server und Ihr Konto zu konfigurieren.",
+      "followStepsBelow": "Führen Sie hierzu die folgenden Schritte aus",
+      "rule1": "Öffnen Sie die Pointsharp Login App",
+      "rule2": "Drücken Sie auf die Schaltfläche 'QR-Code scannen'",
+      "rule3": "Scannen Sie den QR-Code auf der linken Seite, indem Sie Ihr Smartphone auf den Code richten",
+      "rule4": "Nachdem Sie den QR-Code gescannt haben, werden Sie automatisch zum nächsten Schritt weitergeleitet"
+    },
+    "stepThree": {
+      "title": "Schritt 3",
+      "goto": "Öffnen Sie den {{ value }}",
+      "qrCodeScannedSuccessfully": "QR-Code erfolgreich gescannt!",
+      "readyToInstallSkype": "Sie können Skype for Business nun auf Ihrem Mobilgerät installieren und nutzen.",
+      "receivePIN": "Sie sollten Ihren vierstelligen PIN-Code bereits kennen oder ihn per E-Mail erhalten haben, wenn Sie ein ganz neues Konto eingerichtet haben.",
+      "downloadSkypeApp": "Suchen Sie nach {{ value }} und laden Sie es auf Ihr Gerät herunter",
+      "enterEmail": "Geben Sie Ihre Anmelde-E-Mail-Adresse ein und klicken Sie auf den blauen Pfeil",
+      "whenPrompted": "Wenn Sie dazu aufgefordert werden, geben Sie Ihren 4-stelligen Pin ein, klicken dann auf 'Passwort speichern' und dann auf 'Anmelden'",
+      "receivePush": "Sie erhalten nun eine Push-Benachrichtigung zur Bestätigung Ihres Anmeldeversuchs zur biometrischen Authentifizierung",
+      "useBiomteric": "Öffnen Sie diese Benachrichtigung und verwenden Sie Ihre Biometrie-Funktionen, um die App zu entsperren",
+      "confirm1": "Drücken Sie auf",
+      "confirm2": "Bestätigen",
+      "confirm3": "und kehren Sie zu Skype for Business zurück, wo Sie automatisch angemeldet werden",
+      "goodToGo": "Und schon kann es losgehen!",
+      "important": "Wichtig:",
+      "helpSignIn": "Brauchen Sie Hilfe beim Anmelden",
+      "helpPIN": "Sie kennen Ihren 4-stelligen pin nicht"
+    },
+    "greatNews": "Wir haben tolle Neuigkeiten",
+    "youAreEligibleToNewProcess": "Sie dürfen die neue biometrische Pointsharp-Funktion nutzen",
+    "ifYouMigrate": "Wenn Sie auf die neue Funktion umstellen, funktioniert die vorherige App auf Ihrem Mobilgerät nicht mehr und wird von Ihrer Geräteliste unter «Geräte verwalten» entfernt. Ihre Geräteliste wird mit dem hinzugefügten Gerät aktualisiert, nachdem Sie die Voraussetzungen bestätigt und auf die neue Pointsharp-Funktion umgestellt haben.",
+    "devicePrerequisites": "Gerätevoraussetzungen:",
+    "android8": "Android-Geräte müssen mit Android 8 oder höher installiert sein.",
+    "myAndroidVersion": "Was ist meine Android-Version?",
+    "findOutYourAndroidVersion": {
+      "caption": "Um herauszufinden, welche Version von Android auf Ihrem Gerät läuft, führen Sie diese Schritte aus:",
+      "list1": "Suchen und öffnen Sie das Menü Einstellungen.",
+      "list2": "Streichen Sie mit dem Finger über die Option \"Über das Telefon\" oder ein ähnlich benanntes Menü (der genaue Titel kann je nach Gerät variieren).",
+      "list3": "Wählen Sie \"Software-Informationen\" oder ein ähnlich benanntes Menü – im oberen Bereich sollte die Android-Versionsnummer stehen."
+    },
+    "deviceWithCamera": "Gerät mit Kamera",
+    "mobileData": "Gerät mit mobilen Datendiensten",
+    "devicePermissions": "Nutzung der Kamera und mobiler Daten auf dem Gerät aktiviert",
+    "localBiometrics": "Gerät mit lokalen Biometriefunktionen (Fingerabdruckleser, Touch ID oder Face ID)",
+    "confirmPrerequisites": "Bestätigen Sie die Voraussetzungen und stellen Sie auf die neue Pointsharp-Funktion um",
+    "dontMigrate": "Nicht umstellen",
+    "continue": "Fortfahren",
+    "info": "Information",
+    "requestAddDevice": "Anfrage Gerät Hinzufügen",
+    "newDeviceAdded": "Sie haben ein neues Gerät hinzugefügt",
+    "deviceRemoved": "Sie haben ein Gerät entfernt",
+    "rqCode": {
+      "timeRemaining": "Verbleibende Zeit",
+      "expirationPart": "Sie haben noch {{ min }} Minuten und {{ sec }} Sekunden, um den eingeblendeten QR-Code zu scannen, bevor der Prozess zurückgesetzt wird."
+    }
+  },
+  "serviceStatus": {
+    "description": "Beschreibung",
+    "goodService": "Guter Service",
+    "impact": "Auswirkung auf das Geschäft",
+    "impactedCustomer": "Betroffener Kunde",
+    "impactedRegion": "Betroffenes Gebiet",
+    "outage": "Dienstausfall",
+    "severity": "Schwere",
+    "status": "Status",
+    "subscribe": "Abonnieren Sie {{value}} Benachrichtigungen"
+  },
+  "smart": {
+    "startOver": "Neu anfangen",
+    "managingPassword": "Passwortverwaltung"
+  },
+  "sub-menu": {
+    "accesskeys": "Aktivierungsschlüssel",
+    "account": "Konto",
+    "acronyms": "Abkürzungen",
+    "acronyms-faq": "Abkürzungen / Go-To",
+    "adddevice": "Gerät hinzufügen",
+    "allapps": "View/Installieren",
+    "a3store": "A3 App Store",
+    "article": "Artikel",
+    "assist": "Assist",
+    "assist-area": "Bereich",
+    "assist-topic": "Thema",
+    "a-z-index": "A-Z Index",
+    "biometric-wizard": "Biometric Wizard",
+    "blackberry": "BYOD",
+    "desktop": "A3 / DTP",
+    "device": "Gerät",
+    "devices": "Ihre Geräte",
+    "dtpstore": "DTP App Store",
+    "wsstore": "UBS Workspace",
+    "entitlement": "Access IT Berechtigung",
+    "hardware": "Hardware",
+    "info-a-z": "A-Z",
+    "instructions": "Anweisungen herunterladen",
+    "manage": "Verwalten",
+    "mobile-applications": "Mobile Apps",
+    "my-favourites": "Meine Favoriten",
+    "my-status-all": "Alle",
+    "my-status-approvals": "Bewilligungen",
+    "my-status-incidents": "Tickets",
+    "my-status-notifications": "Mitteilungen",
+    "my-status-requests": "Anfrage",
+    "myComputer": "Assets",
+    "appstoreAndAssets": "Assets & App Store",
+    "myapprovals": "Meine Bewilligungen",
+    "myinstalledapps": "Meine installierten Apps",
+    "installedapps": "Installierte Apps",
+    "myrequests": "Anträge",
+    "mytickets": "Meine Tickets",
+    "new-access-key": "neuer Zugangsschlüssel",
+    "new-account": "neues Konto",
+    "password": "Passwort",
+    "pointsharp": "Skype for Mobile",
+    "register": "Verzeichnis",
+    "remove": "Löschen",
+    "request": "Anfragen",
+    "requestSupport": "Hilfe anfordern",
+    "reset": "Zurücksetzen / Entsperren",
+    "secure-pass": "SecurePass PIN",
+    "surface-device": "Surface Device",
+    "self-help": "Selbsthilfe-Videos",
+    "service-interruption": "Dienstunterbrechung",
+    "serviceInteruption": "Service Interuptions",
+    "skype": "Skype Mobile",
+    "smart-card": "Smart Card",
+    "sui": "SUI",
+    "tokens": "Ihre Geräte",
+    "topic-cluster": "Themencluster",
+    "ubsmyhub": "UBS My Hub",
+    "video": "VideoVault",
+    "app-store": "App Setup",
+    "app-store-guides": "Guides",
+    "reset-pin": "Manage your Pin",
+    "wifi": "Wifi",
+    "WSStore": "UBS Workspace",
+    "office365": "Office 365",
+    "distributionList": "Verteilerliste",
+    "changeAsset": "Change Asset",
+    "new": "Neu",
+    "requests": " Los geht's: Office 365 Installationsanleitung",
+    "manage-account": "Get Started: Office 365 Mobile Apps Activation",
+    "manage-devices": "Manage your Devices",
+    "yourAccount": "Your Account",
+    "yourDevices": "Ihre Geräte",
+    "yourPin": "Ihre PIN",
+    "platform": "App Setup Guides",
+    "guide": "UBS MobilePass",
+    "mpGuide": "Los geht's: UBS MobilePass Installationsanleitung",
+    "activateCard": "SecurePass Display Token Activation",
+    "personalInfo": "Personal Info",
+    "settingGuide": "Setting Guide",
+    "workremote": "Arbeiten von zu Hause aus",
+    "settingInfo": "Setting Personal Information",
+    "remote-wizard": "Home Office Readiness",
+    "workspace-readiness": "Workspace Readiness",
+    "ppm": "PPM",
+    "timesheets": "Your Timesheets",
+    "remote-health": "Remote Health"
+  },
+  "activateCard": {
+    "nav": "Activate Token",
+    "step1": "Step 1: Please select authentication method",
+    "step2": "Authenticate yourself",
+    "noQuestionSet": "No Questions Set",
+    "securityDetails": "Security Details",
+    "step1Note": "Authenticate using your security details (no Vouch Key required)",
+    "useSecurity": "Use Security Details",
+    "optionTwoTitle": "Vouch Key(s) and questions",
+    "step1Note2": "Authenticate with a vouch key(s) from a colleague and/or a security detail",
+    "vouchNote1": "Please ask one or two colleagues to vouch for you.",
+    "vouchNote2": "Please make sure you have vouch key(s) before proceeding.",
+    "vouchNote3": "Ask one or two colleagues to visit goto/sui -> 'Vouch for a person' and generate vouch key using your GPN.",
+    "tryAgain": "Wiederholen",
+    "vouchBtn": "Vouch Keys and Questions",
+    "day": "Day (ex: 03 or 22)",
+    "month": "Month (ex: 09)",
+    "year": "Year",
+    "next": "Weiter",
+    "authentic": "Authenticate",
+    "vouchKey": "Vouch Key ",
+    "step3": "Step 3: Activate Card",
+    "serialNumber": "Serial number is on the back of your card, bottom right corner.",
+    "validate": "Aktivieren",
+    "cardActivated": "Card Activated Successfully"
+  },
+  "personalInfo": {
+    "step1": "Step 1: Visit HRi",
+    "step1Note1": "Use the shortcut ",
+    "step1Note2": "goto/hri/",
+    "step1Note3": " and click the link to log in to the HRi self-service portal.",
+    "step1Note4": "Once you are logged in to the HRi portal you will see 'Apps' listed under the 'Me' tab by default.",
+    "next": "Weiter",
+    "previous": "Bisherige",
+    "step2": "Step 2: Select Contact Info",
+    "step2Note1": "Having entered the Personal Information section you can now select Contact Info to provide or update information such as phone numbers and email addresses.",
+    "step3": "Add your information and submit",
+    "step3Note1": "Select ",
+    "step3Note12": "Add",
+    "step3Note13": ", or the Pencil icon to edit an existing number or address ",
+    "step3Note2": "(Business Mobile if you have one, Personal Mobile, Home Phone 1, Business Email and Home Email).",
+    "step3Note3": "Select ",
+    "step3Note4": "Submit ",
+    "step3Note41": "once you have updated your information.",
+    "step3Note5": "The more contact information you submit the greater the number of potential methods for issuing an authentication code.",
+    "backToWizard": "Back to Wizard"
+  },
+  "supportSearch": {
+    "articles": "Artikel",
+    "clearSearch": "Suche löschen",
+    "iCanHelp": "Hallo. Möchten Sie mit mir chatten?",
+    "searchSupport": "Support suchen",
+    "topics": "Themen",
+    "selfServiceOption": "Self-Service Optionen",
+    "allCategories": "Alle Kategorien",
+    "myStatus": "Mein Status",
+    "peopleDirectory": "Mitarbeiter",
+    "noResult": "Keine Suchergebnisse",
+    "hotTopic": "Aktuelles Thema ",
+    "suggestion": "Vorschlag",
+    "approval": "Bewilligung",
+    "request": "Request",
+    "ticket": "Ticket",
+    "notification": "Notification"
+  },
+  "timeout": {
+    "refresh": "Zurück",
+    "sessionTimeout": "Ihre Sitzung ist abgelaufen. Bitte aktualisieren Sie Ihre Sitzung, und wir bringen Sie zu  der Seite zurück, wo Sie zuletzt waren.",
+    "home": "Startseite",
+    "tryAgain": "Wiederholen"
+  },
+  "message": {
+    "connectionTimeout": "Dieser Service ist zur Zeit leider nicht verfügbar. Bitte versuchen Sie es später erneut."
+  },
+  "ubsmyhub": {
+    "mhmh1": "My Hub Mobile",
+    "mhmp1": "My Hub Mobile ist die mobile Version der Goto/Myhub Website. Sobald Sie es installiert haben, können Sie Ihr Passwort ändern, Ihre Tickets einsehen, Ihre Anfragen und Bewilligungen verwalten, das Personenverzeichnis einsehen und vieles mehr.",
+    "mhmlh1": "Vor dem Herunterladen...",
+    "mhmli1": "Sie müssen BlackBerry Work auf Ihrem Gerät installiert haben.",
+    "mhmli2": "Wenn BlackBerry-Anwendungen auf Ihrem Gerät installiert sind  (Work, Connect, Access usw.), müssen diese aktiv sein (innerhalb der letzten 60 Tagen verwendet). Andernfalls schlägt die Aktivierung von My Hub Mobile fehl. Bitte starten Sie diese und melden sich an oder löschen Sie die Anwendungen, bevor Sie My Hub Mobile herunterladen.",
+    "mhmlend1": "Klicken Sie auf ",
+    "mhmlend2": "Weiter ",
+    "mhmlend3": ", um den Installationsanweisungen zu folgen.",
+    "important": "Wichtig",
+    "prerequisite": "Eine Voraussetzung für die UBS My Hub Installation ist ein BlackBerry Dynamics Konto, um ein Konto zu bestellen folgen Sie den Instruktionen auf der Bring Your Own Device (BYOD) Seite.",
+    "installationbeforeproceed": "UBS My Hub Installation - Bevor Sie weiterfahren",
+    "blackberrycontainer": "UBS My Hub benutzt den BlackBerry Container, BlackBerry  Applikationen könnten inaktiv sein: Wenn Sie die BlackBerry Mobil Applikationen (Work, Access, Docs to Go oder Connect) in den letzten 60 Tagen nicht benutzt haben, bitte entfernen Sie dies bevor Sie weiterfahren.",
+    "inanutshell": "Zusammenfassend...",
+    "haventusedblackberry": "Abgelaufene BlackBerry Applikationen können die UBS My Hub Mobile Aktivierung verhindern:",
+    "removeappinstruction": "Wenn Sie eine oder mehrere BlackBerry Applikationen (solche wie Work, Access, Docs to Go oder Connect) haben, welche Sie in den letzten 60 Tagen benutzt haben, wird die Aktivierung gelingen.",
+    "office365instruction": "Wenn alle Ihre BlackBerry Applikationen abgelaufen sind (da während 60 Tagen nicht benutzt), selbst wenn nur eine einzige BlackBerry Applikation installiert und nicht benutzt worden ist, wird die Aktivierung fehlschlagen.",
+    "removeblackberry": "Bitte entfernen Sie abgelaufene BlackBerry Applikationen, sofern vorhanden, bevor Sie fortfahren.",
+    "next": "Weiter",
+    "altiosvideo": "Uninstall Blackberry Suite on iSO video",
+    "altandriodvideo": "Uninstall Blackberry Suite on Android video",
+    "selecteddeviceinstallation": "Installations-Instruktionen",
+    "whenprompted": "wenn Sie dazu aufgefordert werden.",
+    "close": "Schliessen",
+    "back": "Zurück",
+    "instructions": "UBS My Hub Installationsanleitung",
+    "mobileapplicationoffering": "UBS My Hub ist eine mobile Anwendung, welche die Funktionalität von My Hub mit zusätzlichen Inhalten und Funktionen in einer komfortablen mobilen Anwendung bietet. Wählen Sie bitte Ihr Gerät-Betriebssystem von unten aus, um die Installation der Anwendung fortzusetzen.",
+    "iosmobileinfo": "iOS ist ein mobiles Betriebssystem, das von Apple Inc. exklusiv für seine Hardware entwickelt wurde. Es ist das Betriebssystem, welches derzeit für viele der mobilen Geräte des Unternehmens, einschließlich des iPhone, iPad und iPod Touch, verwendet wird.",
+    "androidmobileinfo": "Bei einem Android-Gerät handelt es sich um ein Gerät, das auf dem Betriebssystem Android läuft. Android ist eine Software, die für mobile Geräte entwickelt worden ist und als Betriebssystem funktioniert. Ein Android-Gerät kann ein Smartphone oder Tablet-PC sein, von Marken wie Samsung, LG, Google Pixel, Sony, HTC, Huawei und viele mehr.",
+    "continuewith": "Um mit der Installation fortzufahren, wählen Sie aus, ob Sie BlackBerry Work installiert haben.",
+    "installed": "Installiert",
+    "notinstalled": "Nicht installiert",
+    "workinstalled": "Installation mit BlackBerry Work installiert",
+    "followvideo": "Folgen Sie dem kurzen Video unten.",
+    "wifisignal": "Stellen Sie sicher, dass Sie ein starkes Wi-Fi Signal haben.",
+    "installfromappstore": "Installieren Sie  'UBS My Hub' aus dem App Store  und starten Sie es.",
+    "setupblackberry": "Richten Sie 'BlackBerry work' ein, wenn Sie aufgefordert werden.",
+    "enterpassword": "Geben Sie ein neues Passwort ein, wenn Sie dazu aufgefordert werden.",
+    "readytouseapp": "Nun sind Sie soweit, um die Applikation benutzen zu können.",
+    "stillhavingtrouble": "Haben Sie immer noch Probleme?",
+    "viewarticle": "Lesen Sie diesen My Hub Artikel, um weitere Hilfe zu erhalten.",
+    "withoutblackberry": "Installation ohne BlackBerry Work installiert.",
+    "generatekeyinstallation": "Generieren Sie einen neuen Schlüssel, wenn Sie während dem Installationsprozess dazu aufgefordert werden.",
+    "generatekey": "Generieren Sie einen Zugriffsschlüssel, wenn Sie dazu aufgefordert werden.",
+    "enteremailaddress": "Geben Sie diese Email-Adresse ein:",
+    "enteraccesskey": "Geben Sie diesen Zugriffsschlüssel ein:",
+    "requestAccount": "Konto beantragen",
+    "print": "Drucken (PDF)"
+  },
+  "botfileUpload": {
+    "dropfile": "Ziehen und Ablegen Ihrer Dateien hier oder ",
+    "browse": "Durchsuchen",
+    "screenshots": "Screenshots können direkt über Strg + C / Strg + V angehängt werden",
+    "max4files": "Max. 4 Dateien von 4 MB gesamt",
+    "maxfilesReached": "Sie haben die maximalen Upload-Anforderungen erreicht",
+    "cid": "Bitte stellen Sie sicher, dass Ihr Bild keine vertraulichen Daten enthält",
+    "Cancel": "Abbrechen",
+    "Done": "Fertig",
+    "exceedTotalFileLimit": "Die Gesamtgröße der Anhänge überschreitet die zulässige Grenze von 4 MB"
+  },
+  "mobile": {
+    "office": {
+      "android": "Android",
+      "ios": "iOS"
+    },
+    "office365": {
+      "landingH1": "Installation guides for Office 365 mobile apps",
+      "landingText1": "You can now install any Office 365 application on your personal mobile device by following the instructions below. ",
+      "landingText2": "Ensure you select the correct platform (iOS or Android).",
+      "landingText3": "If you’re just starting out, we recommend installing your mobile apps in the order listed.",
+      "landingText4": "we recommend installing your mobile apps in the order listed.",
+      "landingAlert": "Your PIN and phone number have been set but you can change them anytime.",
+      "manageYourAccount": "Manage Your Account",
+      "typeiOS": "iOS",
+      "platform": "Platform",
+      "ApplicationLabel": "Application",
+      "requirements": "Requirements",
+      "mAuthenticator": "Microsoft Authenticator",
+      "iOSCondition": "iOS 11.0.x or higher is required",
+      "typeAndroid": "Android",
+      "androidCondition": "Android 8.0 or higher is required",
+      "step": "Step {{value}}: ",
+      "next": "Weiter",
+      "previous": "Bisherige",
+      "continue": "Continue",
+      "manageAccount": {
+        "title": "Office 365 Mobile Applications Activation",
+        "text0": "To run Office 365 applications on your iOS or Android device you must set an Authentication PIN and register a mobile number.",
+        "pinSetAlert": "You must create an Authentication PIN to continue.",
+        "text2": "Once your Authentication PIN has been set you can change it any time here.",
+        "text1": "You must set your PIN here.",
+        "phoneSetAlert": "You must add your mobile phone number before you can set up and use any Office 365 mobile apps.",
+        "pinNotMatch": "These PINs do not match. Please re-enter the PIN.",
+        "setPin": "Your Authentication PIN",
+        "setPhone": "Your Mobile Phone Number",
+        "pinSuccess": "Your Authentication PIN has been changed successfully.",
+        "pinSuccess2": "Make a note of your PIN as you will need it to enrol your device and access Office 365 applications with your UBS account.",
+        "pinPresetSuccess": "Your Authentication PIN has been set but you can change it any time.",
+        "nPin": "New Authentication PIN",
+        "cPin": "Confirm your new Authentication PIN",
+        "changePin": "Change my Authentication PIN",
+        "resetPin": "Reset my Authentication PIN",
+        "viewNumber": "View your Mobile number",
+        "nAccepted": "Your mobile number has been set successfully.",
+        "mtext1": "Enter your mobile number including the international prefix",
+        "mtext2": "During application setup, an additional temporary verification code is sent via SMS to your mobile phone.",
+        "mtext3": "Mobiltelefon-Nummer",
+        "mtext4": "To change your mobile number, select its international code from the list, then type the rest of your new number. Your number will not be changed until you Submit the new number.",
+        "criteriaPIN": "Your Authentication PIN must be at least six digits long and it cannot contain a sequence within the phone number of four or more digits, nor any three (or more) repeating digits (e.g. 000, 1111), nor three or more sequential digits (e.g. 123, 4321). Your PIN will not change until you confirm and submit a new PIN",
+        "weakError": "This PIN is not strong enough. Please try again.",
+        "enrolDevice": "Add new device",
+        "ctaOffice1": "Get Office 365 apps"
+      },
+      "outlook": {
+        "ios": {
+          "step1": {
+            "heading": "Install Microsoft Apps",
+            "text1": "Microsoft Authenticator is required in order to use Outlook on your device.",
+            "text2": "Download the Microsoft Authenticator and Outlook applications from your Apple App Store.",
+            "text3": "Install Authenticator but do not sign in to the application."
+          },
+          "step2": {
+            "heading": "Add your account",
+            "text1": "If Outlook finds an existing account that uses your UBS email address select 'Add Account'. If Outlook finds and offers to add any non-UBS email addresses to this account, deselect these and select 'Skip'.",
+            "text2": "Otherwise enter your UBS email address (firstname.lastname@ubs.com) and select 'Add Account'.",
+            "text3": "You will be prompted to open the Authenticator application. Tap 'Open Authenticator'.",
+            "text4": "Acknowledge any notification prompts displayed. Outlook may then close. If so, relaunch it."
+          },
+          "step3": {
+            "heading": "Sign in and verify your account",
+            "text1": "You will be redirected to the UBS sign in page showing your email address. Tap 'Next'",
+            "text2": "A verification code will then be sent by SMS to the mobile phone you provided the number for in the pre-requisite Activation step.",
+            "text3": "Please note: the SMS sender may be displayed as 'SmsVerify' rather than Microsoft.",
+            "text4": "Enter the six digit code sent to this phone, followed directly by the Authentication PIN you have already set up.",
+            "text5": "Then tap 'Sign in'.",
+            "text6": "The 'Help us keep your device secure' page registers your device to allow it to access UBS Resources. Tap 'Register'."
+          },
+          "step4": {
+            "heading": "Set PIN for Office 365 applications",
+            "text1": "Tap 'Maybe Later' on the 'Add Another Account' page. You may also see a three-slide tour of the application's features which can be skipped.",
+            "text2": "A notification that UBS is protecting data in this app will appear. Tap 'OK'.",
+            "text3": "You will then be asked to set an additional PIN. This PIN is used across all your Office 365 mobile applications and is different to the Authentication PIN (or SMS code) that you received earlier.",
+            "text4": "This new PIN must be at least eight characters long, contain least one number, one letter and one special character. The PIN must not contain repeating characters (e.g. AA) or numerical sequences (e.g. 123).",
+            "text5": "Re-enter your new PIN to confirm and proceed."
+          },
+          "step5": {
+            "heading": "Completion",
+            "text1": "Your UBS mailbox is ready to use. Tap 'Turn On' to enable Notifications if you would like to.",
+            "text2": "Tap the circular icon at the top left to navigate to the folder view.",
+            "text3": "Your email folder list is then visible."
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Install Applications",
+            "text1": "The Microsoft Authenticator and Intune Company Portal Apps are required in order to use Outlook on your Android device.",
+            "text2": "If you have not already done so please download and install these Apps, including Outlook, from the Google Play Store.",
+            "text3": "You should not sign into the Intune Company Portal App. There is also no requirement to sign into the Authenticator application, but you must have both of these apps downloaded to your mobile device."
+          },
+          "step2": {
+            "heading": "Install Outlook and Add your account",
+            "text1": "Install the Microsoft Outlook application.",
+            "text2": "If Outlook finds and offers to add previous email addresses to this account, deselect these and select 'Skip'.",
+            "text3": "Enter your UBS email address (firstname.lastname@ubs.com).",
+            "text4": "Tap 'Continue'."
+          },
+          "step3": {
+            "heading": "Sign in and verify your account",
+            "text1": "You may be asked to choose your Account Type. If so please select 'Office 365' rather than 'Outlook'.",
+            "text1a": "You will be redirected to the UBS sign in page showing your email address. Tap 'Next'.",
+            "text2": "A verification code will then be sent by SMS to the mobile phone you provided the number for in the pre-requisite Activation step.",
+            "text2a": "Please note: the SMS sender may be displayed as 'SmsVerify' rather than Microsoft.",
+            "text3": "Enter the six digit code sent to this phone, followed directly by the Authentication PIN you have already set up.",
+            "text4": "Then tap 'Sign in'.",
+            "text5": "The 'Help us keep your device secure' page registers your device to allow it to access UBS Resources. Tap 'Register'."
+          },
+          "step4": {
+            "heading": "Set PIN for Office 365 applications",
+            "text1": "Tap 'Skip' on the 'Add Another Account' page. You may also see a three-slide tour of the application's features which can also be skipped.",
+            "text2": "The 'Get Access' page is displayed. Ensure that four green ticks are displayed, then tap 'Continue'. A notification that UBS is protecting data in this app may also appear. If so, tap 'OK'.",
+            "text3": "You will then be asked to set an additional PIN. This PIN is used across all Office 365 applications and is different to the Authentication PIN (or SMS code) that you received earlier.",
+            "text4": "This new PIN must be at least eight characters long, contain least one number, one letter and one special character. The PIN must not contain repeating characters (e.g. AA) or numerical sequences (e.g. 123).",
+            "text5": "Re-enter your new PIN to confirm and proceed."
+          },
+          "step5": {
+            "heading": "Completion",
+            "text1": "Your UBS mailbox is ready to use. Tap Turn On to enable Notifications.",
+            "text2": "Tap the circular icon at the top left to navigate to the folder view.",
+            "text3": "The folder list is then visible."
+          }
+        }
+      },
+      "onedrive": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install OneDrive",
+            "text1": "Download the Microsoft OneDrive application from the App Store and install.",
+            "text2": "The Microsoft Authenticator App is required in order to use OneDrive on your iOS device.",
+            "text3": "Sign in by entering your email address (firstname.lastname@ubs.com) and selecting the arrow to continue."
+          },
+          "step2": {
+            "heading": "Sign in and verify your account",
+            "text1": "You will be redirected to the UBS sign in page showing your email address. Tap 'Next'.",
+            "text2": "A verification code will then be sent by SMS to the mobile phone you provided the number for in the pre-requisite Activation step.",
+            "text3": "Please note: the SMS sender may be displayed as 'SmsVerify' rather than Microsoft.",
+            "text4": "Enter the six digit code sent to this phone, followed directly by the Authentication PIN you have already set up.",
+            "text5": "Then tap 'Sign in'."
+          },
+          "step3": {
+            "heading": "Application Protection",
+            "text1": "The checking app status page is displayed. You are prompted that a restart is required. Restart the OneDrive app.",
+            "text2": "The protecting this app page is displayed. You may receive a prompt: “Your IT admin is now helping you protect work or school data in this app”.",
+            "text3": "Tap 'OK'."
+          },
+          "step4": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step5": {
+            "heading": "Completion",
+            "text1": "The app will now show your UBS OneDrive directory.",
+            "text2": "You can navigate between Work and Personal OneDrive Accounts by clicking the icon in the top left of the screen."
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install OneDrive",
+            "text1": "Download and Install the Microsoft OneDrive application from the Google Play Store.",
+            "text2": "The Microsoft Authenticator and Intune Company Portal apps are required in order to use OneDrive on your Android device. Please ensure you have downloaded these apps to your personal device before proceeding.",
+            "text3": "You should not sign into the Intune Company Portal App.",
+            "text4": "Select 'Sign in' and your account should be found. If not, enter your email address (firstname.lastname@ubs.com) to sign in."
+          },
+          "step2": {
+            "heading": "Application Protection",
+            "text1": "The 'Get Access' page is displayed. Ensure that four green ticks are displayed, then tap 'Continue'."
+          },
+          "step3": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step4": {
+            "heading": "Completion",
+            "text1": "The app will now show your UBS One Drive directory.",
+            "text2": "You can navigate between Work and Personal One Drive Accounts by clicking the icon in the top left of the screen."
+          }
+        }
+      },
+      "edge": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install Microsoft Edge",
+            "text1": "Download the Microsoft Edge application from the Apple App Store and install.",
+            "text2": "The Microsoft Authenticator App is required in order to use Edge on your iOS device.",
+            "text3": "The app will auto-detect existing accounts to add. Select your UBS account to continue."
+          },
+          "step2": {
+            "heading": "App Protection",
+            "text1": "The checking app status page is displayed. You are prompted that a restart is required. Tap OK and restart the Edge app."
+          },
+          "step3": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step4": {
+            "heading": "Configure Options",
+            "text1": "The configuration settings are optional and can be setup as you prefer."
+          },
+          "step5": {
+            "heading": "Completion and usage",
+            "text1": "The three dots in the menu bar at the bottom can be used to access Favourites and Bookmarks.",
+            "text2": "Access to internet sites whilst logged in with the UBS account is restricted. Whilst signed in with your UBS account, if you attempt to access a restricted website such as gmail.com you’ll be asked to switch to your Personal account.",
+            "text3": "Edge policies can take up to 24 hours to apply after signing into the app.  This means that you many not have intranet access immediately after your first sign in."
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install Microsoft Edge",
+            "text1": "Download and Install the Microsoft Edge application from the Google Play Store.",
+            "text2": "The Microsoft Authenticator and Intune Company Portal Apps are required in order to use Edge on your Android device. Please ensure you have already downloaded these apps to your personal mobile device before continuing.",
+            "text3": "You should not sign into the Intune Company Portal App.",
+            "text4": "Select 'Sign in with a work account'. Then select your UBS account to continue."
+          },
+          "step2": {
+            "heading": "Application Protection",
+            "text1": "The 'Get Access' page is displayed. Ensure that four green ticks are displayed and tap 'Continue'."
+          },
+          "step3": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step4": {
+            "heading": "Configure Options",
+            "text1": "The Settings, including the ability to view browsing history across devices are optional. Configure your Notifications as preferred."
+          },
+          "step5": {
+            "heading": "Completion and usage",
+            "text1": "The three dots in the menu bar at the bottom can be used to access Favourites and Bookmarks.",
+            "text2": "Access to internet sites whilst logged in with the UBS account is restricted. Whilst signed in with your UBS account, if you attempt to access a restricted website such as gmail.com you’ll be asked to switch to your Personal account.",
+            "text3": "Edge policies can take up to 24 hours to apply after signing into the app.  This means that you many not have intranet access immediately after your first sign in."
+          }
+        }
+      },
+      "word": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install Microsoft Word",
+            "text1": "Download the Microsoft Word application from the Apple App Store and install.",
+            "text2": "The Microsoft Authenticator App is required in order to use Word on your iOS device."
+          },
+          "step2": {
+            "heading": "App Protection",
+            "text1": "You may be prompted that your organisation is protecting data in the app. Tap 'OK' and restart the app. ",
+            "text2": "Otherwise tap 'Get Started'."
+          },
+          "step3": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step4": {
+            "heading": "Configure Options & Completion",
+            "text1": "The configuration settings are optional and can be setup as you prefer.",
+            "text2": "Tap 'Create and Edit documents'."
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install Microsoft Word",
+            "text1": "Download and Install the Microsoft Word application from the Google Play Store.",
+            "text2": "The Microsoft Authenticator and Intune Company Portal Apps are required in order to use Word on your Android device. Please ensure you have downloaded these apps to your personal device before proceeding.",
+            "text3": "You should not sign into the Intune Company Portal App."
+          },
+          "step2": {
+            "heading": "Add your Account and sign in",
+            "text0": "Skip this step if you find your account has been added automatically.",
+            "text1": "If the account is not added automatically click the person icon in the top right of the screen.",
+            "text2": "Select 'Add Account'.",
+            "text3": "Enter your email address (firstname.lastname@ubs.com) and select 'Sign in'."
+          },
+          "step3": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications.",
+            "text3": "The 'Configuring Office' screen is then displayed."
+          },
+          "step4": {
+            "heading": "Options and Completion",
+            "text1": "Tap through the options displayed.",
+            "text2": "The icon in the top left allows you to view the active accounts. The bottom menu shows the navigation."
+          }
+        }
+      },
+      "excel": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install Microsoft Excel",
+            "text1": "Download the Microsoft Excel application from the App Store and install."
+          },
+          "step2": {
+            "heading": "heading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "heading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "heading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "heading",
+            "text1": "text5"
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install Microsoft Excel",
+            "text1": "Download the Microsoft Excel application from the App Store and install."
+          },
+          "step2": {
+            "heading": "androidheading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "androidheading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "androidheading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "androidheading",
+            "text1": "text5"
+          }
+        }
+      },
+      "powerpoint": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install Microsoft PowerPoint",
+            "text1": "Download the Microsoft PowerPoint application from the App Store and install."
+          },
+          "step2": {
+            "heading": "heading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "heading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "heading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "heading",
+            "text1": "text5"
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install Microsoft PowerPoint",
+            "text1": "Download the Microsoft PowerPoint application from the App Store and install."
+          },
+          "step2": {
+            "heading": "androidheading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "androidheading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "androidheading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "androidheading",
+            "text1": "text5"
+          }
+        }
+      },
+      "onenote": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install Microsoft OneNote",
+            "text1": "Download and install the Microsoft OneNote application from the Apple App Store.",
+            "text2": "The Microsoft Authenticator App is required in order to use OneNote on your iOS device.",
+            "text3": "Launch OneNote and you will be prompted that your organisation is protecting data in the app.",
+            "text4": "Tap 'OK' and restart the app."
+          },
+          "step2": {
+            "heading": "App setup",
+            "text1": "Tap 'Get Started'."
+          },
+          "step3": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step4": {
+            "heading": "Configure Options & Completion",
+            "text1": "Tap 'OK' to keep track of your notes and 'Allow' notifications if desired.",
+            "text2": "On the choose your notebooks page, select the notebooks you want to display in the app.",
+            "text3": "Tap 'Start using OneNote'.",
+            "text4": "The Notebooks page is shown.",
+            "text5": "Tap 'More Notebooks' if you want to open further notebooks in the app (including personal)."
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install Microsoft OneNote",
+            "text1": "Download and Install the Microsoft OneNote application from the Google Play Store.",
+            "text2": "The Microsoft Authenticator and Intune Company Portal Apps are required in order to use OneNote on your Android device.",
+            "text3": "You should not sign into the Intune Company Portal App.",
+            "text4": "Open the OneNote App.",
+            "text5": "The 'Welcome to OneNote' page is shown.",
+            "text6": "Enter your UBS email address and tap Next."
+          },
+          "step2": {
+            "heading": "Notifications",
+            "text1": "A prompt is displayed 'Allow OneNote to access your contacts'.",
+            "text2": "You can tap 'Deny', this is not required for your UBS account.",
+            "text3": "Tap 'Get Started'."
+          },
+          "step3": {
+            "heading": "App Protection",
+            "text1": "You may receive a prompt: Your Organisation is protecting data in this app, restart to continue. If so, tap 'OK' and restart the OneNote app.",
+            "text2": "The 'Get Access' page is displayed. Ensure that four green ticks are displayed and tap 'Continue'."
+          },
+          "step4": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step5": {
+            "heading": "Completion",
+            "text1": "Your NoteBook is now open. This OneNote notebook is synchronised to your personal OneDrive, it is different to the OneNote notebook on your UBS Workspace desktop (which is saved in your Home/P: drive).",
+            "text2": "Personal Notebooks can also be opened by selecting the More Notebooks option."
+          }
+        }
+      },
+      "todo": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install Microsoft ToDo",
+            "text1": "Download the Microsoft ToDo application from the App Store and install."
+          },
+          "step2": {
+            "heading": "heading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "heading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "heading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "heading",
+            "text1": "text5"
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install Microsoft ToDo",
+            "text1": "Download the Microsoft ToDo application from the App Store and install."
+          },
+          "step2": {
+            "heading": "androidheading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "androidheading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "androidheading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "androidheading",
+            "text1": "text5"
+          }
+        }
+      },
+      "teams": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install Teams",
+            "text1": "Download the Microsoft Teams application from the Apple App Store and install.",
+            "text2": "The Microsoft Authenticator App is required in order to use Teams on your iOS device.",
+            "text3": "Your email address should already be populated, tap it to sign in.",
+            "text4": "If not, enter your email address (firstname.lastname@ubs.com) and select 'Sign in'."
+          },
+          "step2": {
+            "heading": "App Configuration",
+            "text1": "On the configure Notifications prompt tap 'Allow'.",
+            "text2": "At the prompt: Teams would like to access the microphone tap 'OK'."
+          },
+          "step3": {
+            "heading": "App Protection",
+            "text1": "You will be prompted that your organisation is protecting data in the app.",
+            "text2": "Tap 'OK' and restart the app."
+          },
+          "step4": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step5": {
+            "heading": "Completion",
+            "text1": "Tap 'Next' through the info screens, then tap 'Got it'.",
+            "text2": "The bottom menu can be used to navigate through the app functions."
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install Teams",
+            "text1": "Download and Install the Microsoft Teams application from the Google Play Store.",
+            "text2": "The Microsoft Authenticator and Intune Company Portal Apps are required in order to use Teams on your Android device. Please ensure you have downloaded both of these apps to your personal device before continuing.",
+            "text3": "You should not sign into the Intune Company Portal App."
+          },
+          "step2": {
+            "heading": "Sign in",
+            "text1": "Your email address should already be populated. If not, re-enter your email address (firstname.lastname@ubs.com) and select 'Sign in'."
+          },
+          "step3": {
+            "heading": "Application Protection",
+            "text1": "The 'Get Access' page is displayed. Ensure that four green ticks are displayed and tap 'Continue'."
+          },
+          "step4": {
+            "heading": "Enter your PIN",
+            "text1": "If this is the first app you have activated with your UBS account, you will be prompted to create and confirm a PIN. This PIN is used across all Office 365 applications.",
+            "text2": "If you have already activated another app with your UBS account, you will be prompted to enter the PIN. This PIN is used across all Office 365 applications."
+          },
+          "step5": {
+            "heading": "Completion",
+            "text1": "Tap 'Next' through the info screens, then tap 'Got it'.",
+            "text2": "The bottom menu can be used to navigate through the app functions."
+          }
+        }
+      },
+      "sharepoint": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install SharePoint",
+            "text1": "Download the Microsoft SharePoint application from the App Store and install."
+          },
+          "step2": {
+            "heading": "heading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "heading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "heading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "heading",
+            "text1": "text5"
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install SharePoint",
+            "text1": "Download the Microsoft SharePoint application from the App Store and install."
+          },
+          "step2": {
+            "heading": "androidheading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "androidheading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "androidheading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "androidheading",
+            "text1": "text5"
+          }
+        }
+      },
+      "office": {
+        "ios": {
+          "step1": {
+            "heading": "Download and install Office",
+            "text1": "Download the Microsoft Office application from the App Store and install."
+          },
+          "step2": {
+            "heading": "heading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "heading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "heading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "heading",
+            "text1": "text5"
+          }
+        },
+        "android": {
+          "step1": {
+            "heading": "Download and install Office",
+            "text1": "Download the Microsoft Office application from the App Store and install."
+          },
+          "step2": {
+            "heading": "androidheading",
+            "text1": "text2"
+          },
+          "step3": {
+            "heading": "androidheading",
+            "text1": "text3"
+          },
+          "step4": {
+            "heading": "androidheading",
+            "text1": "text4"
+          },
+          "step5": {
+            "heading": "androidheading",
+            "text1": "text5"
+          }
+        }
+      }
+    },
+    "mobilePass": {
+      "heading2": "Bitte beachten Sie, dass Sie UBS MobilePass installieren sollten, solange Sie keine anders lautenden Anweisungen erhalten.",
+      "appName": "UBS MobilePass",
+      "veridium": "VeridiumID",
+      "default": "Vorgabe",
+      "legacy": "Legacy",
+      "latestApp": "Dies ist die neueste Anwendung - verwenden Sie diese.",
+      "phaseOut": "Diese Version ist nicht mehr aktuell. Verwenden Sie diese nur, wenn Sie dazu aufgefordert werden.",
+      "notEntitle": "Sie sind noch nicht berechtigt, UBS MobilePass zu benutzen",
+      "request": "Zugriff beantragen",
+      "requestMessage1": "Antrag mit der Referenz {{value}} ist eingereicht und wartet auf Genehmigung.",
+      "requestMessage2": "Es kann 24-36 Stunden dauern, bis der Antrag erledigt wurde.",
+      "viewRequest": "Antrag anzeigen",
+      "landingH2": "Wählen Sie das Betriebssystem Ihres Geräts",
+      "landingNote1": "Geräte mit Jailbreak oder Geräte die gerootet wurden werden blockiert.",
+      "typeiOS": "iOS",
+      "requirements": "Anforderungen",
+      "mAuthenticator": "Microsoft Authenticator",
+      "iOSCondition": "iOS 11.0.x oder stärker mit biometrischer Authentifizierung (Fingerabdruck oder Gesichtserkennung) ist erforderlich.",
+      "typeAndroid": "Android",
+      "androidCondition": "Android 8.0 oder stärker mit biometrischer Authentifizierung (Fingerabdruck oder Gesichtserkennung) ist erforderlich.",
+      "step": "Schritt {{value}}: ",
+      "next": "Weiter",
+      "previous": "Bisherige",
+      "continue": "Weiter",
+      "viewInstructionPdf": "View Instructions PDF",
+      "viewAssistArticle": "Artikel ansehen",
+      "needHelp": "Benötigen Sie Hilfe?",
+      "landingPage": {
+        "step1": {
+          "heading": "Biometrische Anforderungen",
+          "text1": "Überspringen Sie diesen Schritt, wenn Sie bereits die biometrische Authentifizierung (Fingerabdruck oder Gesichtserkennung) verwenden.",
+          "text2": "Aktivieren Sie die Biometrie Funktionen auf Ihrem Gerät, indem Sie die Dokumentation Ihres Herstellers konsultieren.",
+          "text3": "Aktivieren Sie die Biometrie Funktionen auf Ihrem Gerät, indem Sie die folgenden",
+          "text4": "Schritte durchführen"
+        },
+        "step2": {
+          "heading": "VeridiumID installieren",
+          "text1": "Laden Sie VeridiumID vom App Store herunter. Falls erfragt, erlauben Sie Benachrichtigungen nach der Installation.",
+          "text2": "Laden Sie VeridiumID vom Google Play Store herunter. Falls erfragt, erlauben Sie Benachrichtigungen nach der Installation."
+        },
+        "step3": {
+          "heading": "Bürgeschlüssel",
+          "text1": "2 Kollegen müssen für Sie bürgen via",
+          "text2": "goto/SUI",
+          "text3": "Sobald ein Bürgeschlüssel generiert wurde, ist er für eine Stunde gültig.",
+          "text4": "Bitte notieren Sie die 2 Bürgeschlüssel für den nächsten Schritt.",
+          "text5": "Mehr Information bezüglich Bürgen finden sie",
+          "text6": "hier"
+        },
+        "step4": {
+          "heading": "QR code",
+          "text1": "Starten Sie die VeridiumID App und wählen Sie QR Code scannen.",
+          "text2": "Benutzen Sie ihr Gerät um den folgenden Code zu scannen.",
+          "text3": "Nun geben Sie die Bürgeschlüssel aus dem vorigen Schritt ein."
+        },
+        "step5": {
+          "heading": "Abschluss",
+          "text1": "Die Registrierung ist nun abgeschlossen und Sie können VeridiumID nutzen um sich einzuloggen.",
+          "text2": "Mehr Informationen zu",
+          "text3": "MobilePass",
+          "text4": "finden Sie hier."
+        }
+      },
+      "guideTransmit": {
+        "step1": {
+          "heading": "Biometrische Anforderungen",
+          "text1": "Überspringen Sie diesen Schritt, wenn Sie bereits die biometrische Authentifizierung (Fingerabdruck oder Gesichtserkennung) verwenden.",
+          "text2": "Aktivieren Sie die Biometrie Funktionen auf Ihrem Gerät, indem Sie die Dokumentation Ihres Herstellers konsultieren.",
+          "text3": "Aktivieren Sie die Biometrie Funktionen auf Ihrem Gerät, indem Sie die folgenden ",
+          "text4": "Schritte durchführen"
+        },
+        "step2": {
+          "heading": "UBS MobilePass installieren",
+          "text1": "UBS MobilePass aus dem App Store herunterladen und installieren",
+          "text2": "UBS MobilePass aus dem Google Play Store herunterladen und installieren",
+          "text3": "Nach abgeschlossener Installation starten, zustimmen und Benachrichtigungen zulassen wenn sie dazu aufgefordert werden."
+        },
+        "step3": {
+          "heading": "Login",
+          "text1": "Sie verfügen über die korrekten Berechtigungen zur Nutzung von UBS MobilePass. Ihr Benutzername lautet:",
+          "text2": "Geben Sie diesen Benutzernamen ein, um sich bei UBS MobilePass anzumelden.",
+          "text3": "Wenn Sie Ihren Benutzernamen vergessen haben,",
+          "text4": "können Sie SMART jederzeit fragen",
+          "text5": "'Wie lautet mein Benutzername?'"
+        },
+        "step4": {
+          "heading": "Bürgen",
+          "text1": "Bitten Sie zwei Kollegen für Sie zu bürgen, indem diese ",
+          "text2": "Bürgschlüssel für Sie erstellen",
+          "text3": "Nachdem die Bürgschlüssel generiert wurden, sind diese eine Stunde lang gültig.",
+          "text4": "Sobald Sie die Bürgschlüssel erhalten haben, fahren Sie mit dem nächsten Schritt fort.",
+          "text5": "Weitere Informationen über das Bürgen finden Sie ",
+          "text6": "hier"
+        },
+        "step5": {
+          "heading": "Einstellungen",
+          "text0": "Geben Sie Ihre beiden Bürgschlüssel ein.",
+          "text1": "Erlauben Sie die Verwendung Ihrer Kontakte, Ihres Standorts und der Kamera Ihres Geräts, wenn Sie dazu aufgefordert werden.",
+          "text2": "Erlauben Sie die Verwendung Ihrer Kontakte, Ihres Standorts und der Kamera Ihres Geräts, wenn Sie dazu aufgefordert werden.",
+          "text3": "Sie werden dann gebeten, sich mit biometrischen Daten zu authentifizieren. Nachdem Sie dies getan haben, wählen Sie 'Weiter'. Schliessen Sie die Anwendung, um fortzufahren."
+        },
+        "step6": {
+          "heading": "Abschluss",
+          "text1": "Neustart der UBS MobilePass Anwendung.",
+          "text2": "Wählen Sie auf Ihrem IT Anywhere Anmeldebildschirm 'Anmeldung mit UBS MobilePass'.",
+          "text3": "Scannen Sie den QR-Code mit UBS MobilePass."
+        }
+      }
+    }
+  },
+  "remoteHealth": {
+    "disclaimerHeading": "Please note:",
+    "disclaimerText": "some features of this page may not be functional for Apple macOS users. The issue will soon be resolved, check back later for the full picture of your remote working health.",
+    "sectionTitle": "Fernkontrolle des Zustandes",
+    "sectionSubTitle": "Bitte den Zustand Ihres persönlichen Gerätes überprüfen, um optimale Benutzbarkeit beim Arbeiten von zuhause zu erreichen.",
+    "device30Days": "Ihre Geräte (der letzten 30 Tage)",
+    "dataUpdated": "Diese Daten werden täglich aktualisiert.",
+    "noDataFound": "Ihr persönliches Gerät ist aktuell und für das Arbeiten von zuhause geeignet.",
+    "noSoftware": "Ihre Software ist aktuell und für das Arbeiten von zuhause geeignet.",
+    "noDataLink": "Weitere Informationen finden Sie in den FAQ über das Arbeiten von zuhause.",
+    "noDataBtn": "FAQ durchsehen",
+    "lastUpdatedAt": "Aktualisiert @ {{val}}",
+    "refreshData": "Bitte warten, bis Ihre Daten aktualisiert worden sind. Diese Seite wird in {{val}} Sekunden neu geladen.",
+    "tabs": {
+      "software": "Software",
+      "hardware": "Gerät(e)",
+      "connection": "Verbindungen"
+    },
+    "action": {
+      "expand": "Alle ausklappen",
+      "collapse": "Alle einklappen",
+      "whatDo": "Wie muss ich vorgehen?",
+      "readMore": "Weiterlesen"
+    },
+    "software": {
+      "panelTitle1": "Ihr Betriebssystem",
+      "panelTitle2": "Ihre 'Citrix Workspace App'",
+      "panelTitle3": "Ihre 'Citrix HDX RealTime Media Engine'",
+      "panel1": {
+        "supportText": "Das Betriebssystem dieses Gerätes ist kompatibel mit UBS-Fernarbeit.",
+        "notSupportText1": "Sie versuchen sich unter einem Betriebssystem zu verbinden, welches nicht kompatibel mit UBS-Fernarbeit ist. Um dieses auf Ihrem Gerät zu ändern oder aktualisieren, folgen Sie bitte den Anweisungen des Herstellers.",
+        "notSupportText2": "Welche Betriebssysteme unterstützt werden, steht im vollständigen Beitrag. ",
+        "tooltip1": "Um auf Ihren virtuellen UBS Desktop beim Arbeiten von zuhause zuzugreifen, muss ein UBS-kompatibles Betriebssystem auf Ihrem persönlichen Gerät (z. B. Heim-PC oder Laptop) installiert sein. Dieses ist nicht zwingend das aktuellste, vom Hersteller veröffentlichte Betriebssystem."
+      },
+      "panel2": {
+        "supportText": "Sie benutzen eine geprüfte Version von 'Citrix Workspace App', welche von UBS für die Fernarbeit unterstützt wird.",
+        "notSupportText1": "Wir haben festgestellt, dass Sie eine ungeprüfte Version von 'Citrix Workspace App' benutzen, welche von UBS für die Fernarbeit nicht unterstützt wird.",
+        "notSupportText2": "UBS 'Citrix Workspace App' wird in der Version {{value}} benötigt.",
+        "notSupportText3": "Ubs.com/itanywhere im Browser Ihres persönlichen Gerätes öffnen und für eine Aktualisierungs-Anleitung auf 'Show instructions for this Computer' klicken.",
+        "tooltip1": "Das installierte Hauptprogramm 'Citrix Workspace App' (vorgängig 'Citrix Receiver') ermöglicht auf Ihrem persönlichen Gerät, eine Verbindung zu Ihrem UBS Desktop herzustellen. Die von UBS geprüfte Version ist nicht zwingend die aktuellste, von Citrix veröffentlichte."
+      },
+      "panel3": {
+        "supportText": "Sie benutzen eine geprüfte Version von 'Citrix HDX RealTime Media Engine', welche von UBS für die Fernarbeit unterstützt wird.",
+        "notSupportText1": "Wir haben festgestellt, dass Sie eine ungeprüfte Version von 'Citrix HDX RealTime Media Engine' benutzen, welche von UBS für die Fernarbeit nicht unterstützt wird.",
+        "notSupportText2": "UBS 'Citrix HDX RealTime Media Engine' wird in der Version {{value}} benötigt.",
+        "notSupportText3": "Ubs.com/itanywhere im Browser Ihres persönlichen Gerätes öffnen und für eine Aktualisierungs-Anleitung auf 'Show instructions for this Computer' klicken",
+        "tooltip1": "Das installierte Programm 'Citrix HDX RealTime Media Engine' ist auf Ihrem persönlichen Gerät für die Qualität der Anrufe und Videoübertragungen unter Skype beim Arbeiten von zuhause zuständig. Die von UBS geprüfte Version ist nicht zwingend die aktuellste, von Citrix veröffentlichte."
+      }
+    },
+    "hardware": {
+      "panelTitle1": "Ihr Audio-Headset",
+      "panelTitle2": "Ihre Bildschirme",
+      "panel1": {
+        "supportText": "Ihr Audio-Headset wird von UBS für die Fernarbeit unterstützt.",
+        "notSupportText1": "Wir haben festgestellt, dass Ihr angeschlossenes Audiogerät für die Fernarbeit von UBS nicht unterstützt wird.",
+        "notSupportText2": "Eine Liste der UBS-geprüften Headsets einsehen oder mehr erfahren über den Bestellprozess eines neuen.",
+        "tooltip1": "Ob im Büro oder beim Arbeiten von zuhause, ein UBS-geprüftes Headset wird die bestmögliche Tonqualität sicherstellen."
+      },
+      "panel2": {
+        "supportText": "Ihre Bildschirm-Auflösung wird von UBS für die Fernarbeit unterstützt.",
+        "notSupportText1": "Wir haben festgestellt, dass die Bildschirm-Konfiguration an Ihrem persönlichen Gerät für die Fernarbeit nicht optimal ist.",
+        "notSupportText2": "Es werden max. 2 Bildschirme für die UBS-Fernarbeit unterstützt.",
+        "notSupportText3": "Bitte sicherstellen, dass Ihre Installation folgende Vorgabe(n) erfüllt:",
+        "notSupportText4": "1 Bildschirm",
+        "notSupportText5": "UBS empfiehlt einen Bildschirm mit einer Auflösung von mind. 1280 x 720 für ein produktives Arbeiten von zuhause..",
+        "notSupportText6": "2 Bildschirme zur Verwendung unter A3",
+        "notSupportText7": "Auflösung sollte insgesamt 3480 x 2160 nicht übersteigen.",
+        "notSupportText8": "2 Bildschirme zur Verwendung unter UBS Workspace",
+        "notSupportText9": "Auflösung sollte insgesamt 6960 x 2160 nicht übersteigen.",
+        "tooltip1": "Wie viele Bildschirme Sie angeschlossen haben, und deren Auflösung, kann die Benutzbarkeit beim Arbeiten von zuhause beeinflussen."
+      }
+    },
+    "connection": {
+      "panelTitle1": "Ihre Internetverbindung",
+      "panel1": {
+        "supportText": "Die Netzwerkverbindung zwischen Ihrem persönlichen Gerät und Ihrem virtuellen UBS Desktop ist optimal für das Arbeiten von zuhause.",
+        "notSupportText1": "Wir haben festgestellt, dass die Netzwerkverbindung zwischen Ihrem persönlichen Gerät und dem virtuellen UBS Desktop nicht so gut ist. Möglicherweise werden Sie beim Arbeiten von zuhause auf Ihrem virtuellen Desktop eine Verzögerung beim Klicken oder Schreiben feststellen.",
+        "notSupportText2": "Bitte eine stabile Internetverbindung sicherstellen.",
+        "notSupportText3": "Wenn möglich eine kabelgebundene Verbindung benutzen (z. B.  Ihr persönliches Gerät mittels LAN-Kabel am Router anschliessen).",
+        "notSupportText4": "Bei einer notwendigen Verbindung über Wi-Fi (drahtlos) bitte sicherstellen, dass Streaming-Dienste und andere Geräte (wie Spielkonsolen) ausgeschaltet sind.",
+        "tooltip1": "Eine unzureichende Internetverbindung wird Ihre Benutzbarkeit beim Arbeiten von zuhause beeinträchtigen, z. B. durch eine Verzögerung beim Klicken oder Schreiben."
+      }
+    },
+    "status": {
+      "Supported": "Unterstützt",
+      "NotSupported": "Nicht unterstützt",
+      "Certified": "Geprüft",
+      "UnCertified": "Ungeprüft",
+      "Optimal": "Optimal",
+      "NotOptimum": "Weniger gut"
+    }
+  },
+  "video": {
+    "description": "UBS Tube - here is a description",
+    "title": "UBS Tube",
+    "title1": "UNützliche Links",
+    "ul1": "Liste der zugelassenen Headsets",
+    "ul2": "UBS MobilePass",
+    "ul3": "Installieren von UBS My Hub auf Mobilgeräten",
+    "ul4": "Installieren von Skype for Business auf Mobilgeräten",
+    "ul5": "Installieren von Office 365 auf Mobile",
+    "ul6": "Einrichten und Konfigurieren der Remote-Arbeit",
+    "ul7": "Going Greener App-Artikel",
+    "ul8": "Werden Sie Skype for Business Large Meeting Expert",
+    "gt-connectLinkText1": "GT Connect App-Artikel",
+    "cta1": "Setup-Anleitung",
+    "playlistTitle": "Editor-Picks",
+    "playRec": "Wiedergeben des nächsten empfohlenen videos",
+    "video-1": {
+      "description": "Da viele von uns derzeit aus der Ferne arbeiten, können kleine Änderungen, die wir vornehmen, die Qualität unserer Technologiedienste erheblich verbessern - insbesondere Skype für Unternehmen, Links unten enthielten die neuesten empfohlenen Headsets und wie man Skype für Unternehmen auf Ihrem mobilen Gerät installiert."
+    },
+    "video-2": {
+      "description": "Dieses kurze Video zeigt, wie Sie Ihre persönliche Workstation einrichten, damit Sie sich mit UBS MobilePass als Authentifizierungsmethode aus der Ferne auf Ihrer Workstation anmelden können.  Links unten enthalten Anweisungen, wie man UBS MobilePass zu aktivieren. Besuchen Sie 'www.ubs.com/remoteaccess' auf Ihrem persönlichen Gerät."
+    },
+    "video-3": {
+      "description": "Dieses kurze Video zeigt, wie Sie Ihre persönliche Workstation einrichten, damit Sie sich mit UBS MobilePass als Authentifizierungsmethode aus der Ferne auf Ihrer Workstation anmelden können.  Links unten enthalten Anweisungen, wie man UBS MobilePass zu aktivieren. Besuchen Sie 'www.ubs.com/remoteaccess' auf Ihrem persönlichen Gerät."
+    },
+    "video-4": {
+      "description": "Dieses kurze Video zeigt, wie Sie Ihr persönliches iPad einrichten, damit Sie sich mit UBS MobilePass als Authentifizierungsmethode aus der Ferne auf Ihrer Workstation anmelden können.  Links unten enthalten Anweisungen, wie man UBS MobilePass zu aktivieren. Besuchen Sie 'www.ubs.com/remoteaccess' auf Ihrem persönlichen Gerät."
+    },
+    "video-5": {
+      "description": "Teams ist eine Collaboration-App, die Ihrem Team hilft, organisiert zu bleiben und Gespräche zu führen – alles an einem Ort."
+    },
+    "video-6": {
+      "description": "Teams sind Gruppen von Personen, die für Arbeit, Projekte oder gemeinsame Interessen zusammengebracht werden. Die Teams bestehen aus zwei Arten von Kanälen – Standard (verfügbar und für alle sichtbar) und privaten (fokussierte, private Unterhaltungen mit einer bestimmten Zielgruppe). Jeder Kanal basiert auf einem Thema wie 'Team Events', einem Abteilungsnamen oder nur zum Spaß. Auf den Kanälen halten Sie Besprechungen ab, führen Gespräche und arbeiten gemeinsam an Dateien."
+    },
+    "video-7": {
+      "description": "Ein paar Schritte können Ihnen helfen, bessere, produktivere Meetings zu haben."
+    },
+    "video-8": {
+      "description": "Nehmen Sie über Einwahlnummer und Konferenz-ID an einer Teams-Besprechung teil, oder melden Sie sich als Gast im Web an."
+    },
+    "video-9": {
+      "description": "Starten Sie 1:1 oder Gruppenanrufe – unabhängig davon, wo Sie sich in Teams befinden."
+    },
+    "video-10": {
+      "description": "Starten Sie 1:1 oder gruppieren Sie Chats, um mit einer kleineren Gruppe zusammenzuarbeiten oder privat zu sprechen, und setzen Sie Chats für einen schnellen Zugriff an."
+    },
+    "video-11": {
+      "description": "Erstellen und formatieren Sie einen Beitrag, um eine Unterhaltung in einem Kanal zu starten."
+    },
+    "video-13": {
+      "description": "Wie Sie mit Follow-ups und Erwähnungen in Word im Fluss bleiben, halten Sie Ihren Gedankengang aufrecht, indem Sie Follow-ups im Dokument lassen, und andere ins Gespräch bringen, indem Sie sie direkt in die Leinwand eintragen."
+    },
+    "video-14": {
+      "description": "Arbeiten Sie online in Word zusammen. Teilen Sie mit Office 365 Ihr Dokument und arbeiten Sie schnell mit anderen zusammen, unabhängig davon, wo Sie sich befinden."
+    },
+    "video-15": {
+      "description": "Mit Office 365 für Unternehmen können Sie Mitarbeiter von jedem Gerät aus mit den Personen, Informationen und Inhalten verbinden, die sie für ihre beste Arbeit benötigen."
+    },
+    "video-16": {
+      "description": "Überall, wo Sie in Office 365 arbeiten, können Sie Ihre Dokumente ganz einfach freigeben."
+    },
+    "video-17": {
+      "description": "Das Erstellen, Öffnen und Speichern von Dateien funktioniert in Office-Desktop-Apps auf die gleiche Weise."
+    },
+    "video-18": {
+      "description": "Verwenden Sie @mentions in einem Kommentar, um die Aufmerksamkeit einer Person zu erhalten, z. B. für Feedback oder für weitere Informationen, genau dort, wo Sie die Hilfe benötigen"
+    },
+    "video-19": {
+      "description": "Möchten Sie Ihre Grenzen ausdehnen? Nehmen Sie die grünen Herausforderungen an und werden Sie ein #ZeroHero. Sie müssen My Hub auf Mobile installiert haben."
+    },
+    "video-20": {
+      "description": "Skype-Tipps für Meetings mit externen Teilnehmern, einschliesslich dem Aufsetzen solcher Meetings, dem Hinzufügen von externen Teilnehmern, und wie man externe Teilnehmer zu Präsentatoren macht."
+    },
+    "gt-connect-video": {
+      "description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten und Veranstaltungen aus ganz GT. Teilen Sie Ihre Gedanken und Ideen. Posten Sie Fotos und Videos. Vernetzen Sie sich mit Kollegen durch Kommentieren und Gefallen – alles unterwegs."
+    }
+  },
+  "portalFeedback": {
+    "Positive": "Positiv",
+    "Negative": "Negativ",
+    "Suggestion": "Ein Vorschlag",
+    "AlertInfoText": "Verwenden Sie die Feedback Funktion nicht dazu, einen Vorfall oder eine Anfrage zu erstellen oder zu eskalieren. Wir sind nicht in der Lage, jede Rückmeldung einzeln zu beantworten.",
+    "FeedbackTypeHeading": "Welche Art von Feedback würden Sie gerne anbieten?",
+    "PositiveHeading": "Was hat Ihnen gefallen?",
+    "NegativeHeading": "Was hat Ihnen nicht gefallen?",
+    "SuggestionHeading": "Was sollte Ihrer Meinung nach verbessert werden?",
+    "ApplicationLabel": "Anwendung",
+    "MyHubPortalDesc": "Das My Hub-Portal vereint alle Ihre Technologie-Werkzeuge unter einem Dach. My Hub ist eine zentrale Selbsthilfe-Plattform für eine schnelle Unterstützung bei allen Ihrer technischen Fragen und Problemen.",
+    "MyHubExternalDesc": "Die UBS externe Website von My Hub ist eine Absicherung, wenn Sie Remote arbeiten und stellt Ihnen die My Hub-Funktionalitäten über eine Internet-Seite bereit.",
+    "MyHubMobileDesc": "My Hub Mobile ist eine komfortable Möglichkeit, auf Ihre My Hub Seite zuzugreifen, während Sie nicht an Ihrem Computer zu Hause arbeiten. Sie haben Zugriff auf die Funktionen von My Hub mit Ihrem IOS- oder Android-Gerät.",
+    "MyHubLiteDesc": "Das My Hub-Panel zeigt Ihnen den Status Ihrer Services und Ihre Benachrichtigungen auf einen Blick. Es enthält auch ein Tool zum Ändern und Zurücksetzen Ihres Passworts.",
+    "PeopleDirectory": "Mitarbeiterverzeichnis",
+    "MyStatus": "Mein Status",
+    "Passwords": "Passwörter",
+    "Mobile": "Mobile",
+    "MyComputer": "Mein Computer",
+    "Assist": "Assist",
+    "HowTo": "Anleitung",
+    "Other": "Andere",
+    "Description": "Beschreibung",
+    "CategoryLabel": "Kategorie wählen",
+    "ApplicationError": "Anwendung ist erforderlich",
+    "CategoryError": "Eine Kategorie ist erforderlich",
+    "SuggestionLabel": "Bitte geben Sie Ihren Vorschlag ein",
+    "SuggestionError": "Ein Vorschlag ist erforderlich",
+    "CommentLabel": "Bitte geben Sie Ihren Kommentar ein – erfassen Sie keine kundenidentifizierende Daten (CID).",
+    "CommentError": "Ein Kommentar ist erforderlich",
+    "EmailLabel": "E-Mail (optional)",
+    "Submit": "Submit",
+    "SubmissionFeedback": "Ihr Feedback wurde eingereicht, vielen Dank!"
+  }
+}
