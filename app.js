@@ -4,6 +4,9 @@ var fs = require('fs');
 const app = express();
 
 
+// Parse JSON bodies (as sent by API clients)
+app.use(express.json());
+
 app.use("/public", express.static(path.join(__dirname + "/public")));
 
 app.get("/", function(req, res) {
@@ -17,13 +20,13 @@ app.get("/getJSON", function(req, res) {
 });
 
 
-app.get("/saveJSON", function(req, res) {
+app.post("/saveJSON", function(req, res) {
 
-  var exportFile = req.query.fileName;
-  delete req.query["fileName"];
-  const getQuery = JSON.stringify(req.query, null, "\t");
+  var exportFile = req.body.fileName;
+  delete req.body["fileName"];
+  const getQuery = JSON.stringify(req.body, null, "\t");
   console.log(getQuery);
-  fs.writeFile(exportFile, getQuery, 'utf8', function (err) {
+  fs.writeFile("output/"+exportFile, getQuery, 'utf8', function (err) {
     if (err) throw err;
     console.log('File Uploaded!');
   });
@@ -34,5 +37,5 @@ app.get("/saveJSON", function(req, res) {
 
 
 app.listen(8000, () => {
-  console.log('Server is running on http://localhost:8000/')
+  console.log('Server is running on http://localhost:8000/');
 });

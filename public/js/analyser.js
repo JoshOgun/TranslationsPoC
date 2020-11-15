@@ -1,10 +1,11 @@
-var accessor = [];
+var accessor = []; // NEEDS RESETTING AFTER EVERY LOAD
 var english = {};
 var spanish = {};
 var german = {};
 var french = {};
 var currMissing = {};
 var identicals = {};
+var autoChanges = 0;
 
 function retrieveFile(){
   var language = document.getElementById('languageSelected').value;
@@ -17,65 +18,114 @@ function retrieveFile(){
       var langJSON = JSON.parse(data.target.result);
       switch(language) {
         case "Identicals":
-        identicals = langJSON;
-        document.getElementById('identicalCheck-01').setAttribute("style", "stroke: green;");
-        document.getElementById('identicalCheck-02').setAttribute("style", "stroke: green;");
-        break;
+          identicals = langJSON;
+          document.getElementById('identicalCheck-01').setAttribute("style", "stroke: green;");
+          document.getElementById('identicalCheck-02').setAttribute("style", "stroke: green;");
+          break;
         case "English":
-        english = langJSON;
-        document.getElementById('englishCheck-01').setAttribute("style", "stroke: green;");
-        document.getElementById('englishCheck-02').setAttribute("style", "stroke: green;");
-        // console.log(english);
-        break;
+          english = langJSON;
+          document.getElementById('englishCheck-01').setAttribute("style", "stroke: green;");
+          document.getElementById('englishCheck-02').setAttribute("style", "stroke: green;");
+          break;
         case "Spanish":
-        spanish = langJSON;
-        document.getElementById('spanishCheck-01').setAttribute("style", "stroke: green;");
-        document.getElementById('spanishCheck-02').setAttribute("style", "stroke: green;");
-        break;
+          spanish = langJSON;
+          document.getElementById('spanishCheck-01').setAttribute("style", "stroke: green;");
+          document.getElementById('spanishCheck-02').setAttribute("style", "stroke: green;");
+          break;
         case "German":
-        german = langJSON;
-        document.getElementById('germanCheck-01').setAttribute("style", "stroke: green;");
-        document.getElementById('germanCheck-02').setAttribute("style", "stroke: green;");
-        break;
+          german = langJSON;
+          document.getElementById('germanCheck-01').setAttribute("style", "stroke: green;");
+          document.getElementById('germanCheck-02').setAttribute("style", "stroke: green;");
+          break;
         case "French":
-        french = langJSON;
-        document.getElementById('frenchCheck-01').setAttribute("style", "stroke: green;");
-        document.getElementById('frenchCheck-02').setAttribute("style", "stroke: green;");
-        break;
+          french = langJSON;
+          document.getElementById('frenchCheck-01').setAttribute("style", "stroke: green;");
+          document.getElementById('frenchCheck-02').setAttribute("style", "stroke: green;");
+          break;
         default:
-        console.log("Something went wrong");
+          showToast("Something went wrong.", "G");
+          break;
       }
-      showToast("File Uploaded Successfully.");
+      showToast("File Uploaded Successfully.", "G");
       document.getElementById("fileInstance").value = "";
       document.getElementById("languageSelected").selectedIndex = document.getElementById("languageSelected").selectedIndex+1;
     }
     reader.onerror = function (data) {
-      alert("Error Reading File.");
+      showToast("Error Reading File.", "G");
     }
   }
 }
 
 
 function allKeys(eng, comparator, missingTranslations, lang){
+  var languageMode;
+  switch (lang) {
+    case "Es":
+      languageMode = spanish;
+      break;
+    case "De":
+      languageMode = german;
+      break;
+    case "Fr":
+      languageMode = french;
+
+      break;
+    default:
+      showToast("Something went wrong.", "R");
+      break;
+  }
+
   for (var key in eng) {
     if(typeof eng[key] === "object"){
       accessor.push(key);
       allKeys(eng[key], comparator[key], missingTranslations, lang);
     } else{
       accessor.push(key);
-      if(getObjFromLastKey(eng, accessor) == getObjFromLastKey(comparator, accessor)){
+      var engVal = getObjFromLastKey(eng, accessor);
+      var langVal = getObjFromLastKey(comparator, accessor);
+      if(langVal == null){
+        // Synchronise JSONs
+        inputObject(languageMode, accessor.slice(), engVal);
+      }
+      if(engVal == langVal || langVal == null){
         // Flag this word
-        console.log("Flagged: " + accessor + " - " + comparator[key]);
-        if(!identicals["All"].includes(comparator[key]) && ( !identicals.hasOwnProperty(lang) || !identicals[lang].includes(comparator[key]) )){
-          missingTranslations[comparator[key]] = accessor.slice();
+        console.log("Flagged: " + accessor + " - " + engVal);
+
+        if(!identicals["All"].includes(engVal) && ( !identicals.hasOwnProperty(lang) || !identicals[lang].includes(engVal) )){
+          // Check if translation exsists before asking for a transaltion.
+          var translatedVal = checkTranslationExists(engVal, english, languageMode);
+
+          if(translatedVal != ""){
+            inputObject(languageMode, accessor.slice(), translatedVal);
+            autoChanges++;
+          }else{
+            missingTranslations.hasOwnProperty(engVal) ? missingTranslations[engVal].push(accessor.slice()) : missingTranslations[engVal] = [accessor.slice()] ;
+          }
         }
       }
     }
     accessor.pop();
   }
-
+  showToast(autoChanges + " Phrases translated. " + Object.keys(missingTranslations).length + " Translations left.", "G");
+  console.log(missingTranslations);
   return missingTranslations;
 
+}
+
+function checkTranslationExists(keyInstance, base, compare){
+  var retrievedVal = "";
+  for (var key in base) {
+    if(typeof base[key] === "object"){
+      retrievedVal = checkTranslationExists(keyInstance, base[key], compare[key]);
+      if(retrievedVal != ""){
+        return retrievedVal;
+      }
+    }
+    else if(base[key] == keyInstance && keyInstance != compare[key]){
+      return compare[key];
+    }
+  }
+  return retrievedVal;
 }
 
 // Retrieves an object while algorithm is in recursion.
@@ -103,7 +153,14 @@ function inputObject(jsonObj, keyTrail, input){
   if(keyTrail.length != 0){
     var key = keyTrail[0];
     keyTrail.shift();
-    baseObject[key] = inputObject(baseObject[key], keyTrail, input);
+    if(key in baseObject){
+      baseObject[key] = inputObject(baseObject[key], keyTrail, input);
+    }
+    else{
+      baseObject[key] = {};
+      baseObject[key] = inputObject(baseObject[key], keyTrail, input);
+    }
+
   }
   else{
     return input;
@@ -112,14 +169,13 @@ function inputObject(jsonObj, keyTrail, input){
 }
 
 function addOptions(base, comparator, selectComponent, lang){
-  // Check if the the file has been uploaded.
-  if(Object.keys(base).length === 0 && base.constructor === Object || Object.keys(comparator).length === 0 && comparator.constructor === Object){
-    showToast("Please check you have loaded the appropriate files.");
+
+  if(!checkFilesNeeded(base, comparator, identicals)){
     return;
   }
+
   var missing = {};
   missing = allKeys(base, comparator, missing, lang);
-  console.log(missing);
 
   removeOptions(selectComponent);
 
@@ -145,12 +201,19 @@ function addOptions(base, comparator, selectComponent, lang){
 function submitTranslation(lang, selectComponent, textComponent){
 
   var inputTranslation = textComponent.value;
-
-  var updatedTranlsations = inputObject(lang, currMissing[selectComponent.value], inputTranslation);
-  console.log(updatedTranlsations);
+  var missingKey = selectComponent.value;
+  var updatedTranlsations;
+  for(var i = 0; i < currMissing[missingKey].length; i++){
+    updatedTranlsations = inputObject(lang, currMissing[missingKey][i], inputTranslation); // An array of keytrails
+  }
 
   selectComponent.remove(selectComponent.selectedIndex);
   textComponent.value = '';
+
+  if(selectComponent.length == 0){
+    showToast("All translations done.", "G");
+    changeActive('exportItem');
+  }
 
 }
 
@@ -158,21 +221,21 @@ function updateIdenticals(lang, selectComponent){
 
   switch(lang) {
     case "Spanish":
-    appendToIgnores("Es", selectComponent.value);
-    break;
+      appendToIgnores("Es", selectComponent.value);
+      break;
     case "German":
-    appendToIgnores("De", selectComponent.value);
-    break;
+      appendToIgnores("De", selectComponent.value);
+      break;
     case "French":
-    appendToIgnores("Fr", selectComponent.value);
-    break;
+      appendToIgnores("Fr", selectComponent.value);
+      break;
     case "All":
-    appendToIgnores("All", selectComponent.value);
-    break;
+      appendToIgnores("All", selectComponent.value);
+      break;
     default:
-    console.log("Something went wrong.");
+      showToast("Something went wrong", "R");
+      break;
   }
-  console.log(identicals);
   selectComponent.options[selectComponent.selectedIndex].remove();
 }
 
@@ -197,38 +260,48 @@ function checkSelected(selectElement, tArea){
   }
 }
 
+function checkFilesNeeded(base, comparator, ignores){
+  // Check if the the file has been uploaded.
+  if(Object.keys(base).length === 0 && base.constructor === Object || Object.keys(comparator).length === 0 && comparator.constructor === Object || Object.keys(ignores).length === 0 && ignores.constructor === Object){
+    showToast("Please check you have loaded the appropriate files.", "R");
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
 
 function saveJSON(){
   var fileName = document.getElementById('exportFile').value;
   var toSend = null;
   var languageExporting = document.getElementById('languageExporting').value;
   if(languageExporting == "Spanish"){
-    toSend = JSON.parse(JSON.stringify(spanish));
+    toSend = spanish;
   }
   else if(languageExporting == "German"){
-    toSend = JSON.parse(JSON.stringify(german));
+    toSend = german;
   }
   else if(languageExporting == "French"){
-    toSend = JSON.parse(JSON.stringify(french));
+    toSend = french;
   }
   else if(languageExporting == "Identicals"){
-    toSend = JSON.parse(JSON.stringify(identicals));
+    toSend = identicals;
   }
 
   toSend["fileName"] = fileName;
 
   $.ajax({
     url: '/saveJSON',
-    data: toSend,
+    data: JSON.stringify(toSend),
     contentType: 'application/json; charset=utf-8',
-    type: 'GET',
+    type: 'POST',
     async: false,
     error: function(xhr, ajaxOptions, thrownError){
-      console.log(xhr);
+      showToast("Error saving file.", "R");
     },
     success: function(data, textStatus, jqXHR){
-
-      showToast("File Exported Successfully.");
+      showToast("File Exported Successfully.", "G");
     }
   });
 }

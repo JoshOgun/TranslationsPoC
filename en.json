@@ -6,14 +6,17 @@
   "five": {
     "fiveOne": "five-one",
     "fiveTwo": {
-      "fiveTwoOne": "five-two-one"
+      "fiveTwoOne": "five-two-one",
+      "fiveTwoTwo": "five-two-two"
     }
   },
   "six": {
     "sixOne": "six-one",
+    "fiveTwoTwo": "five-two-three",
     "sixTwo": {
       "sixTwoOne": "six-two-one",
-      "sixTwoTwo": "six-two-two"
+      "sixTwoTwo": "six-two-two",
+      "fiveTwoTwo": "five-two-two"
     }
   },
   "seven": "seven",

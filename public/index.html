@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">MH Translations</a>
+          <a class="navbar-brand" href="/">MH Translations</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
@@ -72,7 +72,7 @@
             <circle id="identicalCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
             <path id="identicalCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
           </svg>
-          <p class="alignVertical fileLabel"> Identicals </p>
+          <p class="alignVertical fileLabel"> Identicals<span class="required">*</span> </p>
         </div>
       </div>
       <div class="row">
@@ -81,7 +81,7 @@
             <circle id="englishCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
             <path id="englishCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
           </svg>
-          <p class="alignVertical fileLabel"> English </p>
+          <p class="alignVertical fileLabel"> English<span class="required">*</span>  </p>
         </div>
       </div>
       <div class="row">
@@ -122,7 +122,7 @@
             <select id="toTranslateSpa" class="form-control" onchange="checkSelected(toTranslateSpa, 'fullPreviewSpa')">...</select>
 
           </div>
-          <textarea id="fullPreviewSpa" class="form-control"> </textarea>
+          <textarea id="fullPreviewSpa" class="form-control" readonly> </textarea>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, spanish, toTranslateSpa, 'Es')">Load</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('Spanish', toTranslateSpa)">Ignore for Spanish</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateSpa)">Ignore Always</button>
@@ -154,7 +154,7 @@
             <h4>Please Translate:</h4>
             <select id="toTranslateGer" class="form-control" onchange="checkSelected(toTranslateGer, 'fullPreviewGer')">...</select>
           </div>
-          <textarea id="fullPreviewGer" class="form-control"> </textarea>
+          <textarea id="fullPreviewGer" class="form-control" readonly> </textarea>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, german, toTranslateGer, 'De')">Load</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('German', toTranslateGer)">Ignore for German</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateGer)">Ignore Always</button>
@@ -186,7 +186,7 @@
             <select id="toTranslateFr" class="form-control" onchange="checkSelected(toTranslateFr, 'fullPreviewFr')">...</select>
 
           </div>
-          <textarea id="fullPreviewFr" class="form-control"> </textarea>
+          <textarea id="fullPreviewFr" class="form-control" readonly> </textarea>
           <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, french, toTranslateFr, 'Fr')">Load</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('French', toTranslateFr)">Ignore for French</button>
           <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateFr)">Ignore Always</button>

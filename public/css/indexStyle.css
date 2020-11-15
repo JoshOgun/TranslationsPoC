@@ -5,6 +5,10 @@ select{
   text-overflow: ellipsis;
 }
 
+.required{
+  color: red;
+}
+
 .mt-48{
   margin-top: 70%;
   margin-left: 40%;

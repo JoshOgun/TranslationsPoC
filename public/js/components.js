@@ -41,19 +41,24 @@ function scrollTo(section){
   }
 }
 
-function showToast(message) {
+function showToast(message, colour) {
   var toast = document.getElementById("snackbar");
   toast.innerHTML = message;
 
   // Add the "show" class to DIV
   toast.className = "show";
+  if(colour == "G"){
+    toast.style.backgroundColor = "#3CB371";
+  }
+  else if(colour = "R"){
+    toast.style.backgroundColor = "#B22222"
+  }
 
   // After 3 seconds, remove the show class from DIV
   setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
 }
 
 function showConfirmation(){
-  // document.getElementById('myModal').collapse('toggle')//see here usage
   $("#myModal").collapse('toggle');
 };
 
