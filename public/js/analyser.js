@@ -76,11 +76,12 @@ function allKeys(eng, comparator, missingTranslations, lang){
   }
 
   for (var key in eng) {
+    accessor.push(key);
     if(typeof eng[key] === "object"){
-      accessor.push(key);
+      if(!comparator.hasOwnProperty(key)) {comparator[key] = eng[key]};
       allKeys(eng[key], comparator[key], missingTranslations, lang);
+
     } else{
-      accessor.push(key);
       var engVal = getObjFromLastKey(eng, accessor);
       var langVal = getObjFromLastKey(comparator, accessor);
       if(langVal == null){
@@ -106,7 +107,8 @@ function allKeys(eng, comparator, missingTranslations, lang){
     }
     accessor.pop();
   }
-  showToast(autoChanges + " Phrases translated. " + Object.keys(missingTranslations).length + " Translations left.", "G");
+  showToast(autoChanges + " Phrase(s) translated. " + Object.keys(missingTranslations).length + " Translation(s) left.", "G");
+  autoChanges = 0;
   console.log(missingTranslations);
   return missingTranslations;
 
@@ -116,10 +118,12 @@ function checkTranslationExists(keyInstance, base, compare){
   var retrievedVal = "";
   for (var key in base) {
     if(typeof base[key] === "object"){
-      retrievedVal = checkTranslationExists(keyInstance, base[key], compare[key]);
-      if(retrievedVal != ""){
-        return retrievedVal;
-      }
+      try{
+        retrievedVal = checkTranslationExists(keyInstance, base[key], compare[key]);
+        if(retrievedVal != ""){
+          return retrievedVal;
+        }
+      }catch(e){ }
     }
     else if(base[key] == keyInstance && keyInstance != compare[key]){
       return compare[key];
@@ -262,7 +266,8 @@ function checkSelected(selectElement, tArea){
 
 function checkFilesNeeded(base, comparator, ignores){
   // Check if the the file has been uploaded.
-  if(Object.keys(base).length === 0 && base.constructor === Object || Object.keys(comparator).length === 0 && comparator.constructor === Object || Object.keys(ignores).length === 0 && ignores.constructor === Object){
+
+  if(Object.keys(base).length === 0 && base.constructor === Object || comparator.constructor != Object || Object.keys(ignores).length === 0 && ignores.constructor === Object){
     showToast("Please check you have loaded the appropriate files.", "R");
     return false;
   }
