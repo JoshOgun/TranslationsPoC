@@ -108,7 +108,7 @@ function allKeys(eng, comparator, missingTranslations, lang){
     accessor.pop();
   }
   showToast(autoChanges + " Phrase(s) translated. " + Object.keys(missingTranslations).length + " Translation(s) left.", "G");
-  autoChanges = 0;
+  // autoChanges = 0;
   console.log(missingTranslations);
   return missingTranslations;
 
@@ -214,10 +214,7 @@ function submitTranslation(lang, selectComponent, textComponent){
   selectComponent.remove(selectComponent.selectedIndex);
   textComponent.value = '';
 
-  if(selectComponent.length == 0){
-    showToast("All translations done.", "G");
-    changeActive('exportItem');
-  }
+  checkCompleted(selectComponent);
 
 }
 
@@ -241,6 +238,14 @@ function updateIdenticals(lang, selectComponent){
       break;
   }
   selectComponent.options[selectComponent.selectedIndex].remove();
+  checkCompleted(selectComponent);
+}
+
+function checkCompleted(selectComponent){
+  if(selectComponent.length == 0){
+    showToast("All translations done.", "G");
+    changeActive('exportItem');
+  }
 }
 
 function appendToIgnores(key, element){
@@ -276,25 +281,24 @@ function checkFilesNeeded(base, comparator, ignores){
   }
 }
 
+function exportMissing(transNeeded){
+  var toSend = {};
 
-function saveJSON(){
-  var fileName = document.getElementById('exportFile').value;
-  var toSend = null;
-  var languageExporting = document.getElementById('languageExporting').value;
-  if(languageExporting == "Spanish"){
-    toSend = spanish;
-  }
-  else if(languageExporting == "German"){
-    toSend = german;
-  }
-  else if(languageExporting == "French"){
-    toSend = french;
-  }
-  else if(languageExporting == "Identicals"){
-    toSend = identicals;
+  if(Object.keys(currMissing).length === 0){
+    showToast("There is nothing to export.", "R");
+    return;
   }
 
-  toSend["fileName"] = fileName;
+  Object.assign(toSend, currMissing);
+  if(transNeeded == "Spanish"){
+    toSend["fileName"] = "spanish_missing_translations.json";
+  }
+  else if(transNeeded == "German"){
+    toSend["fileName"] = "german_missing_translations.json";
+  }
+  else if(transNeeded == "French"){
+    toSend["fileName"] = "french_missing_translations.json";
+  }
 
   $.ajax({
     url: '/saveJSON',
@@ -309,4 +313,56 @@ function saveJSON(){
       showToast("File Exported Successfully.", "G");
     }
   });
+
+
+}
+
+
+function saveJSON(){
+  // var fileName = document.getElementById('exportFile').value;
+  var toSend = {};
+  var languageExporting = document.getElementById('languageExporting').value;
+  if(languageExporting == "Spanish"){
+    Object.assign(toSend, spanish);
+  }
+  else if(languageExporting == "German"){
+    Object.assign(toSend, german);
+  }
+  else if(languageExporting == "French"){
+    Object.assign(toSend, french);
+  }
+  else if(languageExporting == "Identicals"){
+    Object.assign(toSend, identicals);
+  }
+
+  toSend["fileName"] = "output.json";
+
+  $.ajax({
+    url: '/saveJSON',
+    data: JSON.stringify(toSend),
+    contentType: 'application/json; charset=utf-8',
+    type: 'POST',
+    async: false,
+    error: function(xhr, ajaxOptions, thrownError){
+      showToast("Error saving file.", "R");
+    },
+    success: function(data, textStatus, jqXHR){
+      showToast("File Exported Successfully.", "G");
+    }
+  });
+}
+
+function downloadFile(filename) {
+  saveJSON();
+  var element = document.createElement('a');
+  element.setAttribute('href', '/public/output/output.json');
+  element.setAttribute('download', filename.value);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+
 }

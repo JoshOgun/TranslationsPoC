@@ -26,7 +26,7 @@ app.post("/saveJSON", function(req, res) {
   delete req.body["fileName"];
   const getQuery = JSON.stringify(req.body, null, "\t");
   console.log(getQuery);
-  fs.writeFile("output/"+exportFile, getQuery, 'utf8', function (err) {
+  fs.writeFile("public/output/"+exportFile, getQuery, 'utf8', function (err) {
     if (err) throw err;
     console.log('File Uploaded!');
   });

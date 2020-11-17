@@ -1,0 +1,24 @@
+{
+	"one": "uno",
+	"two": "dos",
+	"three": "tres",
+	"four": "four",
+	"five": {
+		"fiveOne": "cinco-uno",
+		"fiveTwo": {
+			"fiveTwoOne": "five-two-one",
+			"fiveTwoTwo": "cinco-dos-dos"
+		}
+	},
+	"six": {
+		"sixOne": "seis-uno",
+		"fiveTwoTwo": "cinco-dos-tres",
+		"sixTwo": {
+			"sixTwoOne": "seis-dos-uno",
+			"sixTwoTwo": "seis-dos-dos",
+			"fiveTwoTwo": "cinco-dos-dos"
+		}
+	},
+	"seven": "siete",
+	"eight": "eight"
+}
