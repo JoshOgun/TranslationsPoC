@@ -174,6 +174,8 @@ function inputObject(jsonObj, keyTrail, input){
 
 function addOptions(base, comparator, selectComponent, lang){
 
+  Object.assign(currMissing, {});
+
   if(!checkFilesNeeded(base, comparator, identicals)){
     return;
   }

@@ -25,19 +25,39 @@ function changeActive(toItem) {
 
 function scrollTo(section){
   if(section == "uploadItem"){
-    document.getElementById('uploadSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
+    document.getElementById('uploadSection').style.display = "inherit";
+    document.getElementById('spanishSection').style.display = "none";
+    document.getElementById('germanSection').style.display = "none";
+    document.getElementById('frenchSection').style.display = "none";
+    document.getElementById('exportSection').style.display = "none";
   }
   else if(section == "spanishItem"){
-    document.getElementById('spanishSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
+    document.getElementById('uploadSection').style.display = "none";
+    document.getElementById('spanishSection').style.display = "inherit";
+    document.getElementById('germanSection').style.display = "none";
+    document.getElementById('frenchSection').style.display = "none";
+    document.getElementById('exportSection').style.display = "none";
   }
   else if(section == "germanItem"){
-    document.getElementById('germanSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
+    document.getElementById('uploadSection').style.display = "none";
+    document.getElementById('spanishSection').style.display = "none";
+    document.getElementById('germanSection').style.display = "inherit";
+    document.getElementById('frenchSection').style.display = "none";
+    document.getElementById('exportSection').style.display = "none";
   }
   else if(section == "frenchItem"){
-    document.getElementById('frenchSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
+    document.getElementById('uploadSection').style.display = "none";
+    document.getElementById('spanishSection').style.display = "none";
+    document.getElementById('germanSection').style.display = "none";
+    document.getElementById('frenchSection').style.display = "inherit";
+    document.getElementById('exportSection').style.display = "none";
   }
   else if(section == "exportItem"){
-    document.getElementById('exportSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
+    document.getElementById('uploadSection').style.display = "none";
+    document.getElementById('spanishSection').style.display = "none";
+    document.getElementById('germanSection').style.display = "none";
+    document.getElementById('frenchSection').style.display = "none";
+    document.getElementById('exportSection').style.display = "inherit";
   }
 }
 

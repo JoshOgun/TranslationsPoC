@@ -1,0 +1,185 @@
+body{
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 350;
+}
+
+select{
+  text-overflow: ellipsis;
+}
+
+input[type=file]{
+  display: inline-block;
+  margin-top: 5px;
+}
+
+textarea.form-control{
+  margin-bottom: 12px;
+  display: none;
+}
+
+.sectionHeading{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bebebe;
+  font-weight: 200;
+}
+
+.d-none{
+  display: none;
+}
+
+.panel {
+    box-shadow: 1px 3px 1px rgba(0,0,0,.05);
+    height: 500px;
+    width: 1200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.panel-body{
+  padding: 15px 30px;
+}
+
+.pl-20{
+  padding-left: 20px;
+}
+
+.pt-20{
+  padding-top: 20px;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover:not(.active) {
+  font-weight: 500;
+  background-color: unset;
+}
+
+.panel-body {
+  margin-left: 200px;
+
+}
+
+.nav li{
+  float: none;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav li a{
+  margin: 5px 0px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+li.active{
+  background-color: white;
+}
+
+.nav li.active a{
+  font-weight: 500;
+}
+
+
+/* ------------ */
+
+
+.required{
+  color: red;
+}
+
+.mt-48{
+  margin-top: 100%;
+  margin-left: 40%;
+}
+
+.cls-1{
+  fill: #fff;
+  stroke: #ccc;
+  stroke-miterlimit:10;
+  stroke-width:2px;
+}
+
+.alignVertical{
+  display: inline-block;
+  vertical-align: bottom;
+  padding-bottom: 2px;
+  padding-left: 6px;
+}
+
+.label{
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.btn-list{
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  margin-bottom: 15px;
+}
+
+ /* TOAST */
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #3CB371;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+ #snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
