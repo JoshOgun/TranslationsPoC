@@ -1,45 +1,114 @@
 body{
   overflow: hidden;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
 }
+
+h4 {
+  font-size: 15px;
+  font-weight: 350;
+}
+
 select{
   text-overflow: ellipsis;
 }
+
+input[type=file]{
+  display: inline-block;
+  margin-top: 5px;
+}
+
+textarea.form-control{
+  margin-bottom: 12px;
+  display: none;
+}
+
+.sectionHeading{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bebebe;
+  font-weight: 200;
+}
+
+.d-none{
+  display: none;
+}
+
+.panel {
+    box-shadow: 1px 3px 1px rgba(0,0,0,.05);
+    height: 500px;
+    width: 1200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.panel-body{
+  padding: 15px 30px;
+  margin-left: 200px;
+}
+
+.pl-20{
+  padding-left: 20px;
+}
+
+.pt-20{
+  padding-top: 20px;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover:not(.active) {
+  font-weight: 500;
+  background-color: unset;
+}
+
+.nav li{
+  float: none;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav li a{
+  margin: 5px 0px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+li.active{
+  background-color: white;
+}
+
+.nav li.active a{
+  font-weight: 500;
+}
+
+
+/* ------------ */
+
 
 .required{
   color: red;
 }
 
 .mt-48{
-  margin-top: 70%;
+  margin-top: 100%;
   margin-left: 40%;
-}
-
-.mb-0{
-  margin-bottom: 0px;
-}
-
-.mt-30{
-  margin: 30px auto 0px auto;
-}
-
-.section{
-  height: 70vh;
-  padding-top: 7vh;
-
-  scroll-snap-type: y mandatory;
-  border-bottom: 1px grey;
-}
-
-.sticky{
-  position: fixed;
-  top: 0px;
-  overflow: hidden;
-  width: 100%;
-  z-index: 1;
-}
-
-.container{
-  margin-top: 290px;
 }
 
 .cls-1{
@@ -52,11 +121,13 @@ select{
 .alignVertical{
   display: inline-block;
   vertical-align: bottom;
+  padding-bottom: 2px;
+  padding-left: 6px;
 }
 
 .label{
   padding-left: 10px;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .btn-list{
@@ -64,16 +135,6 @@ select{
   width: 100%;
   max-width: 170px;
   margin-bottom: 15px;
-}
-
-input[type=file]{
-  display: inline-block;
-  margin-top: 5px;
-}
-
-textarea.form-control{
-  margin-bottom: 12px;
-  display: none;
 }
 
  /* TOAST */
