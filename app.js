@@ -13,13 +13,6 @@ app.get("/", function(req, res) {
   res.status(200).sendFile(path.join(__dirname + "/public/index.html"));
 });
 
-app.get("/getJSON", function(req, res) {
-  var retrievedFile = require("./"+Object.keys(req.query)[0]);
-  console.log("File Retrieved.");
-  return res.send(retrievedFile);
-});
-
-
 app.post("/saveJSON", function(req, res) {
 
   var exportFile = req.body.fileName;

@@ -32,6 +32,18 @@ textarea.form-control{
   display: none;
 }
 
+.w-100{
+  width: 100%;
+}
+
+.ml-10{
+  margin-left: 10px;
+}
+
+.mt-10{
+  margin-top: 10px;
+}
+
 .panel {
     box-shadow: 1px 3px 1px rgba(0,0,0,.05);
     height: 500px;
@@ -73,8 +85,8 @@ textarea.form-control{
 }
 
 .sidebar a:hover:not(.active) {
-  font-weight: 500;
   background-color: unset;
+  font-weight: 600;
 }
 
 .nav li{
@@ -87,7 +99,7 @@ textarea.form-control{
 .nav li a{
   margin: 5px 0px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 li.active{
@@ -95,7 +107,7 @@ li.active{
 }
 
 .nav li.active a{
-  font-weight: 500;
+  font-weight: 600;
 }
 
 

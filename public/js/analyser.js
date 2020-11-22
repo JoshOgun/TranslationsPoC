@@ -321,7 +321,6 @@ function exportMissing(transNeeded){
 
 
 function saveJSON(){
-  // var fileName = document.getElementById('exportFile').value;
   var toSend = {};
   var languageExporting = document.getElementById('languageExporting').value;
   if(languageExporting == "Spanish"){
@@ -358,7 +357,7 @@ function downloadFile(filename) {
   saveJSON();
   var element = document.createElement('a');
   element.setAttribute('href', '/public/output/output.json');
-  element.setAttribute('download', filename.value);
+  element.setAttribute('download', filename.value+".json");
 
   element.style.display = 'none';
   document.body.appendChild(element);
@@ -366,5 +365,53 @@ function downloadFile(filename) {
   element.click();
 
   document.body.removeChild(element);
+
+  filename.value = "";
+
+}
+
+function showJson(){
+  var exportObj = document.getElementById('languageExporting').value;
+  var output = "";
+
+  if(exportObj == "Spanish"){
+     output = JSON.stringify(spanish, null, "\t");
+  }
+  else if(exportObj == "German"){
+    output = JSON.stringify(german, null, "\t");
+  }
+  else if(exportObj == "French"){
+    output = JSON.stringify(french, null, "\t");
+  }
+  else if(exportObj == "Identicals"){
+    output = JSON.stringify(identicals, null, "\t");
+  }
+
+
+
+  if(output != "{}"){
+    document.getElementById('outputResult').value = output;
+    showToast("Content loaded.", "G");
+  }
+  else{
+    showToast("Object is empty.", "R");
+  }
+
+
+}
+
+function copyJSON(){
+  var copyText = document.getElementById("outputResult");
+
+  copyText.select();
+
+  document.execCommand("copy");
+
+  if(copyText.value != " "){
+    showToast("Saved to Clipboard", "G");
+  }
+  else{
+    showToast("Please ensure you have loaded an object.", "R");
+  }
 
 }
