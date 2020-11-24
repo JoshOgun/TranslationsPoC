@@ -22,8 +22,8 @@
       <div class="sidebar">
         <ul class="nav navbar-nav">
           <li id="uploadItem" class="active" onclick="changeActive('uploadItem')"><a>Upload</a></li>
-          <li id="spanishItem" onclick="changeActive('spanishItem')"><a>Spanish</a></li>
           <li id="germanItem" onclick="changeActive('germanItem')"><a>German</a></li>
+          <li id="italianItem" onclick="changeActive('italianItem')"><a>Italian</a></li>
           <li id="frenchItem" onclick="changeActive('frenchItem')"><a>French</a></li>
           <li id="exportItem" onclick="changeActive('exportItem')"><a>Export</a></li>
         </ul>
@@ -39,8 +39,8 @@
                 <select class="form-control" id="languageSelected">
                   <option> Identicals </option>
                   <option> English </option>
-                  <option> Spanish </option>
                   <option> German </option>
+                  <option> Italian </option>
                   <option> French </option>
                 </select>
 
@@ -76,19 +76,19 @@
           <div class="row">
             <div class="col-lg-12">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
-                <circle id="spanishCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
-                <path id="spanishCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
+                <circle id="germanCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
+                <path id="germanCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
               </svg>
-              <p class="alignVertical fileLabel"> Spanish </p>
+              <p class="alignVertical fileLabel"> German </p>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-12">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px">
-                <circle id="germanCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
-                <path id="germanCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
+                <circle id="italianCheck-01" class="cls-1" cx="15" cy="15" r="12.5"/>
+                <path id="italianCheck-02" class="cls-1" d="M6.419,14.72255l5.72626,7.09473L22.313,8.18272"/>
               </svg>
-              <p class="alignVertical fileLabel"> German </p>
+              <p class="alignVertical fileLabel"> Italian </p>
             </div>
           </div>
           <div class="row">
@@ -102,40 +102,6 @@
           </div>
         </div>
 
-        <div id="spanishSection" class="d-none">
-          <h1 class="sectionHeading"> Spanish </h1>
-          <div class="row">
-
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-              <div class="form-group">
-                <h4>Please Translate:</h4>
-                <select id="toTranslateSpa" class="form-control" onchange="checkSelected(toTranslateSpa, 'fullPreviewSpa')">...</select>
-
-              </div>
-              <textarea id="fullPreviewSpa" class="form-control" readonly> </textarea>
-              <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, spanish, toTranslateSpa, 'Es')">Load</button>
-              <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('Spanish', toTranslateSpa)">Ignore for Spanish</button>
-              <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateSpa)">Ignore Always</button>
-              <button type="button" class="btn btn-primary btn-list" onclick="exportMissing('Spanish')">Export Missing</button>
-
-            </div>
-
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-              <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
-            </div>
-
-            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-              <div class="form-group">
-                <h4>Translation:</h4>
-                <input type="text" class="form-control" placeholder="Translation" id="translatedTextSpa">
-              </div>
-
-              <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(spanish, toTranslateSpa, translatedTextSpa)">Submit</button>
-            </div>
-          </div>
-        </div>
-
-
         <div id="germanSection" class="d-none">
           <h1 class="sectionHeading"> German </h1>
           <div class="row">
@@ -145,7 +111,7 @@
                 <h4>Please Translate:</h4>
                 <select id="toTranslateGer" class="form-control" onchange="checkSelected(toTranslateGer, 'fullPreviewGer')">...</select>
               </div>
-              <textarea id="fullPreviewGer" class="form-control" readonly> </textarea>
+              <textarea id="fullPreviewGer" class="form-control d-none" readonly> </textarea>
               <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, german, toTranslateGer, 'De')">Load</button>
               <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('German', toTranslateGer)">Ignore for German</button>
               <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateGer)">Ignore Always</button>
@@ -154,7 +120,7 @@
             </div>
 
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-              <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-chevron-right mt-100p ml-40p" aria-hidden="true"></span>
             </div>
 
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
@@ -164,6 +130,39 @@
               </div>
 
               <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(german, toTranslateGer, translatedTextGer)">Submit</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="italianSection" class="d-none">
+          <h1 class="sectionHeading"> Italian </h1>
+          <div class="row">
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <div class="form-group">
+                <h4>Please Translate:</h4>
+                <select id="toTranslateIta" class="form-control" onchange="checkSelected(toTranslateIta, 'fullPreviewIta')">...</select>
+
+              </div>
+              <textarea id="fullPreviewIta" class="form-control d-none" readonly> </textarea>
+              <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, italian, toTranslateIta, 'It')">Load</button>
+              <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('Italian', toTranslateIta)">Ignore for Italian</button>
+              <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateIta)">Ignore Always</button>
+              <button type="button" class="btn btn-primary btn-list" onclick="exportMissing('Italian')">Export Missing</button>
+
+            </div>
+
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+              <span class="glyphicon glyphicon-chevron-right mt-100p ml-40p" aria-hidden="true"></span>
+            </div>
+
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+              <div class="form-group">
+                <h4>Translation:</h4>
+                <input type="text" class="form-control" placeholder="Translation" id="translatedTextIta">
+              </div>
+
+              <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(italian, toTranslateIta, translatedTextIta)">Submit</button>
             </div>
           </div>
         </div>
@@ -178,7 +177,7 @@
                 <select id="toTranslateFr" class="form-control" onchange="checkSelected(toTranslateFr, 'fullPreviewFr')">...</select>
 
               </div>
-              <textarea id="fullPreviewFr" class="form-control" readonly> </textarea>
+              <textarea id="fullPreviewFr" class="form-control d-none" readonly> </textarea>
               <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, french, toTranslateFr, 'Fr')">Load</button>
               <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('French', toTranslateFr)">Ignore for French</button>
               <button type="button" class="btn btn-primary btn-list" onclick="updateIdenticals('All', toTranslateFr)">Ignore Always</button>
@@ -187,7 +186,7 @@
             </div>
 
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-              <span class="glyphicon glyphicon-chevron-right mt-48" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-chevron-right mt-100p ml-40p" aria-hidden="true"></span>
             </div>
 
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
@@ -209,8 +208,8 @@
                 <h4>Language</h4>
                 <select class="form-control" id="languageExporting">
                   <option> Identicals </option>
-                  <option> Spanish </option>
                   <option> German </option>
+                  <option> Italian </option>
                   <option> French </option>
                 </select>
               </div>
@@ -218,36 +217,21 @@
           </div>
           <div class="row">
             <div class="col-lg-10">
-              <textarea class="w-100" rows="8" id="outputResult" readonly> </textarea>
+              <textarea class="w-100 readOnly form-control" rows="8" id="outputResult" readonly> </textarea>
             </div>
           </div>
-          <div class="row col-lg-12 mt-10">
+          <div class="row col-lg-12">
             <button type="button" class="btn btn-primary" onclick="showJson()">Load</button>
             <button type="button" class="btn btn-primary ml-10" onclick="copyJSON()">Copy to Clipboard</button>
           </div>
-            <!-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-            <div class="form-group">
-            <h4>Export File:</h4>
-            <div class="input-group">
-            <input type="text" class="form-control" id="exportFile" placeholder="File Name">
-            <div class="input-group-addon">.json</div>
 
-          </div>
-
-
-        </div> -->
-
-        <!-- <button type="button" class="btn btn-primary pull-right" id="submitExport" onclick="downloadFile(exportFile)">
-        Download
-      </button> -->
-
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div id="snackbar">Placeholder</div>
+<div id="snackbar">Placeholder</div>
 
 </body>
 </html>

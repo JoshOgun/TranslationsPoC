@@ -1,11 +1,11 @@
-document.getElementById('uploadSection').scrollIntoView({ behavior: 'smooth', block: 'end' });
-showConfirmation();
-
+/*
+* Changes the active tab.
+*/
 function changeActive(toItem) {
   var wasActive = document.getElementById("uploadItem");
   wasActive.classList.remove("active");
 
-  wasActive = document.getElementById("spanishItem");
+  wasActive = document.getElementById("italianItem");
   wasActive.classList.remove("active");
 
   wasActive = document.getElementById("germanItem");
@@ -20,52 +20,57 @@ function changeActive(toItem) {
   var nowActive =  document.getElementById(toItem);
   nowActive.classList.add("active");
 
-  scrollTo(toItem);
+  displayTab(toItem);
 }
 
-function scrollTo(section){
+/*
+* Shows the active tab.
+*/
+function displayTab(section){
   if(section == "uploadItem"){
     document.getElementById('uploadSection').style.display = "inherit";
-    document.getElementById('spanishSection').style.display = "none";
+    document.getElementById('italianSection').style.display = "none";
     document.getElementById('germanSection').style.display = "none";
     document.getElementById('frenchSection').style.display = "none";
     document.getElementById('exportSection').style.display = "none";
   }
-  else if(section == "spanishItem"){
+  else if(section == "italianItem"){
     document.getElementById('uploadSection').style.display = "none";
-    document.getElementById('spanishSection').style.display = "inherit";
+    document.getElementById('italianSection').style.display = "inherit";
     document.getElementById('germanSection').style.display = "none";
     document.getElementById('frenchSection').style.display = "none";
     document.getElementById('exportSection').style.display = "none";
   }
   else if(section == "germanItem"){
     document.getElementById('uploadSection').style.display = "none";
-    document.getElementById('spanishSection').style.display = "none";
+    document.getElementById('italianSection').style.display = "none";
     document.getElementById('germanSection').style.display = "inherit";
     document.getElementById('frenchSection').style.display = "none";
     document.getElementById('exportSection').style.display = "none";
   }
   else if(section == "frenchItem"){
     document.getElementById('uploadSection').style.display = "none";
-    document.getElementById('spanishSection').style.display = "none";
+    document.getElementById('italianSection').style.display = "none";
     document.getElementById('germanSection').style.display = "none";
     document.getElementById('frenchSection').style.display = "inherit";
     document.getElementById('exportSection').style.display = "none";
   }
   else if(section == "exportItem"){
     document.getElementById('uploadSection').style.display = "none";
-    document.getElementById('spanishSection').style.display = "none";
+    document.getElementById('italianSection').style.display = "none";
     document.getElementById('germanSection').style.display = "none";
     document.getElementById('frenchSection').style.display = "none";
     document.getElementById('exportSection').style.display = "inherit";
   }
 }
 
+/*
+* Shows a customisable toast message.
+*/
 function showToast(message, colour) {
   var toast = document.getElementById("snackbar");
   toast.innerHTML = message;
 
-  // Add the "show" class to DIV
   toast.className = "show";
   if(colour == "G"){
     toast.style.backgroundColor = "#3CB371";
@@ -74,17 +79,27 @@ function showToast(message, colour) {
     toast.style.backgroundColor = "#B22222"
   }
 
-  // After 3 seconds, remove the show class from DIV
+  // After 3 seconds, remove toast.
   setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
 }
 
-function showConfirmation(){
-  $("#myModal").collapse('toggle');
-};
+/*
+* Resets the select components.
+*/
+function resetSelects() {
+  var allTranslationSelects = ["toTranslateGer", "toTranslateIta", "toTranslateFr"];
+  for(var j = 0; j < allTranslationSelects.length; j++){
+    var selectElement = document.getElementById(allTranslationSelects[j]);
+     var count = selectElement.options.length - 1;
+     for(var i = count; i >= 0; i--) {
+        selectElement.remove(i);
+     }
+ }
+}
 
-function removeOptions(selectElement) {
-   var count = selectElement.options.length - 1;
-   for(var i = count; i >= 0; i--) {
-      selectElement.remove(i);
-   }
+/*
+* Indicates whether the file has been uploaded.
+*/
+function changeStrokeGreen(componentID){
+  document.getElementById(componentID).setAttribute("style", "stroke: green;");
 }

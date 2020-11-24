@@ -19,14 +19,45 @@ input[type=file]{
 
 textarea.form-control{
   margin-bottom: 12px;
-  display: none;
+}
+
+.readOnly{
+  background-color: #f9f9f9;
 }
 
 .sectionHeading{
   padding-bottom: 10px;
   border-bottom: 1px solid #bebebe;
-  font-weight: 200;
+  font-weight: 300;
 }
+
+.cls-1{
+  fill: #fff;
+  stroke: #ccc;
+  stroke-miterlimit:10;
+  stroke-width:2px;
+}
+
+.alignVertical{
+  display: inline-block;
+  vertical-align: bottom;
+  padding-bottom: 2px;
+  padding-left: 6px;
+}
+
+.label{
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.btn-list{
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  margin-bottom: 15px;
+}
+
+/* PRESETS */
 
 .d-none{
   display: none;
@@ -44,6 +75,28 @@ textarea.form-control{
   margin-top: 10px;
 }
 
+.pl-20{
+  padding-left: 20px;
+}
+
+.pt-20{
+  padding-top: 20px;
+}
+
+.mt-100p{
+  margin-top: 100%;
+}
+
+.ml-40p{
+  margin-left: 40%;
+}
+
+.required{
+  color: red;
+}
+
+/* PANEL */
+
 .panel {
     box-shadow: 1px 3px 1px rgba(0,0,0,.05);
     height: 500px;
@@ -59,13 +112,7 @@ textarea.form-control{
   margin-left: 200px;
 }
 
-.pl-20{
-  padding-left: 20px;
-}
-
-.pt-20{
-  padding-top: 20px;
-}
+/* SIDEBAR */
 
 .sidebar {
   margin: 0;
@@ -108,45 +155,6 @@ li.active{
 
 .nav li.active a{
   font-weight: 600;
-}
-
-
-/* ------------ */
-
-
-.required{
-  color: red;
-}
-
-.mt-48{
-  margin-top: 100%;
-  margin-left: 40%;
-}
-
-.cls-1{
-  fill: #fff;
-  stroke: #ccc;
-  stroke-miterlimit:10;
-  stroke-width:2px;
-}
-
-.alignVertical{
-  display: inline-block;
-  vertical-align: bottom;
-  padding-bottom: 2px;
-  padding-left: 6px;
-}
-
-.label{
-  padding-left: 10px;
-  font-size: 15px;
-}
-
-.btn-list{
-  display: block;
-  width: 100%;
-  max-width: 170px;
-  margin-bottom: 15px;
 }
 
  /* TOAST */
