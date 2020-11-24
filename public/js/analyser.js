@@ -13,6 +13,10 @@ var autoChanges = 0; // Counter for the number of automatic translations that we
 function retrieveFile(){
   var language = document.getElementById('languageSelected').value;
   var fileObj = document.getElementById('fileInstance').files[0];
+  if(fileObj == null){
+    showToast('Please click the "Choose File" button before importing.', "R");
+    return;
+  }
 
   if (fileObj) {
     var reader = new FileReader();
@@ -249,6 +253,12 @@ function submitTranslation(lang, selectComponent, textComponent){
   var inputTranslation = textComponent.value;
   var missingKey = selectComponent.value;
   var updatedTranlsations;
+
+  if(missingKey == ""){
+    showToast('Please ensure that you have pressed "Load".', "R");
+    return;
+  }
+
   // Ensures the translations are stored in duplicates as well.
   for(var i = 0; i < currMissing[missingKey].length; i++){
     updatedTranlsations = inputObject(lang, currMissing[missingKey][i], inputTranslation);
