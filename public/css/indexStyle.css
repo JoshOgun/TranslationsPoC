@@ -19,6 +19,7 @@ input[type=file]{
 
 textarea.form-control{
   margin-bottom: 12px;
+  resize: none;
 }
 
 .readOnly{
@@ -50,11 +51,50 @@ textarea.form-control{
   font-size: 15px;
 }
 
+.close-icon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 30px;
+  top: 10px;
+}
+
+/* BUTTONS */
+
+.btn{
+  width: 140px;
+  border-radius: 2px;
+}
+
 .btn-list{
   display: block;
   width: 100%;
   max-width: 170px;
   margin-bottom: 15px;
+}
+
+.btn-primary{
+  color: #fff;
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn-primary:hover{
+  color: #fff;
+  background-color: #1c1c1c;
+  border-color: #444;
+}
+
+.btn-outline{
+  color: #1c1c1c;
+  background-color: #fff;
+  border-color: #1c1c1c;
+}
+
+.btn-outline:hover{
+  color: #fff;
+  background-color: #1c1c1c;
+  border-color: #1c1c1c;
 }
 
 /* PRESETS */
@@ -110,6 +150,8 @@ textarea.form-control{
 .panel-body{
   padding: 15px 30px;
   margin-left: 200px;
+  height: 100%;
+  overflow: scroll;
 }
 
 /* SIDEBAR */

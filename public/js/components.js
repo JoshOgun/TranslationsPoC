@@ -103,3 +103,8 @@ function resetSelects() {
 function changeStrokeGreen(componentID){
   document.getElementById(componentID).setAttribute("style", "stroke: green;");
 }
+
+function closePreview(container, preview){
+  preview.innerHTML = "";
+  container.style.display = "none";
+}

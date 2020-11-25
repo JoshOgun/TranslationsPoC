@@ -266,6 +266,7 @@ function submitTranslation(lang, selectComponent, textComponent){
 
   selectComponent.remove(selectComponent.selectedIndex);
   textComponent.value = '';
+  delete currMissing[missingKey];
 
   // Check if there are anymore translations needed.
   checkCompleted(selectComponent);
@@ -299,6 +300,7 @@ function updateIdenticals(lang, selectComponent){
       showToast("Something went wrong", "R");
       break;
   }
+  delete currMissing[selectComponent.value];
   selectComponent.options[selectComponent.selectedIndex].remove();
   checkCompleted(selectComponent);
 }
@@ -353,7 +355,7 @@ function checkFilesNeeded(base, comparator, ignores){
   }
 }
 
-function exportMissing(transNeeded){
+function exportMissing(container, preview){
   var toExport = {};
 
   if(Object.keys(currMissing).length === 0){
@@ -361,9 +363,18 @@ function exportMissing(transNeeded){
     return;
   }
 
+  container.style.display = "block";
+  var panel = document.getElementById("panel");
+  panel.scrollTop = panel.scrollHeight;
+
   Object.assign(toExport, currMissing);
 
-  // IMPLEMENT SOME PREVIEW AND COPY TO CLIPBOARD
+  preview.innerHTML = JSON.stringify(toExport, null, "\t");
+
+  copyJSON(preview);
+
+
+
 
 }
 
@@ -399,8 +410,8 @@ function showJson(){
 /*
 * Copys the resultant JSON object to clipboard.
 */
-function copyJSON(){
-  var copyText = document.getElementById("outputResult");
+function copyJSON(tArea){
+  var copyText = tArea;
 
   copyText.select();
 
@@ -412,5 +423,8 @@ function copyJSON(){
   else{
     showToast("Please ensure you have loaded an object.", "R");
   }
+  try{
+    document.getSelection().removeAllRanges();
+  }catch(e){}
 
 }
