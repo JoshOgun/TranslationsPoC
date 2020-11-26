@@ -188,13 +188,14 @@ function inputObject(jsonObj, keyTrail, input){
   if(keyTrail.length != 0){
     var key = keyTrail[0];
     keyTrail.shift();
-    if(key in baseObject){
+    if(baseObject.hasOwnProperty(key) && baseObject[key].constructor === Object){
       baseObject[key] = inputObject(baseObject[key], keyTrail, input);
     }
     else{
       baseObject[key] = {};
       baseObject[key] = inputObject(baseObject[key], keyTrail, input);
     }
+
   }
   else{
     return input;

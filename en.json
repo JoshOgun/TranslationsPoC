@@ -20,5 +20,9 @@
     }
   },
   "seven": "seven",
-  "eight": "eight"
+  "eight": "eight",
+  "nine": {
+    "nineOne": "nine-one",
+    "nineTwo": "nine-two"
+  }
 }
