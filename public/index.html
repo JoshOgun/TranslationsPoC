@@ -25,6 +25,7 @@
           <li id="germanItem" onclick="changeActive('germanItem')"><a>German</a></li>
           <li id="italianItem" onclick="changeActive('italianItem')"><a>Italian</a></li>
           <li id="frenchItem" onclick="changeActive('frenchItem')"><a>French</a></li>
+          <li id="dataViewItem" onclick="changeActive('dataViewItem')"><a>Data View</a></li>
           <li id="exportItem" onclick="changeActive('exportItem')"><a>Export</a></li>
         </ul>
       </div>
@@ -115,7 +116,7 @@
               <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, german, toTranslateGer, 'De')">Load</button>
               <button type="button" class="btn btn-outline btn-list" onclick="updateIdenticals('German', toTranslateGer)">Ignore for German</button>
               <button type="button" class="btn btn-outline btn-list" onclick="updateIdenticals('All', toTranslateGer)">Ignore Always</button>
-              <button type="button" class="btn btn-outline btn-list" onclick="exportMissing(previewContainerGer, previewMissingGer)">Export Missing</button>
+              <button type="button" class="btn btn-outline btn-list" onclick="exportMissing(toTranslateGer, 'German')">Export Missing</button>
 
             </div>
 
@@ -132,31 +133,21 @@
               <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(german, toTranslateGer, translatedTextGer)">Submit</button>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="d-none" id="previewContainerGer">
-                <textarea class="w-100 readOnly form-control" rows="8" id="previewMissingGer" readonly> </textarea>
-                <span class="glyphicon glyphicon-remove close-icon" onclick="closePreview(previewContainerGer, previewMissingGer)"></span>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div id="italianSection" class="d-none">
           <h1 class="sectionHeading"> Italian </h1>
           <div class="row">
-
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
               <div class="form-group">
                 <h4>Please Translate:</h4>
                 <select id="toTranslateIta" class="form-control" onchange="checkSelected(toTranslateIta, 'fullPreviewIta')">...</select>
-
               </div>
               <textarea id="fullPreviewIta" class="form-control d-none" readonly> </textarea>
               <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, italian, toTranslateIta, 'It')">Load</button>
               <button type="button" class="btn btn-outline btn-list" onclick="updateIdenticals('Italian', toTranslateIta)">Ignore for Italian</button>
               <button type="button" class="btn btn-outline btn-list" onclick="updateIdenticals('All', toTranslateIta)">Ignore Always</button>
-              <button type="button" class="btn btn-outline btn-list" onclick="exportMissing(previewContainerIta, previewMissingIta)">Export Missing</button>
+              <button type="button" class="btn btn-outline btn-list" onclick="exportMissing(toTranslateIta, 'Italian')">Export Missing</button>
 
             </div>
 
@@ -171,14 +162,6 @@
               </div>
 
               <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(italian, toTranslateIta, translatedTextIta)">Submit</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="d-none" id="previewContainerIta">
-                <textarea class="w-100 readOnly form-control" rows="8" id="previewMissingIta" readonly> </textarea>
-                <span class="glyphicon glyphicon-remove close-icon" onclick="closePreview(previewContainerIta, previewMissingIta)"></span>
-              </div>
             </div>
           </div>
         </div>
@@ -197,7 +180,7 @@
               <button type="button" class="btn btn-primary btn-list" onclick="addOptions(english, french, toTranslateFr, 'Fr')">Load</button>
               <button type="button" class="btn btn-outline btn-list" onclick="updateIdenticals('French', toTranslateFr)">Ignore for French</button>
               <button type="button" class="btn btn-outline btn-list" onclick="updateIdenticals('All', toTranslateFr)">Ignore Always</button>
-              <button type="button" class="btn btn-outline btn-list" onclick="exportMissing(previewContainerFr, previewMissingFr)">Export Missing</button>
+              <button type="button" class="btn btn-outline btn-list" onclick="exportMissing(toTranslateFr, 'French')">Export Missing</button>
 
             </div>
 
@@ -214,15 +197,20 @@
               <button type="button" class="btn btn-primary pull-right" onclick="submitTranslation(french, toTranslateFr, translatedTextFr)">Submit</button>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="d-none" id="previewContainerFr">
-                <textarea class="w-100 readOnly form-control" rows="8" id="previewMissingFr" readonly> </textarea>
-                <span class="glyphicon glyphicon-remove close-icon" onclick="closePreview(previewContainerFr, previewMissingFr)"></span>
-              </div>
-            </div>
-          </div>
         </div>
+
+        <div id="dataViewSection" class="d-none">
+          <div class="row inlineRow mt-20">
+          <h1 class="inlineHeading"> Data View </h1>
+          <select class="form-control inlineHeading f-right" onchange="loadLangDataView(this)">
+            <option> English </option>
+            <option> German </option>
+            <option> Italian </option>
+            <option> French </option>
+          </select>
+
+        </div>
+      </div>
 
         <div id="exportSection" class="d-none">
           <h1 class="sectionHeading"> Export </h1>
@@ -238,24 +226,33 @@
                 </select>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-10">
-              <textarea class="w-100 readOnly form-control" rows="8" id="outputResult" readonly> </textarea>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+              <div class="form-group">
+                <h4>Export File:</h4>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="exportFile" placeholder="File Name">
+                  <div class="input-group-addon">.json</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row col-lg-12">
-            <button type="button" class="btn btn-primary" onclick="showJson()">Load</button>
-            <button type="button" class="btn btn-outline ml-10" onclick="copyJSON(outputResult)">Copy to Clipboard</button>
-          </div>
+            <div class="row">
+              <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <textarea class="w-100 readOnly form-control" rows="8" id="outputResult" readonly> </textarea>
+              </div>
+            </div>
+            <div class="row col-lg-12">
+              <button type="button" class="btn btn-primary" onclick="showJson()">Load</button>
+              <button type="button" class="btn btn-outline ml-10" onclick="copyJSON(outputResult)">Copy to Clipboard</button>
+              <button type="button" class="btn btn-outline ml-10" onclick="exportData(languageExporting, exportFile)">Download</button>
+            </div>
 
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="snackbar">Placeholder</div>
+  <div id="snackbar">Placeholder</div>
 
 </body>
 </html>

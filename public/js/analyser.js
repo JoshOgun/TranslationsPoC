@@ -356,26 +356,56 @@ function checkFilesNeeded(base, comparator, ignores){
   }
 }
 
-function exportMissing(container, preview){
+/*
+* Creates a data view for the selected language.
+*/
+function createDataView(language, level, parent, parentIndex, trail){
+  for (var key in language) {
+    // Recursion if the JSON is nested.
+    if(typeof language[key] === "object"){
+      trail.push(key);
+      addJSONHeading(key, level, parent, parentIndex, Object.keys(language).indexOf(key), trail);
+      level++;
+      createDataView(language[key], level, key, Object.keys(language).indexOf(key), trail);
+      level--;
+      trail.pop();
+    }
+    else {
+      addJSONContent(key+': '+language[key], level, parent, parentIndex, trail);
+    }
+  }
+}
+
+
+/*
+* Function to format and download the missing translations.
+*/
+function exportMissing(translatePhrases, lang){
   var toExport = {};
+  var file = "";
 
   if(Object.keys(currMissing).length === 0){
     showToast("There is nothing to export.", "R");
     return;
   }
+  else if(translatePhrases.options.length === 0){
+    showToast("Please load before trying to export.", "R");
+    return;
+  }
 
-  container.style.display = "block";
-  var panel = document.getElementById("panel");
-  panel.scrollTop = panel.scrollHeight;
+  if(lang == "German"){
+    file = "german_missing";
+  }
+  else if(lang == "Italian"){
+    file = "italian_missing";
+  }
+  else if(lang == "French"){
+    file = "french_missing";
+  }
 
   Object.assign(toExport, currMissing);
 
-  preview.innerHTML = JSON.stringify(toExport, null, "\t");
-
-  copyJSON(preview);
-
-
-
+  saveData(toExport, file);
 
 }
 
@@ -428,4 +458,56 @@ function copyJSON(tArea){
     document.getSelection().removeAllRanges();
   }catch(e){}
 
+}
+
+/*
+* Function to format and download the resultant json.
+*/
+function exportData(language, fileName){
+  var exportData = {};
+  if(language.value == "German"){
+    Object.assign(exportData, german);
+  }
+  else if(language.value == "Italian"){
+    Object.assign(exportData, italian);
+  }
+  else if(language.value == "French"){
+    Object.assign(exportData, french);
+  }
+  else if(language.value == "Identicals"){
+    Object.assign(exportData, identicals);
+  }
+
+  if(exportData == "{}" ){
+    showToast("Nothing to export.", "R");
+    return;
+  }
+  else if (fileName.value == ""){
+    showToast("Please enter a file name.", "R");
+    return;
+  }
+
+  saveData(exportData, fileName.value);
+  fileName.value = "";
+}
+
+/*
+* Function to download data.
+*/
+function saveData(data, fileName){
+
+  var aElement = document.createElement("a");
+  document.body.appendChild(aElement);
+  aElement.style = "display: none";
+
+  var json = JSON.stringify(data, null, "\t");
+  var blob = new Blob([json], {type: "octet/stream"});
+  var url = window.URL.createObjectURL(blob);
+
+  aElement.href = url;
+  aElement.download = fileName+".json";
+  aElement.click();
+
+  window.URL.revokeObjectURL(url);
+  showToast("Content exported.", "G");
 }
