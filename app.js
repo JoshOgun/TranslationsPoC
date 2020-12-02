@@ -13,22 +13,6 @@ app.get("/", function(req, res) {
   res.status(200).sendFile(path.join(__dirname + "/public/index.html"));
 });
 
-app.post("/saveJSON", function(req, res) {
-
-  var exportFile = req.body.fileName;
-  delete req.body["fileName"];
-  const getQuery = JSON.stringify(req.body, null, "\t");
-  console.log(getQuery);
-  fs.writeFile("public/output/"+exportFile, getQuery, 'utf8', function (err) {
-    if (err) throw err;
-    console.log('File Uploaded!');
-  });
-
-  return res.status(200).end();
-});
-
-
-
 app.listen(8000, () => {
   console.log('Server is running on http://localhost:8000/');
 });
